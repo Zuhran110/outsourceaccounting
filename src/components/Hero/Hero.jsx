@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
 import connect from "../../assets/images/HeroSection/fluent-mdl2_connect-contacts.png";
 import UKflag from "../../assets/images/HeroSection/UKflage.png";
