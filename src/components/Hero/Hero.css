@@ -1,0 +1,180 @@
+.hero{
+    background-image: url('../../assets/images/HeroSection/countryinlte-uk1.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* black cover on top of image */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;                       /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0.55);   /* adjust 0.2 - 0.8 to taste */
+  z-index: 1;
+  pointer-events: none;           /* keep overlay non-interactive */
+}
+
+/* ensure text and other content sit above overlay */
+.hero-container, .hero-content, .hero-form-card {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-container{
+    max-width: 64dvw;
+    margin: 0 auto;
+    padding-left: 5.75rem ;
+    padding-right: 5.75rem ;
+    padding-rigth: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-bar{
+    flex: 1 1 45%;
+    min-width: 6dvw;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #C0B2FF, #ffffff);
+    padding: .8em;
+    border-radius: 20px;
+    display: inline-block;
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.hero-title{
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+.hero-title-highlight {
+    color: #DFD8FF;
+}
+.hero-form-highlight{
+    color: #4f46e5;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;                
+  padding: 1em;
+  border-radius: 2em;
+  background: linear-gradient(135deg,#4f46e5,#817ceb);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 1em;
+  height: 2dvh;
+  display: block;
+  object-fit: contain;
+}
+
+.hero-form-card{
+    background-color: rgba(255,255,255,0.45);
+    backdrop-filter: blur(8px);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: #333;
+    flex: 1 1 40%;
+    min-width: 4dvw;
+    position: relative;
+    margin-right: 5.5rem;
+}
+
+.hero-form-title{
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group{
+    margin-bottom: 2em;
+}
+
+.form-input{
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: .7em;
+    box-sizing: border-box;
+}   
+
+.form-input:focus{
+    border-color: #4f46e5;
+    outline: none;
+    box-shadow: 0 0 5px rgba(79,70,229,0.5);
+}
+
+.form-submit-btn{
+    width: 50%;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4f46e5;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 900px) {
+    .hero{
+        top: 5.5rem;
+        padding: 2rem 1rem;
+        flex-direction: column;
+        width: 100dvw;
+    }
+    .hero-container{
+        flex-direction: column;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .hero-bar{
+        margin-bottom: .5rem;
+        font-size: .9em;
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .hero-title{
+        font-size: 2em;
+    }
+
+    .hero-form-card{
+        margin: 0;
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 660px){
+    .hero-subtitle{
+        display: none;
+    }
+    .hero{
+        min-width: 100%;
+
+    }
+}
