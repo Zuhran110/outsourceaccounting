@@ -57,7 +57,7 @@ const Services = () => {
                                     Managing corporation tax is a crucial yet complex aspect of
                                     running a UK-based business.
                                 </p>
-                                <a className="learn-more">Learn more...</a>
+                                <span className="learn-more">Learn more...</span>
                             </div>
                         </div>
                     </a>

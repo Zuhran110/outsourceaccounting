@@ -66,10 +66,11 @@
     background-color: white;
     border-radius: 8px;
     padding: 1.5rem;
-    width: 20rem;
     height: auto;
     border: #333333 1px solid;
     transition: transform 0.2s;
+    width: 20rem;
+    min-height: 17rem;
 }
 
 
@@ -98,13 +99,13 @@
 }
 
 
-.service-card-title{
+.service-card-title {
     font-size: 1.25rem;
     font-weight: 300;
     margin-bottom: 0.5rem;
-    margin-right: 5em;
     color: black;
 }
+
 
 .service-card-description{
     font-size: 1rem;
@@ -129,5 +130,20 @@
 @media (max-width: 900px) {
     .services{
         padding-top: 6rem;
+    }
+}
+
+@media (max-width: 660px) {
+    .services{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .service-card{
+        width: 100%;
+        min-height: 7rem;
+        max-height: 14rem;
     }
 }
