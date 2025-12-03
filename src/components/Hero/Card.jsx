@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Hero.css";
 
 
-const Card = ({ imgComponent, title, content }) => {
+const Card = ({ index, imgComponent, title, content }) => {
 
 
     return (
