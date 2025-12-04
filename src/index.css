@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+:root {
+  --color-veryLightBlue: #ECF6FE;
+  --color-buttonBlue: #6c3aff;
+}
