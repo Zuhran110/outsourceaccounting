@@ -1,4 +1,4 @@
-import "./Hero.css";
+import "./../Hero.css";
 
 import {
     CompanyFormation,
@@ -6,7 +6,7 @@ import {
     Support,
     AutherizedAgent,
     UnmatchedExperience,
-} from "../../assets/images/HeroSection/belowHero/index.js";
+} from "../../../assets/images/HeroSection/belowHero/index.js";
 import Card from "./Card";
 
 const data = [

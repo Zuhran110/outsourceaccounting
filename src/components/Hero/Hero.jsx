@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form"
 import "./Hero.css";
-import connect from "../../assets/images/HeroSection/fluent-mdl2_connect-contacts.png";
-import UKflag from "../../assets/images/HeroSection/UKflage.png";
 
-import Cards from "./Cards";
+import {
+    ContactIcon, UKFlagIcon
+} from "../../assets/images/HeroSection/HeroImgs";
+
+import Cards from "./HeroComponents/Cards";
 
 const Hero = () => {
     const {
@@ -23,10 +25,10 @@ const Hero = () => {
                     <div className="hero-container">
                         <div className="hero-content">
                             <p className="hero-bar">Welcome to Outsource Accounting Solutions</p>
-                            <h1 className="hero-title">Cheap <span className="hero-title-highlight">Online Accounting</span> & Tax Filing Services in the UK <img src={UKflag} alt="ukflage" className="Uk-Flag"></img></h1>
+                            <h1 className="hero-title">Cheap <span className="hero-title-highlight">Online Accounting</span> & Tax Filing Services in the UK <img src={UKFlagIcon} alt="ukflage" className="Uk-Flag"></img></h1>
                             <p className="hero-subtitle">Outsource Accounting is your trusted, reliable, and cheap online accounting and tax services partner. Chin up, we are dedicated to handling your Companies House and HM Revenue & Customs (HMRC) filings, starting from only £75 per year.</p>
                             <p className="hero-subtitle">Time to give your business a proper leg up! Fancy a chat with our expert UK accountants? Lets turn your business into an absolute cracker – reach out today! </p>
-                            <button className="hero-btn"> <img src={connect} alt="btnimage" aria-hidden="true" className="btn-icon" /> Free Consultation</button>
+                            <button className="hero-btn"> <img src={ContactIcon} alt="btnimage" aria-hidden="true" className="btn-icon" /> Free Consultation</button>
                         </div>
                     </div>
                     <div className="hero-form-card">

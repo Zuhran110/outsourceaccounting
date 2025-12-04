@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import logo from "../../assets/images/NavbarTopBar/logo.png";
-import hamburgerMenu from "../../assets/images/NavbarTopBar/menu-burger-horizontal-svgrepo-com.png";
-import closeMenu from "../../assets/images/NavbarTopBar/close-svgrepo-com.png";
+
+import {
+  CompanyLogo,
+  HamburgerMenu,
+  CloseMenu
+} from "../../assets/images/NavbarTopBar/NavbarImg.js";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -21,11 +24,11 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="navbar-logo">
-            <img src={logo} alt="Company Logo" />
+            <img src={CompanyLogo} alt="Company Logo" />
           </div>
 
           <div className="navbar-hamburger" onClick={onClick}>
-            <img src={hamburgerMenu} alt="Menu" />
+            <img src={HamburgerMenu} alt="Menu" />
           </div>
 
           {/* Menu Links */}
@@ -55,17 +58,17 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="navbar-logo">
-            <img src={logo} alt="Company Logo" />
+            <img src={CompanyLogo} alt="Company Logo" />
           </div>
 
 
           {menuOpen ? (
             <div className="close-Menu" onClick={onClick}>
-              <img src={closeMenu} alt="Close Menu" />
+              <img src={CloseMenu} alt="Close Menu" />
             </div>
           ) : (
             <div className="navbar-hamburger" onClick={onClick}>
-              <img src={hamburgerMenu} alt="Menu" />
+              <img src={HamburgerMenu} alt="Menu" />
             </div>
           )}
 

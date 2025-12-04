@@ -1,8 +1,8 @@
-import CompanyFormation from "./1.png";
-import GreatValue from "./2.png";
-import Support from "./3.png";
-import AutherizedAgent from "./4.png";
-import UnmatchedExperience from "./5.png";
+import CompanyFormation from "./CompanyFormation.png";
+import GreatValue from "./GreatValue.png";
+import Support from "./Support.png";
+import AutherizedAgent from "./AutherizedAgent.png";
+import UnmatchedExperience from "./UnmatchedExperience.png";
 
 export {
   CompanyFormation,
