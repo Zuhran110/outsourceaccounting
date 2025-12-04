@@ -1,5 +1,3 @@
-import "./../Hero.css";
-
 import {
     CompanyFormation,
     GreatValue,
@@ -47,7 +45,7 @@ const data = [
 
 const Cards = () => {
     return (
-        <div className="hero--container-card">
+        <div className="flex relative items-center justify-center w-full px-16">
             {data.map((card, index) => {
                 const { imgComponent, title, content } = card;
 

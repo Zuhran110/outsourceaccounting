@@ -76,37 +76,39 @@ const Navbar = () => {
           {/* Dropdown Menu Links */}
           {menuOpen && (
             <ul className="flex flex-col items-center bg-[#ecf6fe] absolute top-full left-0 w-full h-screen py-4 shadow-md z-[999]">
-              <li className="w-full flex items-center">
-                <a href="/" className="block w-full text-right py-2 px-4 border-b border-[#542ecc] text-base text-gray-800 hover:text-gray-600 no-underline">
+
+              {/* Corrected Link 1: Text is now centered */}
+              <li className="w-full">
+                <a href="/" className="block w-full text-center py-2 px-4 border-b border-(--color-buttonBlue) text-base text-gray-800 hover:text-gray-600 no-underline">
                   Home
                 </a>
               </li>
+
+              {/* Corrected Link 2: Apply text-center to all other links */}
               <li className="w-full">
-                <a href="#services" className="block w-full text-right py-2 px-4 border-b border-[#542ecc] text-base text-gray-800 hover:text-gray-600 no-underline">
+                <a href="#services" className="block w-full text-center py-2 px-4 border-b border-(--color-buttonBlue) text-base text-gray-800 hover:text-gray-600 no-underline">
                   Services
                 </a>
               </li>
               <li className="w-full">
-                <a href="#about" className="block w-full text-right py-2 px-4 border-b border-[#542ecc] text-base text-gray-800 hover:text-gray-600 no-underline">
+                <a href="#about" className="block w-full text-center py-2 px-4 border-b border-(--color-buttonBlue) text-base text-gray-800 hover:text-gray-600 no-underline">
                   About Us
                 </a>
               </li>
               <li className="w-full">
-                <a href="#blog" className="block w-full text-right py-2 px-4 border-b border-[#542ecc] text-base text-gray-800 hover:text-gray-600 no-underline">
+                <a href="#blog" className="block w-full text-center py-2 px-4 border-b border-(--color-buttonBlue) text-base text-gray-800 hover:text-gray-600 no-underline">
                   Blogs
                 </a>
               </li>
               <li className="w-full">
-                <a href="#faq" className="block w-full text-right py-2 px-4 border-b border-[#542ecc] text-base text-gray-800 hover:text-gray-600 no-underline">
+                <a href="#faq" className="block w-full text-center py-2 px-4 border-b border-(--color-buttonBlue) text-base text-gray-800 hover:text-gray-600 no-underline">
                   FAQs
                 </a>
               </li>
-
-              {/* Contact Button - Pushed to bottom */}
               <li className="mt-auto mb-8">
                 <a
                   href="#contact"
-                  className="inline-block bg-[#542ecc] text-white px-4 py-2 rounded-md font-semibold transition-all duration-200"
+                  className="inline-block border-(--color-buttonBlue) text-white px-4 py-2 rounded-md font-semibold transition-all duration-200"
                 >
                   Contact Us
                 </a>

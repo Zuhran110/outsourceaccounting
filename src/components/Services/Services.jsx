@@ -1,14 +1,13 @@
 import React from "react";
 
-import "./Services.css";
 import ServiceCards from "./ServiceComponents/ServiceCards.jsx";
 
 const Services = () => {
     return (
-        <section className="services" id="services">
-            <div className="services-container">
-                <h2 className="services-title">Services</h2>
-                <p className="services-description">
+        <section className="flex self-center items-center content-center justify-center text-black bg-white px-16 py-8" id="services">
+            <div className="flex self-center items-center content-center justify-center text-black bg-white flex-wrap">
+                <h2 className="text-[2rem] font-semibold mb-4 w-full text-center text-[#4632DA]">Services</h2>
+                <p className="text-[1rem] font-normal mb-8 w-full text-center text-[#333333]">
                     Welcome to our all-inclusive professional Accountancy service
                     portfolio, designed to satisfy the various financial requirements of
                     individuals, partnerships, limited liability programs, sole traders,
