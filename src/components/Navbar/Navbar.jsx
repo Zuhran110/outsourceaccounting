@@ -19,38 +19,34 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="pt-[10vh] md:pt-[4vh] fixed h-auto w-full top-0 left-0 pl-16 pr-16 z-1000 bg-white flex items-center justify-between hidden md:flex">
+      <nav className="w-full px-16 z-1000 bg-white items-center justify-between hidden md:flex">
         <div className="flex items-center justify-between w-full py-3">
 
           {/* Logo */}
-          <div className="navbar-logo">
+          <div className="navbar-logo ">
             <img src={CompanyLogo} alt="Company Logo" />
           </div>
 
           {/* Menu Links */}
           {
-            <ul className="navbar-link justify-between items-center hidden md:flex">
-              <li><a href="/" className="p-1 ">Home</a></li>
-              <li><a href="#services" className="p-1 ">Services</a></li>
-              <li><a href="#about" className="p-1 ">About Us</a></li>
-              <li><a href="#blog" className="p-1 ">Blogs</a></li>
-              <li><a href="#faq" className="p-1 ">FAQs</a></li>
+            <ul className="navbar-link justify-between items-center hidden md:flex "> {/*hidden*/}
+              <li><a href="/" className="p-1 pr-3 font-light inline-block">Home</a></li>
+              <li><a href="#services" className="p-1 pr-3 font-light inline-block">Services</a></li>
+              <li><a href="#about" className="p-1 pr-3 font-light inline-block">About Us</a></li>
+              <li><a href="#blog" className="p-1 pr-3 font-light inline-block">Blogs</a></li>
+              <li><a href="#faq" className="p-1 pr-3 font-light inline-block">FAQs</a></li>
             </ul>
           }
 
           {/* CTA Button */}
-          <a href="#contact" className="navbar-btn bg-(--color-buttonBlue) pr-6 pl-6 pt-3 pb-3 text-white font-semibold border-2 rounded-2xl hidden md:flex">
+          <a href="#contact" className="navbar-btn bg-(--color-buttonBlue) pr-8 pl-8 pt-2 pb-2 text-white font-semibold border-2 rounded-2xl hidden md:flex">
             Contact Us
           </a>
         </div>
       </nav >
 
-
-
-
-
-      <nav className="flex md:hidden fixed top-[5.6rem] left-0 right-0 h-[8dvh] w-full bg-white/98 border-b border-gray-100 z-[1000] shadow-sm">
-        <div className="relative w-full h-full flex items-center px-4">
+      <nav className="md:hidden w-full bg-white/98 border-b border-gray-100 shadow-sm">
+        <div className="relative w-full px-4 p-8 flex justify-between items-center">
 
           {/* Logo - Absolute Left */}
           <div className="absolute left-2 top-1/2 -translate-y-1/2">
