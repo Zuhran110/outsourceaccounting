@@ -4,5 +4,9 @@
   --color-veryLightBlue: #ECF6FE;
   --color-buttonBlue: #4632DA;
   --color-linearBar:  #c0eaff;
+  --color-ImgOverlay: #538ED2;
 }
 
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
