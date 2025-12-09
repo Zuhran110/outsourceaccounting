@@ -14,7 +14,7 @@ const HowWeWork = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12 mx-auto w-full lg:w-3/4 font-light">
-        <div className="relative border  bg-white rounded-2xl p-6 pt-16 flex flex-col justify-start items-start h-full">
+        <div className="relative border  bg-white rounded-2xl border-blue-800 p-6 pt-16 flex flex-col justify-start items-start h-full">
           <img
             src={CompanyIcon}
             alt="Service Icon"

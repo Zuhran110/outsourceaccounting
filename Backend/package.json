@@ -1,0 +1,23 @@
+{
+  "name": "outsourcebackend",
+  "version": "1.0.0",
+  "description": "creating a backend for outsource accounting , initially needed for email service",
+  "keywords": [
+    "node",
+    "express",
+    "mongoose",
+    "controllers"
+  ],
+  "license": "ISC",
+  "author": "Zuhran",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
+  }
+}
