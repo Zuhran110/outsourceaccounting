@@ -4,7 +4,7 @@ import {
   CallIcon,
   WhatsAppIcon,
   LocationIcon,
-} from "../../../assets/images/Footer/footerImg.js";
+} from "../../../../assets/images/Footer/footerImg.js";
 
 const ContactUS = () => {
   return (

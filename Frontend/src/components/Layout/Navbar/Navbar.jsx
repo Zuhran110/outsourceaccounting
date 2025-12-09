@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-//import "./Navbar.css";
 
 import {
   CompanyLogo,
   HamburgerMenu,
   CloseMenu,
-} from "../../assets/images/NavbarTopBar/NavbarImg.js";
+} from "../../../assets/images/NavbarTopBar/NavbarImg.js";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -45,7 +44,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  href="#about"
+                  to="/aboutus"
                   className="p-1 pr-3 font-light inline-block"
                 >
                   About Us

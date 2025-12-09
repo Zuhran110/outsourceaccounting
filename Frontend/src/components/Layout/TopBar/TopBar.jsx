@@ -1,6 +1,3 @@
-import React from "react";
-//import "./TopBar.css";
-
 import {
   WhatsAppIcon,
   PrimeTwitter,
@@ -10,7 +7,7 @@ import {
   FacebookIcon,
   CallIcon,
   MailIcon,
-} from "../../assets/images/NavbarTopBar/TopBar/topBar.js";
+} from "../../../assets/images/NavbarTopBar/TopBar/topBar.js";
 
 const TopBar = () => {
   return (
@@ -18,7 +15,10 @@ const TopBar = () => {
       <div className="flex items-center ml-auto pb-1 pt-1 flex-wrap justify-center">
         <div className="contact-item pt-1 pb-1 mr-4 flex items-center">
           <img src={MailIcon} alt="mail" className="icon p-1" />
-          <a className="value text-nowrap" href="mailto:admin@outsourceaccountings.co.uk">
+          <a
+            className="value text-nowrap"
+            href="mailto:admin@outsourceaccountings.co.uk"
+          >
             admin@outsourceaccountings.co.uk
           </a>
         </div>

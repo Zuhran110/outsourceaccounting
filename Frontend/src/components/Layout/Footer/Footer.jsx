@@ -5,7 +5,7 @@ import {
   CallIcon,
   WhatsAppIcon,
   LocationIcon,
-} from "../../assets/images/Footer/footerImg.js";
+} from "../../../assets/images/Footer/footerImg.js";
 
 import {
   LinkdinIcon,
@@ -13,7 +13,7 @@ import {
   PintrestIcon,
   InstagramIcon,
   FacebookIcon,
-} from "../../assets/images/Footer/MoreUpdates/moreUpdates.js";
+} from "../../../assets/images/Footer/MoreUpdates/moreUpdates.js";
 import Services from "./components/Services.jsx";
 import Comapany from "./components/Company.jsx";
 import ContactUS from "./components/ContactUS.jsx";

@@ -1,4 +1,4 @@
-import Layout from "../layout";
+import Layout from "../layout.jsx";
 import Services from "../components/Services/Services.jsx";
 import JoinUs from "../components/JoinUs/JoinUs.jsx";
 

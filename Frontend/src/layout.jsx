@@ -1,6 +1,6 @@
-import TopBar from "./components/TopBar/TopBar";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import TopBar from "./components/Layout/TopBar/TopBar";
+import Navbar from "./components/Layout/Navbar/Navbar";
+import Footer from "./components/Layout/Footer/Footer";
 
 const Layout = ({ children }) => {
   return (
