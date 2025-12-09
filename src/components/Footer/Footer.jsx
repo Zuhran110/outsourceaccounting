@@ -31,7 +31,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <ul className="flex flex-wrap items-start mb-6 text-sm font-medium text-body sm:mb-0 gap-16">
+                    <ul className="flex flex-wrap items-start mb-6 ml-12 text-sm font-medium text-body sm:mb-0 gap-16">
                         <li>
                             <a href="#" className="hover:underline me-4 md:me-6">Services</a>
 
