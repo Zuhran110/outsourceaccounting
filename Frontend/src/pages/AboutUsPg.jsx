@@ -3,6 +3,7 @@ import MissionStatement from "../components/AboutUs/MissionStatement/MissionStat
 import JoinUs from "../components/JoinUs/JoinUs";
 import OurStoryPg from "../components/AboutUs/OurStory/OurStory.jsx";
 import Layout from "../layout";
+import OurValues from "../components/AboutUs/OurValues/OurValues.jsx";
 
 const AboutUsPg = () => {
   return (
@@ -10,6 +11,7 @@ const AboutUsPg = () => {
       <AboutHero />
       <OurStoryPg />
       <MissionStatement />
+      <OurValues />
       <JoinUs />
     </Layout>
   );
