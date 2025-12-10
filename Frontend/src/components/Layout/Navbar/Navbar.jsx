@@ -52,7 +52,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  href="#blog"
+                  to="/blogs"
                   className="p-1 pr-3 font-light inline-block"
                 >
                   Blogs
@@ -60,7 +60,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
-                  href="#faq"
+                  to="/faqs"
                   className="p-1 pr-3 font-light inline-block"
                 >
                   FAQs
