@@ -3,13 +3,13 @@ import OurStory from "../../../assets/images/AboutUs/OurStory/Ourstory.png";
 const OurStoryPg = () => {
   return (
     <div>
-      <div className=" flex flex-col lg:flex-row justify-center items-center lg:justify-between mx-6 md:mx-12 my-6 md:my-12 lg:my-24">
+      <div className=" flex flex-col lg:flex-row justify-center items-center lg:justify-between mx-6 md:mx-12 lg:mx-24 my-6 md:my-12 lg:my-24">
         <img
           src={OurStory}
           alt="Our Story"
           className="hidden lg:block lg:w-auto lg:h-auto "
         />
-        <div className="flex flex-col gap-6 lg:mx-12">
+        <div className="flex flex-col gap-6 lg:ml-12">
           <h1 className="text-center lg:text-start font-semibold lg:text-4xl md:text-3xl text-2xl my-3 lg:my-0">
             Our Story
           </h1>

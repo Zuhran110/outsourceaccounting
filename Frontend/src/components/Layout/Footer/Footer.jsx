@@ -20,9 +20,9 @@ import ContactUS from "./components/ContactUS.jsx";
 
 const Footer = () => {
   return (
-    <footer className="bg-(--color-buttonBlue) text-amber-50 rounded-base shadow-xs border border-default px-4">
+    <footer className=" bg-(--color-buttonBlue) text-amber-50 rounded-base shadow-xs border border-default px-4">
       <div className="w-full max-w-7xl mx-auto p-4 md:py-8">
-        <div className="flex flex-col md:flex-row items-start justify-between">
+        <div className="flex flex-col md:flex-row items-start justify-between w-full">
           <div className="flex flex-col gap-6 h-auto">
             <div>
               <span className="text-heading self-center text-2xl font-semibold whitespace-nowrap">

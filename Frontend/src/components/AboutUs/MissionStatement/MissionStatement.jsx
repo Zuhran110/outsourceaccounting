@@ -5,7 +5,7 @@ import {
 
 const MissionStatement = () => {
   return (
-    <div className="bg-blue-800 flex flex-col justify-between items-center p-8 text-white">
+    <div className="bg-blue-800 flex flex-col justify-between items-center p-8 text-white my-6 lg:my-12 mx-6 md:mx-12">
       <div>
         <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl my-6 lg:mb-12">
           Mission Statement & Vision Statement

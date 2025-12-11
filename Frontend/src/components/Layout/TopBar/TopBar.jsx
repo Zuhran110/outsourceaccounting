@@ -11,7 +11,7 @@ import {
 
 const TopBar = () => {
   return (
-    <div className="w-full bg-(--color-veryLightBlue) text-gray-800 text-xs flex items-center px-16 z-1001 flex-wrap">
+    <div className="w-full bg-(--color-veryLightBlue) text-gray-800 text-xs flex items-center px-12 lg:px-25 z-1001 flex-wrap">
       <div className="flex items-center ml-auto pb-1 pt-1 flex-wrap justify-center">
         <div className="contact-item pt-1 pb-1 mr-4 flex items-center">
           <img src={MailIcon} alt="mail" className="icon p-1" />

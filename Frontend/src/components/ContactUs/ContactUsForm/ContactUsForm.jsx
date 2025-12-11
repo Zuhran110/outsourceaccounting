@@ -1,6 +1,5 @@
-import ContactUsFormImg from "../../../assets/images/ContactUS/ContactUSFormImg/ContactUsFormImg.png";
+import ContactUsFormImg from "../../../assets/images/ContactUS/ContactUSFormImg/ContactUsImg.jpg";
 import { useForm } from "react-hook-form";
-
 const ContactUsForm = () => {
   const {
     register,
@@ -19,23 +18,24 @@ const ContactUsForm = () => {
       </div>
 
       {/* Content Section: Added flex-col for mobile, row for desktop, and a gap */}
-      <div className="flex flex-col md:flex-row items-center">
+      <div className="flex flex-col md:flex-row items-center justify-center content-center">
         {/* Image Section */}
-        <div className="w-full md:w-1/2">
+        <div className=" ">
           <img
             src={ContactUsFormImg}
             alt="ContactUsFormImg"
-            className="block w-full h-auto object-cover rounded-2xl"
+            className="w-full h-auto object-cover rounded-2xl md:w-141 md:h-141 md:rounded-none md:rounded-l-2xl"
           />
         </div>
 
         {/* Form Section */}
         <div
-          className="w-full md:w-1/2 flex flex-col border border-black shadow-black 
-        rounded-2xl p-4 md:p-8 text-center lg:text-start"
+          className="w-full md:w-1/2 flex flex-col justify-center border border-black md:border-l-0
+          rounded-2xl md:rounded-l-none md:rounded-r-2xl my-3 md:my-0 
+          p-4 md:p-11 text-center lg:text-left shadow-lg shadow-black/10"
         >
-          <h1 className="text-2xl font-bold mb-2">Message Us</h1>
-          <p className="mb-6 text-gray-600">we get back to you in 24 hours</p>
+          <h1 className="text-2xl font-bold mb-1">Message Us</h1>
+          <p className="mb-2 text-gray-600">we get back to you in 24 hours</p>
 
           <form action="" onSubmit={handleSubmit(onSubmit)}>
             {/* Full Name */}
