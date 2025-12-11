@@ -70,12 +70,12 @@ const Navbar = () => {
           }
 
           {/* CTA Button */}
-          <a
-            href="#contact"
+          <NavLink
+            to="/contactUs"
             className="navbar-btn bg-(--color-buttonBlue) pr-8 pl-8 pt-2 pb-2 text-white font-semibold border-2 rounded-2xl hidden md:flex"
           >
             Contact Us
-          </a>
+          </NavLink>
         </div>
       </nav>
 

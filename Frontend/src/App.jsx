@@ -5,6 +5,7 @@ import Services from "./pages/Services.jsx";
 import AboutUsPg from "./pages/AboutUsPg.jsx";
 import Blogs from "./pages/BlogsPg.jsx";
 import FAQSPg from "./pages/FAQSPg.jsx";
+import ContactUSPg from "./pages/ContactUsPg.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/aboutus" element={<AboutUsPg />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/faqs" element={<FAQSPg />} />
+      <Route path="/contactUs" element={<ContactUSPg />} />
     </Routes>
   );
 }
