@@ -7,7 +7,7 @@ const JoinUs = () => {
       <img
         src={JoinUS}
         alt="LinkdinIcon"
-        className="h-auto w-auto overlay-image bg-(--color-ImgOverlay) opacity-90"
+        className="h-auto w-full overlay-image bg-(--color-ImgOverlay) opacity-90"
       />
       <div
         className="overlay-text absolute inset-0 flex flex-col justify-center items-center 

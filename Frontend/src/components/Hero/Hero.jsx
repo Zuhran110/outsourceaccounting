@@ -29,7 +29,7 @@ const Hero = () => {
         />
 
         {/* LEFT TEXT SECTION */}
-        <div className="w-full md:w-1/2 px-6 md:pl-16 text-white flex flex-col justify-center ">
+        <div className="w-full md:w-1/2 px-6 md:pl-16 text-white flex flex-col justify-center my-6 lg:my-12 mx-6 md:mx-8 ">
           <p className="inline-block mb-4 bg-linear-to-r from-[#c0b2ff] to-white text-[#333] px-4 py-2 rounded-xl text-sm font-medium w-fit">
             Welcome to Outsource Accounting Solutions
           </p>
@@ -66,7 +66,7 @@ const Hero = () => {
         </div>
 
         {/* RIGHT FORM SECTION */}
-        <div className="w-screen md:w-1/3 md:mr-16 bg-white/40 backdrop-blur-md p-3 md:p-12 rounded-xl shadow-lg mt-10 md:mt-0 md:mx-0">
+        <div className="w-screen md:w-1/3 md:mr-25 bg-white/40 backdrop-blur-md p-3 md:p-12 rounded-xl shadow-lg mt-10 md:mt-0 my-6 lg:my-12 ">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-left text-gray-800">
             Quick <span className="text-(--color-buttonBlue)">Quote</span>
           </h2>

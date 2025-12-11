@@ -5,7 +5,7 @@ import ServiceCards from "./ServiceComponents/ServiceCards.jsx";
 const Services = () => {
   return (
     <section
-      className="flex self-center items-center content-center justify-center text-black bg-white px-6 md:px-16 py-8"
+      className="flex self-center items-center content-center justify-center text-black bg-white lg:my-12 mx-12 md:mx-20"
       id="services"
     >
       <div className="flex self-center items-center content-center justify-center text-black bg-white flex-wrap">

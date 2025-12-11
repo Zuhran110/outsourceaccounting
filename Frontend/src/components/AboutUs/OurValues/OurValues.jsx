@@ -7,7 +7,7 @@ import {
 
 const OurValues = () => {
   return (
-    <div className="flex flex-col justify-between items-center mx-6 md:mx-12 my-12 md:my-20 lg:my-36">
+    <div className="flex flex-col justify-between items-center mx-6 md:mx-12 my-6 md:my-12 lg:my-18">
       <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl my-12 lg:mb-12 text-center">
         Mission Statement & Vision Statement
       </h1>
@@ -21,7 +21,7 @@ const OurValues = () => {
           <div>{/* Empty Space Bottom */}</div>
         </div>
 
-        <div className="grid grid-rows-[.25fr_3fr_1fr] h-full justify-items-center ">
+        <div className="grid grid-rows-[.25fr_3fr_.12fr] h-full justify-items-center ">
           <div>{/* Empty Space Top */}</div>
           <img src={two} alt="two" className="w-full h-full object-contain" />
           <p className="flex items-center text-center mt-2">
