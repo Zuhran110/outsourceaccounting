@@ -2,11 +2,7 @@ import React from "react";
 
 const ServiceCard = ({ index, imgSrc, title, description, extraTxt }) => {
   return (
-    <a
-      href="#Learn-more"
-      className="no-underline text-inherit flex-wrap"
-      key={index}
-    >
+    <a href="#Learn-more" className="no-underline text-inherit flex-wrap">
       <div
         className="flex flex-col items-center justify-start bg-white rounded-lg p-3 md:p-6 h-auto border 
             border-[#333333] transition-transform w-70 md:w-80 min-h-54.5 md:min-h-68"

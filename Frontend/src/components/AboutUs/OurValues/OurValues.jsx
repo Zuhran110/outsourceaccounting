@@ -12,39 +12,41 @@ const OurValues = () => {
         Mission Statement & Vision Statement
       </h1>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-24 h-full">
-        <div className="grid grid-rows-[1fr_auto_.5fr] h-full justify-items-center ">
-          <img src={one} alt="one" className="w-full h-full object-contain" />
-          <p className="flex items-center text-center mt-2">
-            Customer success is our priority
-          </p>
-          <div>{/* Empty Space Bottom */}</div>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-24">
+        <div className="flex flex-col items-center">
+          <img
+            src={one}
+            alt="one"
+            className="w-36 md:w-48 lg:w-56 h-auto object-contain"
+          />
+          <p className="text-center mt-2">Customer success is our priority</p>
         </div>
 
-        <div className="grid grid-rows-[.25fr_3fr_.25fr] h-full justify-items-center ">
-          <div>{/* Empty Space Top */}</div>
-          <img src={two} alt="two" className="w-full h-full object-contain" />
-          <p className="flex items-center text-center mt-2">
-            Top quality & constant growth
-          </p>
+        <div className="flex flex-col items-center pt-6 md:pt-8 lg:pt-10">
+          <img
+            src={two}
+            alt="two"
+            className="w-36 md:w-48 lg:w-56 h-auto object-contain"
+          />
+          <p className="text-center mt-2">Top quality & constant growth</p>
         </div>
 
-        <div className="grid grid-rows-[1fr_auto_.5fr] h-full justify-items-center ">
+        <div className="flex flex-col items-center">
           <img
             src={three}
             alt="three"
-            className="w-full h-full object-contain"
+            className="w-36 md:w-48 lg:w-56 h-auto object-contain"
           />
-          <p className="flex items-center text-center mt-2">New technologies</p>
-          <div></div>
+          <p className="text-center mt-2">New technologies</p>
         </div>
 
-        <div className="grid grid-rows-[.25fr_3fr_.25fr] h-full justify-items-center ">
-          <div></div>
-          <img src={four} alt="four" className="w-full h-full object-contain" />
-          <p className="flex items-center text-center mt-2">
-            Ecological materials & production
-          </p>
+        <div className="flex flex-col items-center pt-6 md:pt-8 lg:pt-10">
+          <img
+            src={four}
+            alt="four"
+            className="w-36 md:w-48 lg:w-56 h-auto object-contain"
+          />
+          <p className="text-center mt-2">Ecological materials & production</p>
         </div>
       </div>
     </div>

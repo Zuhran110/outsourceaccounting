@@ -66,12 +66,11 @@ const Cards = forwardRef((props, ref) => {
       className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-8 px-2"
     >
       {data.map((card, index) => {
-        const { bgImg, personImg, name, title, description } = card;
+        const { id, bgImg, personImg, name, title, description } = card;
 
         return (
-          <div key={index} className="flex">
+          <div key={id} className="flex">
             <Card
-              key={index}
               bgImg={bgImg}
               personImg={personImg}
               name={name}

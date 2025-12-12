@@ -51,7 +51,7 @@ const Cards = () => {
 
         return (
           <Card
-            key={index}
+            key={card.index}
             imgComponent={imgComponent}
             title={title}
             content={content}

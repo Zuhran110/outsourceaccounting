@@ -34,9 +34,9 @@ const CardContact = () => {
   return (
     <div>
       {data.map((card, index) => {
-        const { img, title, description, details } = card;
+        const { id, img, title, description, details } = card;
         return (
-          <div>
+          <div key={id}>
             <CardsContact
               img={img}
               title={title}

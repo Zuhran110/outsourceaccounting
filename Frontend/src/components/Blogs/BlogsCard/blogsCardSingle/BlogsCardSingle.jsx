@@ -69,7 +69,7 @@ const BlogsCardSingle = () => {
 
         return (
           <div
-            key={index}
+            key={cardDetails.id}
             className={`${isFullRow ? "md:col-span-2" : "md:col-span-1"}`}
           >
             <BlogsCardMultiple

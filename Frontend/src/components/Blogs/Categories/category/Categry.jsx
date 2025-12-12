@@ -68,9 +68,9 @@ const Category = () => {
   return (
     <div className="flex flex-wrap relative w-full  mt-4 md:mt-0">
       {data.map((categories, index) => {
-        const { categoryName } = categories;
+        const { id, categoryName } = categories;
 
-        return <CategoryCard key={index} categoryName={categoryName} />;
+        return <CategoryCard key={id} categoryName={categoryName} />;
       })}
     </div>
   );

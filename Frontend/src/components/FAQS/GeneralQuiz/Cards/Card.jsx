@@ -82,15 +82,10 @@ const Card = () => {
   return (
     <div className="my-6 lg:my-12 mx-6 md:mx-12">
       {data.map((carding, index) => {
-        const { img, service, description } = carding;
+        const { id, img, service, description } = carding;
         return (
-          <div>
-            <Cards
-              key={index}
-              img={img}
-              service={service}
-              description={description}
-            />
+          <div key={id}>
+            <Cards img={img} service={service} description={description} />
           </div>
         );
       })}
