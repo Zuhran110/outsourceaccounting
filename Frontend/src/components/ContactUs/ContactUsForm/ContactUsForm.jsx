@@ -18,7 +18,7 @@ const ContactUsForm = () => {
       </div>
 
       {/* Content Section: Added flex-col for mobile, row for desktop, and a gap */}
-      <div className="flex flex-col md:flex-row items-center justify-center content-center">
+      <div className="flex flex-col md:flex-row items-center justify-center content-center ">
         {/* Image Section */}
         <div className=" ">
           <img
@@ -106,7 +106,7 @@ const ContactUsForm = () => {
                 rows="4"
                 {...register("message", { required: true })}
                 placeholder="Send Message"
-                className="border p-2 w-full rounded"
+                className="border p-2 w-full rounded resize-none"
               />
               {errors.message && (
                 <p className="text-red-900 text-sm mt-1">Message is required</p>

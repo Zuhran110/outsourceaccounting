@@ -17,7 +17,7 @@ const OurValues = () => {
           <img
             src={one}
             alt="one"
-            className="w-36 md:w-48 lg:w-56 h-auto object-contain"
+            className="w-46 md:w-48 lg:w-66 h-auto object-contain"
           />
           <p className="text-center mt-2">Customer success is our priority</p>
         </div>
@@ -26,7 +26,7 @@ const OurValues = () => {
           <img
             src={two}
             alt="two"
-            className="w-36 md:w-48 lg:w-56 h-auto object-contain"
+            className="w-46 md:w-48 lg:w-66 h-auto object-contain"
           />
           <p className="text-center mt-2">Top quality & constant growth</p>
         </div>
@@ -35,7 +35,7 @@ const OurValues = () => {
           <img
             src={three}
             alt="three"
-            className="w-36 md:w-48 lg:w-56 h-auto object-contain"
+            className="w-46 md:w-48 lg:w-66 h-auto object-contain"
           />
           <p className="text-center mt-2">New technologies</p>
         </div>
@@ -44,7 +44,7 @@ const OurValues = () => {
           <img
             src={four}
             alt="four"
-            className="w-36 md:w-48 lg:w-56 h-auto object-contain"
+            className="w-46 md:w-48 lg:w-66 h-auto object-contain"
           />
           <p className="text-center mt-2">Ecological materials & production</p>
         </div>

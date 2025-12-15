@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ index, bgImg, personImg, name, title, description }) => {
   return (
-    <div className="min-w-[300px] w-full max-w-[350px] border border-gray-200 rounded-2xl overflow-hidden shrink-0 bg-white snap-center shadow-sm hover:shadow-md transition-shadow">
+    <div className="relative min-w-[300px] w-full max-w-[350px] border border-gray-200 rounded-2xl overflow-hidden shrink-0 bg-white snap-center shadow-sm hover:shadow-md transition-shadow">
       <div className="h-auto w-full">
         <img
           src={bgImg}
@@ -10,7 +10,7 @@ const Card = ({ index, bgImg, personImg, name, title, description }) => {
           className="w-full h-full object-cover"
         />
       </div>
-
+      <div className="absolute top-41  border-b-4 w-73 shadow-2xl border-b-blue-800 border-solid rotate-163"></div>
       <div className="px-6 pb-6 relative flex flex-col items-center">
         <div className="-mt-24 mb-4">
           <img
