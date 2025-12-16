@@ -1,4 +1,4 @@
-import OurStory from "../../../assets/images/AboutUs/OurStory/Ourstory.png";
+import OurStory from "../../../assets/images/AboutUs/OurStory/OurStory.png";
 
 const OurStoryPg = () => {
   return (
