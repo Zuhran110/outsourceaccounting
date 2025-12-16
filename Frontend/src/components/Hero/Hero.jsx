@@ -10,6 +10,8 @@ import {
 
 import Cards from "./HeroComponents/Cards";
 
+const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 const Hero = () => {
   const {
     register,
@@ -22,10 +24,7 @@ const Hero = () => {
   const onSubmit = async (data) => {
     console.log(data);
     try {
-      const res = await axios.post(
-        "http://localhost:8000/app/v1/contact",
-        data
-      );
+      const res = await axios.post(`${VITE_BACKEND_URL}/app/v1/contact`, data);
 
       toast.success(res.data.message);
       reset();
