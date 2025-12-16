@@ -1,4 +1,4 @@
-import BlogsCardImgTHREE from "./BlogsCardImgThree.png";
+import BlogsCardImgTHREE from "./BlogsCardImgthree.png";
 import BlogsCardImgTWO from "./BlogsCardImgTwo.png";
 import BlogsCardImgONE from "./BlogsCardImgOne.png";
 import BlogsCardImgFOUR from "./BlogsCardImgFOUR.png";
