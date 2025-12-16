@@ -1,4 +1,4 @@
-import BlogsCardSingle from "./blogsCardSingle/blogsCardSingle";
+import BlogsCardSingle from "./blogsCardSingle/BlogsCardSingle";
 
 const BlogsCard = () => {
   return (
