@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import axios from "axios";
 
 import {
@@ -26,11 +27,11 @@ const Hero = () => {
         data
       );
 
-      alert("success" + res.data.message);
+      toast.success(res.data.message);
       reset();
     } catch (error) {
       console.log("error occued hero ", error);
-      alert("failed to send message");
+      toast.error("failed to send message");
     }
   };
 

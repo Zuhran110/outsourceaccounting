@@ -1,4 +1,4 @@
-import { sendAutoMail } from "../config/mail.config.js";
+import { sendAutoMail } from "../services/Email.services.js";
 
 // const Customer = {
 //   fullname: "asdf",

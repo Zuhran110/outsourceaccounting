@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+/* Make the toast tick (icon) blue */
+.Toastify__toast .Toastify__toast-icon svg,
+.Toastify__toast--success .Toastify__toast-icon svg,
+.Toastify__toast--info .Toastify__toast-icon svg {
+	color: #60a5fa !important; /* blue-400 */
+	fill: #60a5fa !important;
+}
+
+/* Remove icon background so colored SVG is visible */
+.Toastify__toast--success .Toastify__toast-icon,
+.Toastify__toast--info .Toastify__toast-icon {
+	background: transparent !important;
+}
+
+/* Make the progress/timer bar blue */
+.Toastify__progress-bar {
+	background: #60a5fa !important;
+}
+.Toastify__progress-bar--success {
+	background: #60a5fa !important;
+}
