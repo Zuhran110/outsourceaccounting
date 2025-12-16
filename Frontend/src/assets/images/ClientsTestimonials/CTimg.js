@@ -4,7 +4,7 @@ import StarIcon from "./Star.png";
 import CTBGTWO from "./CTBGTWO.png";
 import CTPersonIMGTWO from "./CTPersonIMGTWO.png";
 import CTBGThree from "./CTBGThree.png";
-import CTPersonIMGthree from "./CTPersonIMGthree.png";
+import CTPersonIMGthree from "./CTPersonIMGThree.png";
 import arrow from "./arrow.png";
 
 export {
