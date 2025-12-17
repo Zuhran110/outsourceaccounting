@@ -19,9 +19,9 @@ const ClientsTestimonials = () => {
   };
 
   return (
-    <div className="px-4 py-14 md:px-22 w-full bg-gray-50 ">
+    <div className="px-4 py-14 md:px-22 w-full ">
       <div className="relative flex flex-col md:flex-row items-center justify-center mb-12">
-        <h1 className="font-bold text-3xl text-center text-gray-800">
+        <h1 className="font-bold text-3xl text-center bg-linear-to-l from-blue-600 to-black bg-clip-text text-transparent">
           Clients testimonials
         </h1>
 

@@ -17,7 +17,7 @@ const Hero = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors /*issubmitting*/ },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm();
 
@@ -28,6 +28,8 @@ const Hero = () => {
 
       toast.success(res.data.message);
       reset();
+
+      await new Promise((resolve) => setTimeout(resolve, 2000));
     } catch (error) {
       console.log("error occued hero ", error);
       toast.error("failed to send message");
@@ -150,9 +152,14 @@ const Hero = () => {
 
             <button
               type="submit"
-              className="w-1/2 mx-auto block p-3 rounded-xl bg-(--color-buttonBlue) text-white text-lg font-medium hover:opacity-90 transition"
+              disabled={isSubmitting}
+              className={
+                isSubmitting
+                  ? "w-1/2 mx-auto block p-3 rounded-xl bg-(--color-buttonBlue) text-white text-lg font-medium hover:opacity-90 transition opacity-50 cursor-not-allowed"
+                  : "w-1/2 mx-auto block p-3 rounded-xl bg-(--color-buttonBlue) text-white text-lg font-medium hover:opacity-90 transition cursor-pointer"
+              }
             >
-              Submit
+              {isSubmitting ? "Sending" : "Submite"}
             </button>
           </form>
         </div>

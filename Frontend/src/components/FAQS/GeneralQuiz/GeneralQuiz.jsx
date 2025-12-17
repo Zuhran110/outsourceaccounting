@@ -4,7 +4,7 @@ const GeneralQuiz = () => {
   return (
     <div className="my-6 md:my-12 lg:my-14 mx-6 md:mx-12">
       <div>
-        <Card />
+        <Card className="flex" />
       </div>
     </div>
   );

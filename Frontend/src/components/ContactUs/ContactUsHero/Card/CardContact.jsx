@@ -4,39 +4,44 @@ import {
   locationIcon,
   heroLineIcon,
   mailIcon,
+  whatsapp,
 } from "../../../../assets/images/ContactUS/ContactUsHero/ContactUseroImgs.js";
 
 const data = [
   {
     id: 1,
+    img: whatsapp,
+    title: "Whatsapp:",
+    description: "Speak to our friendly team",
+    details: "0208 144 6811",
+  },
+  {
+    id: 2,
     img: callIcon,
     title: "Call Us",
     description: "Speak to our friendly team",
     details: "0208 144 6811",
   },
   {
-    id: 2,
+    id: 3,
     img: mailIcon,
     title: "Email:",
     description: "We are here to help you",
     details: "admin@outsourseaccountings.co.uk",
   },
-  {
-    id: 3,
-    img: locationIcon,
-    title: "Address:",
-    description: "Monday-Friday 7:00-18:00",
-    details: "61 Bridge Street, Kington, United Kingdom, HR5 3DJ",
-  },
 ];
 
 const CardContact = () => {
   return (
-    <div>
+    <div className="mx-12 lg:mx-0 flex flex-col  items-center md:items-start">
+      <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-blue-800">
+        Get In Touch
+      </h1>
+      <p>Fill out the form and a member of our team will be in touch soon.</p>
       {data.map((card, index) => {
         const { id, img, title, description, details } = card;
         return (
-          <div key={id}>
+          <div key={id} className="w-3/4 min-w-auto md:min-w-120">
             <CardsContact
               img={img}
               title={title}

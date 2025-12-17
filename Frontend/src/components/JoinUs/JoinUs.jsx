@@ -3,7 +3,7 @@ import JoinUS from "../../assets/images/JoinUs/BgImg.png";
 
 const JoinUs = () => {
   return (
-    <div className="relative">
+    <div className="relative my-24">
       <img
         src={JoinUS}
         alt="LinkdinIcon"

@@ -17,7 +17,7 @@ const data = [
     imgSrc: GroupIcon,
     title: "Company Accounts",
     description:
-      "Outsource Accounting, where your business company accounts get the royal treatment, making you a financial king.",
+      "Outsource Accounting, where your business company accounts get the royal treatment, making you a financial king. Our dedicated team of online UK accountants is here to make your financial management a breeze, offering...",
     extraTxt: "Learn more...",
   },
   {
@@ -25,7 +25,7 @@ const data = [
     imgSrc: TaxIcon,
     title: "Corporation Tax",
     description:
-      "Managing corporation tax is a crucial yet complex aspect of running a UK-based business.",
+      "Simplify your tax responsibilities with our HMRC-approved Corporation Tax services for UK limited companies. Our qualified accountants handle everything from accurate tax calculations to timely online filing.",
     extraTxt: "Learn more...",
   },
   {
@@ -33,7 +33,7 @@ const data = [
     imgSrc: SelfAssessmentIcon,
     title: "Self Assessment",
     description:
-      "Financial tranquility of self-assessment tax return, where your financial worries take a back seat.",
+      "financial tranquility of self-assessment tax return, where your financial worries take a back seat, and we handle your self-assessment tax return smoothly. we are not just regular bean counters; we sweep through the....",
     extraTxt: "Learn more...",
   },
   {
@@ -41,7 +41,7 @@ const data = [
     imgSrc: PayrollIcon,
     title: "Payroll",
     description:
-      "Sick of swimming in the payroll paperwork ocean? We understand, and that is why we are here.",
+      "Sick of swimming in the payroll paperwork ocean? We understand, and that is why we are here.Our splendid PAYE online services are the bee's knees, designed to handle the nitty-gritty of payroll management with the finesse...",
     extraTxt: "Learn more...",
   },
   {
@@ -49,7 +49,7 @@ const data = [
     imgSrc: VatReturnsIcon,
     title: "VAT Returns",
     description:
-      "Alright, buckle up, mates! Our online VAT Return services in the UK are crafted with you in mind.",
+      "Alright, buckle up, mates! Our online VAT Return services in the UK are crafted with you in mind - yes, you savvy directors, contractors, freelancers, and sole traders running the show. We know, going through the mind-boggling..",
     extraTxt: "Learn more...",
   },
   {
@@ -57,7 +57,7 @@ const data = [
     imgSrc: TaxCorporationIcon,
     title: "Company Formation",
     description:
-      "Kudos to you for deciding to start a new venture in the UK! You are in the perfect place for it.",
+      "Your ultimate solution for limited company formation and seamless UK company registration. We specialise in making the process simple, fast, and hassle-free. Let us handle the details while you focus...",
     extraTxt: "Learn more...",
   },
 ];

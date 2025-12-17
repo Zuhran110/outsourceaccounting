@@ -45,13 +45,13 @@ const data = [
 
 const Cards = () => {
   return (
-    <div className="flex flex-wrap relative items-center justify-center w-full px-6 md:px-16 mt-4 md:mt-0">
+    <div className="flex flex-col md:flex-row relative items-start justify-evenly w-full px-6 md:px-24 mt-4 md:mt-0 gap-4">
       {data.map((card, index) => {
         const { imgComponent, title, content } = card;
 
         return (
           <Card
-            key={card.index}
+            key={index} // Changed card.index to index to ensure it works
             imgComponent={imgComponent}
             title={title}
             content={content}

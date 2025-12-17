@@ -5,7 +5,7 @@ import ServiceCards from "./ServiceComponents/ServiceCards.jsx";
 const Services = () => {
   return (
     <section
-      className="flex self-center items-center content-center justify-center text-black bg-white lg:my-12 mx-12 md:mx-20"
+      className="flex flex-col self-center items-center content-center justify-center text-black bg-white lg:my-12 mx-12 md:mx-20"
       id="services"
     >
       <div className="flex self-center items-center content-center justify-center text-black bg-white flex-wrap">
@@ -22,6 +22,11 @@ const Services = () => {
           manage your tax responsibilities.
         </p>
         <ServiceCards />
+      </div>
+      <div>
+        <button className="border px-6 py-3 border-blue-800 m-6 text-blue-800 rounded">
+          Get a Quote
+        </button>
       </div>
     </section>
   );
