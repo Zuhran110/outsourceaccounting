@@ -1,34 +1,32 @@
 import CardContact from "./Card/CardContact.jsx";
 import { useForm } from "react-hook-form";
-import {
-  callIcon,
-  locationIcon,
-  heroLineIcon,
-  mailIcon,
-  ContactUsPeople,
-  whatsapp,
-} from "../../../assets/images/ContactUS/ContactUsHero/ContactUseroImgs.js";
-
-import {
-  PersonOne,
-  PersonTwo,
-  PersonThree,
-  PersonFour,
-  PersonFive,
-  PersonSix,
-  PersonSeven,
-  PersonEigth,
-  PersonNine,
-} from "../../../assets/images/ContactUS/ContactUsHero/PersonsImg/PersonsImg.js";
+import { heroLineIcon } from "../../../assets/images/ContactUS/ContactUsHero/ContactUseroImgs.js";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 const ContactUsHero = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
+  const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+  const onSubmit = async (data) => {
+    try {
+      const res = await axios.post(
+        `${VITE_BACKEND_URL}/app/v1/contacttwo`,
+        data
+      );
+      toast.success(res.data.message);
+      console.log(data);
+      reset();
 
-  const onSubmit = (data) => console.log(data);
+      await new Promise((res) => setTimeout(res, 2000));
+    } catch (error) {
+      console.log("error occurred when trying to submiting form", error);
+      toast.error("Failed submit Form");
+    }
+  };
   return (
     <div>
       <div className="flex flex-col items-center justify-center text-center my-3 md:my-6 lg:my-12 mx-6 md:mx-12">
@@ -62,7 +60,7 @@ const ContactUsHero = () => {
                 type="text"
                 {...register("fullname", { required: true })}
                 placeholder="Enter Your Full Name"
-                className="border border-gray-300 shadow-2xl p-2 w-full rounded"
+                className="border border-gray-300  p-2 w-full rounded"
               />
               {errors.fullname && (
                 <p className="text-red-900 text-sm mt-1">Enter your name</p>
@@ -75,7 +73,7 @@ const ContactUsHero = () => {
                 type="text"
                 {...register("companyName", { required: true })}
                 placeholder="Enter Company Name"
-                className="border border-gray-300 shadow-2xl p-2 w-full rounded"
+                className="border border-gray-300  p-2 w-full rounded"
               />
               {errors.companyName && (
                 <p className="text-red-900 text-sm mt-1">
@@ -93,7 +91,7 @@ const ContactUsHero = () => {
                   pattern: /^\S+@\S+$/i,
                 })}
                 placeholder="Email"
-                className="border border-gray-300 shadow-2xl p-2 w-full rounded"
+                className="border border-gray-300  p-2 w-full rounded"
               />
               {errors.email && (
                 <p className="text-red-900 text-sm mt-1">Enter a valid email</p>
@@ -104,7 +102,7 @@ const ContactUsHero = () => {
             <div className="mb-4">
               <select
                 {...register("serviceType", { required: true })}
-                className="border border-gray-300 shadow-2xl p-2 w-full rounded"
+                className="border border-gray-300  p-2 w-full rounded"
                 defaultValue=""
               >
                 <option value="" disabled>
@@ -124,7 +122,7 @@ const ContactUsHero = () => {
                 rows="4"
                 {...register("message", { required: true })}
                 placeholder="Send Message"
-                className="border border-gray-300 shadow-2xl p-2 w-full rounded"
+                className="border border-gray-300  p-2 w-full rounded"
               />
               {errors.message && (
                 <p className="text-red-900 text-sm mt-1">Message is required</p>
@@ -132,10 +130,14 @@ const ContactUsHero = () => {
             </div>
             <button
               type="submit"
-              className="bg-blue-800 text-white px-10 py-4 rounded hover:bg-blue-700 cursor-pointer
-               flex justify-self-center text-center w-auto transition duration-300"
+              disabled={isSubmitting}
+              className={
+                isSubmitting
+                  ? "bg-blue-800 text-white px-10 py-4 rounded hover:bg-blue-700 cursor-not-allowed flex justify-self-center text-center w-auto transition duration-300"
+                  : "bg-blue-800 text-white px-10 py-4 rounded hover:bg-blue-700 cursor-pointer flex justify-self-center text-center w-auto transition duration-300"
+              }
             >
-              Send Message
+              {isSubmitting ? "Sending" : "Send Message"}
             </button>
           </form>
         </div>

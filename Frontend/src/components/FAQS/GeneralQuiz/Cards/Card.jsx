@@ -1,15 +1,3 @@
-import {
-  AccountsPayable,
-  Bookkeeping,
-  Cloude,
-  GrantWriting,
-  HelpWithBudgeting,
-  ProtectClient,
-  SacheduleMeeting,
-  Service,
-  TaxPlanning,
-} from "../../../../assets/images/OutSourseHero/GeneralQuestions/GQimg.js";
-
 import Cards from "./Cards.jsx";
 
 const data = [
@@ -17,55 +5,55 @@ const data = [
     id: 1,
     service: "What services do you offer ?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "We maintain strict confidentiality through secure data storage, encryption, limited access and adherence to industry standards, ensuring sensitive information remains protected and confidential.",
   },
   {
     id: 2,
     service: "How do you protect client confidentiality?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "Yes, our experts provide comprehensive tax services, including planning, preparation, compliance and controversy resolution, minimizing tax liabilities and ensuring timely filings for individuals and businesses.",
   },
   {
     id: 3,
     service: "Can you assist with tax planning and compliance?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "Yes, schedule a consultation or meeting by contacting us via phone, email or online form, we'll accommodate your schedule to discuss your accounting needs.",
   },
   {
     id: 4,
     service: "Can I schedule a consultation or meeting?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "Yes, we offer cloud-based accounting solutions, providing secure, scalable and remote access to financial data, streamlining operations and enhancing collaboration.",
   },
   {
     id: 5,
     service: "Do you provide cloud-based accounting solutions?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "Yes, our experts provide comprehensive budgeting and financial forecasting services, helping businesses and individuals create realistic plans, manage expenses and achieve long-term financial goals.",
   },
   {
     id: 6,
     service: "Can you help with budgeting and financial forecasting?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "Our experienced team collaborates with industry experts to analyze and resolve complex accounting issues efficiently, providing innovative solutions and ensuring compliance with regulatory standards.",
   },
   {
     id: 7,
     service: "How do you handle complex accounting issues?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "Yes, our experts efficiently manage accounts payable and accounts receivable, ensuring timely payments, accurate invoicing and optimized cash flow to maintain healthy financial operations",
   },
   {
     id: 8,
     service: "Can you help with accounts payable and accounts receivable?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "Yes, our team provides expert grant writing and non-profit accounting services, including financial reporting, budgeting and compliance, to support mission-driven organizations.",
   },
   {
     id: 9,
     service: "Can you help with grant writing and non-profit accounting?",
     description:
-      "We offer comprehensive accounting services, including financial statement preparation, tax planning, auditing, bookkeeping, business consulting, payroll processing and financial planning for individuals, businesses and non-profit organizations.",
+      "Yes, our experts set up and maintain accurate bookkeeping and accounting systems, including QuickBooks, Xero and other software, tailored to meet your business needs.",
   },
 ];
 

@@ -159,7 +159,7 @@ const Hero = () => {
                   : "w-1/2 mx-auto block p-3 rounded-xl bg-(--color-buttonBlue) text-white text-lg font-medium hover:opacity-90 transition cursor-pointer"
               }
             >
-              {isSubmitting ? "Sending" : "Submite"}
+              {isSubmitting ? "Sending" : "Submit"}
             </button>
           </form>
         </div>

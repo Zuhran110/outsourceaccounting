@@ -17,7 +17,8 @@ app.use(express.static("public"));
 
 //routes import
 
-app.use("/app/v1/contact", contactRouter);
+app.use("/app/v1", contactRouter);
+app.use("/app/v1", contactRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json({
