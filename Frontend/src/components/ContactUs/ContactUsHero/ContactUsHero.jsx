@@ -9,6 +9,7 @@ const ContactUsHero = () => {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm();
   const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const onSubmit = async (data) => {
