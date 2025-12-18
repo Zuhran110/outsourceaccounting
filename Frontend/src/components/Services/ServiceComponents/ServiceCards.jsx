@@ -14,6 +14,7 @@ import ServiceCard from "./ServiceCard.jsx";
 const data = [
   {
     index: 1,
+    pglink: "/AnnualServicePg/company-accounts",
     imgSrc: GroupIcon,
     title: "Company Accounts",
     description:
@@ -22,6 +23,7 @@ const data = [
   },
   {
     index: 2,
+    pglink: "/AnnualServicePg/corporation-tax",
     imgSrc: TaxIcon,
     title: "Corporation Tax",
     description:
@@ -30,6 +32,7 @@ const data = [
   },
   {
     index: 3,
+    pglink: "/AnnualServicePg/self-assessment",
     imgSrc: SelfAssessmentIcon,
     title: "Self Assessment",
     description:
@@ -38,6 +41,7 @@ const data = [
   },
   {
     index: 4,
+    pglink: "/AnnualServicePg/payroll",
     imgSrc: PayrollIcon,
     title: "Payroll",
     description:
@@ -46,6 +50,7 @@ const data = [
   },
   {
     index: 5,
+    pglink: "/AnnualServicePg/vat-returns",
     imgSrc: VatReturnsIcon,
     title: "VAT Returns",
     description:
@@ -54,6 +59,7 @@ const data = [
   },
   {
     index: 6,
+    pglink: "/AnnualServicePg/company-formation",
     imgSrc: TaxCorporationIcon,
     title: "Company Formation",
     description:
@@ -68,6 +74,7 @@ const ServiceCards = () => {
       {data.map((ServiceCards, index) => {
         const {
           index: serviceIndex,
+          pglink,
           imgSrc,
           title,
           description,
@@ -76,6 +83,7 @@ const ServiceCards = () => {
         return (
           <ServiceCard
             key={serviceIndex}
+            pglink={pglink}
             imgSrc={imgSrc}
             title={title}
             description={description}

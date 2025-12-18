@@ -6,6 +6,7 @@ import AboutUsPg from "./pages/AboutUsPg.jsx";
 import Blogs from "./pages/BlogsPg.jsx";
 import FAQSPg from "./pages/FAQSPg.jsx";
 import ContactUSPg from "./pages/ContactUsPg.jsx";
+import AnnualAccount from "./pages/ServiceSubPages/AnnualAccount.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/faqs" element={<FAQSPg />} />
       <Route path="/contactUs" element={<ContactUSPg />} />
+      <Route path="/AnnualServicePg/:slug" element={<AnnualAccount />} />
     </Routes>
   );
 }

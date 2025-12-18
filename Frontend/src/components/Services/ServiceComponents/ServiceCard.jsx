@@ -1,8 +1,16 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const ServiceCard = ({ index, imgSrc, title, description, extraTxt }) => {
+const ServiceCard = ({
+  index,
+  pglink,
+  imgSrc,
+  title,
+  description,
+  extraTxt,
+}) => {
   return (
-    <a href="#Learn-more" className="no-underline text-inherit flex-wrap">
+    <NavLink to={pglink} className="no-underline text-inherit flex-wrap">
       <div
         className="flex flex-col items-center justify-start bg-white rounded-lg p-3 md:p-6 h-auto border 
             border-[#333333] transition-transform w-70 md:w-80 min-h-75 md:min-h-80 max-h-80"
@@ -20,7 +28,7 @@ const ServiceCard = ({ index, imgSrc, title, description, extraTxt }) => {
           </span>
         </div>
       </div>
-    </a>
+    </NavLink>
   );
 };
 
