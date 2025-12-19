@@ -14,7 +14,7 @@ import ServiceCard from "./ServiceCard.jsx";
 const data = [
   {
     index: 1,
-    pglink: "/AnnualServicePg/company-accounts",
+    pglink: "/AnnualServicePg",
     imgSrc: GroupIcon,
     title: "Company Accounts",
     description:
@@ -23,7 +23,7 @@ const data = [
   },
   {
     index: 2,
-    pglink: "/AnnualServicePg/corporation-tax",
+    pglink: "/AnnualServicePg",
     imgSrc: TaxIcon,
     title: "Corporation Tax",
     description:
@@ -32,7 +32,7 @@ const data = [
   },
   {
     index: 3,
-    pglink: "/AnnualServicePg/self-assessment",
+    pglink: "/AnnualServicePg",
     imgSrc: SelfAssessmentIcon,
     title: "Self Assessment",
     description:
@@ -41,7 +41,7 @@ const data = [
   },
   {
     index: 4,
-    pglink: "/AnnualServicePg/payroll",
+    pglink: "/AnnualServicePg",
     imgSrc: PayrollIcon,
     title: "Payroll",
     description:
@@ -50,7 +50,7 @@ const data = [
   },
   {
     index: 5,
-    pglink: "/AnnualServicePg/vat-returns",
+    pglink: "/AnnualServicePg",
     imgSrc: VatReturnsIcon,
     title: "VAT Returns",
     description:
@@ -59,7 +59,7 @@ const data = [
   },
   {
     index: 6,
-    pglink: "/AnnualServicePg/company-formation",
+    pglink: "/AnnualServicePg",
     imgSrc: TaxCorporationIcon,
     title: "Company Formation",
     description:

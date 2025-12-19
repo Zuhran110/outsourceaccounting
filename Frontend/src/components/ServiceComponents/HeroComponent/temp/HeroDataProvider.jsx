@@ -8,7 +8,8 @@ import {
   HONE,
   HFOOR,
   HFIVE,
-} from "../../../assets/images/serivePgsImg/Hero/HeroServicePgImg.js";
+  HeroBackgroundImg,
+} from "../../../../assets/images/serivePgsImg/Hero/HeroServicePgImg.js";
 
 const data = [
   {
@@ -16,6 +17,7 @@ const data = [
     slug: "company-accounts",
     title: "Preparing Annual Accounts for Year-End",
     img: HONE,
+    gbimg: HeroBackgroundImg,
     paragraphOne:
       "Preparing annual accounts can be time-consuming and complicated, but it doesn’t have to be. At online accountant, we provide annual accounts services designed to make the process seamless and stress-free. Our expert team ensures your year-end accounts are accurate, compliant, and submitted on time, helping you avoid penalties and maintain peace of mind.",
     paragraphTwo:
@@ -26,6 +28,7 @@ const data = [
     slug: "self-assessment",
     title: "File Self Assessment Tax Return Online",
     img: HTOO,
+    gbimg: HeroBackgroundImg,
     paragraphOne:
       "Filing your Self Assessment tax return in the UK doesn’t have to be stressful. With us, we simplify the process of submitting your tax return online, ensuring accuracy, timeliness, and compliance with HMRC regulations. Whether you are self-employed, a freelancer, or an individual with additional income sources, our expert team is here to guide you through every step",
     paragraphTwo:
@@ -36,6 +39,7 @@ const data = [
     slug: "corporation-tax",
     title: "Reliable Bookkeeping Services",
     img: HTHREE,
+    gbimg: HeroBackgroundImg,
     paragraphOne:
       "Managing your finances shouldn’t be stressful. At outsource, we specialize in offering bookkeeping UK services that simplify financial management for businesses of all sizes. Our expert team ensures your records are organized, compliant, and always up-to-date, allowing you to focus on the growth of your business while we handle the numbers.",
     paragraphTwo:
@@ -46,6 +50,7 @@ const data = [
     slug: "payroll",
     title: "Efficient Payroll Services",
     img: HFOOR,
+    gbimg: HeroBackgroundImg,
     paragraphOne:
       "Small businesses spend roughly six hours per month sorting their own payroll, this is time you can’t afford to waste.",
     paragraphTwo:
@@ -56,6 +61,7 @@ const data = [
     slug: "vat-returns",
     title: "Expert VAT Services",
     img: HFIVE,
+    gbimg: HeroBackgroundImg,
     paragraphOne:
       "Simplify your VAT registration process with Online accountant expert-driven VAT registration service. Whether you’re registering voluntarily or out of necessity, our streamlined process ensures compliance with HMRC VAT online registration requirements, saving you time and hassle",
     paragraphTwo:
@@ -65,6 +71,7 @@ const data = [
     key: 6,
     slug: "company-formation",
     title: "Seamless Company Formation",
+    gbimg: HeroBackgroundImg,
     img: HSIX,
     paragraphOne:
       "Setting up a UK company as a non-resident is simple and straightforward with outsource accounting. Whether you’re an entrepreneur expanding globally or seeking access to the thriving UK market, our hassle-free process ensures you can establish your presence with ease. Our service is designed to cater specifically to non-UK residents, offering you everything you need to start your business smoothly, including fast registration and a prestigious London office address.",
@@ -73,21 +80,19 @@ const data = [
 ];
 
 const HeroDataProvider = () => {
+  //destructuring
   const { slug } = useParams();
-
-  // 1. Find the specific object where the slug matches
-  // Note: Ensure your data objects have a 'slug' property that matches the URL
+  // items.slug is from our data .find matching it with the url slug if matches out put given.
   const card = data.find((item) => item.slug === slug);
 
-  // 2. Error handling if the slug doesn't exist
   if (!card) {
     return <div>Service not found</div>;
   }
 
-  // 3. Render ONLY the single card (No .map() here!)
   return (
     <HeroCard
       img={card.img}
+      bgimg={card.gbimg}
       paragraphOne={card.paragraphOne}
       paragraphTwo={card.paragraphTwo}
       title={card.title}
