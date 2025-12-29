@@ -3,11 +3,6 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-import {
-  ContactIcon,
-  UKFlagIcon,
-  CountrySideUK,
-} from "../../../../public/images/HeroSection/HeroImgs.js";
 import Cards from "./HeroComponents/Cards";
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -41,13 +36,13 @@ const Hero = () => {
       <div className="relative h-[95vh] lg:h-[90vh] w-full flex flex-col md:flex-row items-center justify-center md:justify-between overflow-hidden ">
         {/* Background Image */}
         <img
-          src={CountrySideUK}
+          src="/images/HeroSection/CountrySideUK.png"
           alt="Country side view"
           className="absolute inset-0 w-full h-full object-cover brightness-50 -z-10"
         />
 
         {/* LEFT TEXT SECTION */}
-        <div className="w-full md:w-1/2 px-6  md:pl-16 text-white flex flex-col justify-center my-6 lg:my-12 mx-6 md:mx-8 ">
+        <div className="w-full  md:w-1/2 px-6  md:pl-16 text-white flex flex-col justify-center my-6 lg:my-12 mx-6 md:mx-8 ">
           <p className="inline-block mb-4 bg-linear-to-r from-[#c0b2ff] to-white text-[#333] px-4 py-2 rounded-xl text-sm font-medium w-fit">
             Welcome to Outsource Accounting Solutions
           </p>
@@ -59,7 +54,7 @@ const Hero = () => {
             </span>{" "}
             & Tax Filing Services in the UK{" "}
             <img
-              src={UKFlagIcon}
+              src="/images/HeroSection/UKFlagIcon.png"
               alt="uk flag"
               className="inline-block w-8 h-8 ml-2"
             />
@@ -78,7 +73,11 @@ const Hero = () => {
           </p>
 
           <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-linear-to-r from-indigo-600 to-indigo-400 text-white shadow-lg hover:opacity-90 transition w-max">
-            <img src={ContactIcon} alt="contact" className="w-4 h-4" />
+            <img
+              src="/images/HeroSection/ContactIcon.png"
+              alt="contact"
+              className="w-4 h-4"
+            />
             Free Consultation
           </button>
         </div>

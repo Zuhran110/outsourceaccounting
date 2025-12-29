@@ -1,43 +1,36 @@
-import {
-  CompanyFormation,
-  GreatValue,
-  Support,
-  AutherizedAgent,
-  UnmatchedExperience,
-} from "../../../../../public/images/HeroSection/belowHero/index.js";
 import Card from "./Card";
 
 const data = [
   {
     index: 1,
-    imgComponent: AutherizedAgent,
+    imgComponent: "/images/HeroSection/belowHero/AutherizedAgent.png",
     title: "Autherized Agent",
     content: "5 Star Rated Companies House Authorised Formation Agent",
   },
   {
     index: 2,
-    imgComponent: GreatValue,
+    imgComponent: "/images/HeroSection/belowHero/GreatValue.png",
     title: "Great Value",
     content:
       "Affordable Packages start From 54.99 and you can est assured there are never Hidden costs.",
   },
   {
     index: 3,
-    imgComponent: UnmatchedExperience,
+    imgComponent: "/images/HeroSection/belowHero/UnmatchedExperience.png",
     title: "Unmatched Experience",
     content:
       "20+ years of experience, we know what it takes to get your business set up smothly and quickly.",
   },
   {
     index: 4,
-    imgComponent: Support,
+    imgComponent: "/images/HeroSection/belowHero/Support.png",
     title: "24/7 Support",
     content:
-      "We’re always here for you. Call, email or use online chat whenever it suits you.",
+      "We're always here for you. Call, email or use online chat whenever it suits you.",
   },
   {
     index: 5,
-    imgComponent: CompanyFormation,
+    imgComponent: "/images/HeroSection/belowHero/CompanyFormation.png",
     title: "Fast Company Formation",
     content: "Over 1 M+ orders Processed for clients globally",
   },
