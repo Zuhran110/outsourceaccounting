@@ -100,7 +100,7 @@ const Navbar = () => {
 
           {/* Dropdown Menu Links */}
           {menuOpen && (
-            <ul className="flex flex-col items-center bg-[#ecf6fe] absolute top-full left-0 w-full h-screen py-4 shadow-md z-[999]">
+            <ul className="flex flex-col items-center bg-[#ecf6fe] absolute top-full left-0 w-full h-screen py-4 shadow-md z">
               {/* Corrected Link 1: Text is now centered */}
               <li className="w-full">
                 <a

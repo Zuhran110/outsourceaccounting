@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { HamburgerMenu } from "../../../assets/images/NavbarTopBar/NavbarImg.js";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -16,7 +17,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between w-full py-3 mx-3 md:mx-8">
           {/* Logo */}
           <div className="navbar-logo ">
-            <img src="/images/NavbarTopBar/CompanyLogo.png" alt="Company Logo" />
+            <img
+              src="/images/NavbarTopBar/CompanyLogo.png"
+              alt="Company Logo"
+            />
           </div>
 
           {/* Menu Links */}
@@ -54,10 +58,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/faqs"
-                  className="p-1 pr-3 font-light inline-block"
-                >
+                <Link href="/faqs" className="p-1 pr-3 font-light inline-block">
                   FAQs
                 </Link>
               </li>
@@ -78,7 +79,11 @@ const Navbar = () => {
         <div className="relative w-full px-4 p-8 flex justify-between items-center">
           {/* Logo - Absolute Left */}
           <div className="absolute left-2 top-1/2 -translate-y-1/2">
-            <img src="/images/NavbarTopBar/CompanyLogo.png" alt="Company Logo" className="w-20 h-auto" />
+            <img
+              src="/images/NavbarTopBar/CompanyLogo.png"
+              alt="Company Logo"
+              className="w-20 h-auto"
+            />
           </div>
 
           {/* Hamburger / Close Icon - Absolute Right */}
@@ -87,7 +92,7 @@ const Navbar = () => {
             onClick={onClick}
           >
             <img
-              src={menuOpen ? "/images/NavbarTopBar/CloseMenu.png" : "/images/NavbarTopBar/HamburgerMenu.png"}
+              src={menuOpen ? CloseMenu : HamburgerMenu}
               alt={menuOpen ? "Close Menu" : "Menu"}
               className="w-6 h-auto block"
             />
