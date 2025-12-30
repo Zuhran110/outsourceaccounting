@@ -5,8 +5,6 @@ import axios from "axios";
 
 import Cards from "./HeroComponents/Cards";
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
-
 const Hero = () => {
   const {
     register,
@@ -19,7 +17,7 @@ const Hero = () => {
   const onSubmit = async (data) => {
     console.log(data);
     try {
-      const res = await axios.post(`${BACKEND_URL}/app/v1/contact`, data);
+      const res = await axios.post(`/api/contact`, data);
 
       toast.success(res.data.message);
       reset();

@@ -12,10 +12,10 @@ const ContactUsHero = () => {
     formState: { errors, isSubmitting },
     reset,
   } = useForm();
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post(`${BACKEND_URL}/app/v1/contacttwo`, data);
+      const res = await axios.post(`/api/contacttwo`, data);
       toast.success(res.data.message);
       console.log(data);
       reset();
@@ -42,11 +42,7 @@ const ContactUsHero = () => {
         <div>
           <CardContact />
         </div>
-        <div
-          className="w-3/4 md:w-1/3 flex flex-col justify-center border border-gray-600
-          rounded-2xl  h-1/2 
-          p-4 md:p-8 text-center lg:text-left shadow-lg shadow-black/10"
-        >
+        <div className="w-3/4 md:w-1/3 flex flex-col justify-center border border-gray-600 rounded-2xl  h-1/2 p-4 md:p-8 text-center lg:text-left shadow-lg shadow-black/10">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-1 text-blue-800">
             Message Us
           </h1>

@@ -1,3 +1,4 @@
+"use client";
 import CardsContact from "./CardsContact";
 import callIcon from "../../../assets/images/ContactUS/ContactUsHero/callIcon.png";
 import mailIcon from "../../../assets/images/ContactUS/ContactUsHero/mailIcon.png";
