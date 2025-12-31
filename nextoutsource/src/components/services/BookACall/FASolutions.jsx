@@ -6,7 +6,7 @@ import email from "../../../assets/images/serivePgsImg/BookACall/email.svg";
 
 const FASolutions = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center my-6 lg:my-12 overflow-hidden min-h-[300px]">
+    <div className="relative flex flex-col items-center justify-center my-6 lg:my-12 overflow-hidden min-h-75">
       <img
         src={BookACall.src}
         alt="Book a call background"
