@@ -15,7 +15,6 @@ const Navbar = () => {
     <>
       <nav className="w-full px-16 z-1000 bg-white items-center justify-between hidden md:flex ">
         <div className="flex items-center justify-between w-full py-3 mx-3 md:mx-8">
-          {/* Logo */}
           <div className="navbar-logo ">
             <img
               src="/images/NavbarTopBar/CompanyLogo.png"
@@ -23,7 +22,6 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Menu Links */}
           {
             <ul className="navbar-link justify-between items-center hidden md:flex ">
               {" "}
@@ -65,7 +63,6 @@ const Navbar = () => {
             </ul>
           }
 
-          {/* CTA Button */}
           <Link
             href="/contactUs"
             className="navbar-btn bg-(--color-buttonBlue) pr-8 pl-8 pt-2 pb-2 text-white font-semibold border-2 rounded-2xl hidden md:flex"
@@ -86,7 +83,6 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Hamburger / Close Icon - Absolute Right */}
           <div
             className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
             onClick={onClick}
@@ -98,10 +94,8 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Dropdown Menu Links */}
           {menuOpen && (
             <ul className="flex flex-col items-center bg-[#ecf6fe] absolute top-full left-0 w-full h-screen py-4 shadow-md z-999">
-              {/* Corrected Link 1: Text is now centered */}
               <li className="w-full">
                 <Link
                   href="/"
@@ -111,7 +105,6 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              {/* Corrected Link 2: Apply text-center to all other links */}
               <li className="w-full">
                 <Link
                   href="/services"
