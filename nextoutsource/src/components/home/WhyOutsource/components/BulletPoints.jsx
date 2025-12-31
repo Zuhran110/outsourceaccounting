@@ -1,4 +1,4 @@
-import tickCircle from "@/assets/images/WhyOutsourceAccounting/tickCircle.png";
+import tickCircle from "../../../../assets/images/WhyOutsourceAccounting/tickcircle.svg";
 import BulletPoint from "./BulletPoint.jsx";
 
 const data = [
@@ -20,7 +20,7 @@ const data = [
   {
     key: 4,
     img: tickCircle.src,
-    description: "Transparent fixed pricing",
+    description: "Transparent fixed pricing ",
   },
 ];
 

@@ -1,45 +1,57 @@
 import BookACall from "../../../assets/images/serivePgsImg/BookACall/BookACall.png";
-import Group from "../../../assets/images/OutSourseHero/BookaCallImg/Group.png";
+import contactperson from "../../../assets/images/serivePgsImg/BookACall/contactperson.svg";
+import emailtyper from "../../../assets/images/serivePgsImg/BookACall/emailtyper.svg";
+import phone from "../../../assets/images/serivePgsImg/BookACall/phone.svg";
+import email from "../../../assets/images/serivePgsImg/BookACall/email.svg";
 
 const FASolutions = () => {
   return (
-    <div
-      className="relative flex flex-col md:flex-row justify-between 
-   my-6 lg:my-12 mx-6 md:mx-12 rounded-2xl overflow-hidden"
-    >
+    <div className="relative flex flex-col items-center justify-center my-6 lg:my-12 overflow-hidden min-h-[300px]">
       <img
         src={BookACall.src}
         alt="Book a call background"
-        className="absolute w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
-      <div
-        className="relative z-10 flex flex-col md:flex-row justify-between items-center
-    p-6 md:p-12 lg:p-16 w-full"
-      >
-        <div className="flex flex-col gap-6">
-          <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl text-center md:text-start">
-            Book a 1-on-1 Call
-          </h1>
 
-          <p className="font-light max-w-xl text-center md:text-start">
-            Have questions or need personalized support? Our team is here to
-            help you every step of the way—don't hesitate to reach out!
-          </p>
-
-          <button
-            className="bg-purple-200 px-6 py-3 rounded-2xl font-medium 
-        w-fit mx-auto md:mx-0 hover:bg-purple-300 transition"
-          >
-            Book free 30 Min Now
-          </button>
+      <div className="relative z-10 flex flex-col md:flex-row gap-6 p-6 md:p-12 lg:p-16 w-full lg:w-4/5 xl:w-3/4 mx-auto">
+        <div className="flex-1 flex items-center gap-4 border border-transparent p-6 md:p-8 bg-white rounded-3xl shadow-lg">
+          <div className="relative w-20 h-20 md:w-24 md:h-24 flex shrink-0 items-center justify-center">
+            <img
+              src={contactperson.src}
+              alt="contact"
+              className="absolute h-12 w-12 md:h-16 md:w-16"
+            />
+            <img
+              src={phone.src}
+              alt="phone"
+              className="absolute right-1 max-w-6 max-h-6 md:max-w-8 md:max-h-8"
+            />
+          </div>
+          <div className="flex flex-col">
+            <h1 className="font-bold text-lg">Feel free to contact</h1>
+            <p className="text-gray-600">0208 144 6811</p>
+          </div>
         </div>
 
-        <div className="mt-6 md:mt-0">
-          <img
-            src={Group.src}
-            alt="Consultation illustration"
-            className="w-64 md:w-80 lg:w-96"
-          />
+        <div className="flex-1 flex items-center gap-4 border border-transparent p-6 md:p-8 bg-white rounded-3xl shadow-lg">
+          <div className="relative w-20 h-20 md:w-24 md:h-24 flex shrink-0 items-center justify-center">
+            <img
+              src={emailtyper.src}
+              alt="emailtyper"
+              className="absolute h-12 w-12 md:h-16 md:w-16"
+            />
+            <img
+              src={email.src}
+              alt="email"
+              className="absolute right-1 max-w-6 max-h-6 md:max-w-8 md:max-h-8"
+            />
+          </div>
+          <div className="flex flex-col">
+            <h1 className="font-bold text-lg">Email Us</h1>
+            <p className="text-gray-600 break-all lg:break-normal">
+              admin@outsourceaccountings.co.uk
+            </p>
+          </div>
         </div>
       </div>
     </div>

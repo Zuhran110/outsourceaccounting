@@ -7,8 +7,22 @@ import HFIVE from "../assets/images/serivePgsImg/Hero/HFIVE.png";
 import HSIX from "../assets/images/serivePgsImg/Hero/HSIX.png";
 import HSEVEN from "../assets/images/serivePgsImg/Hero/HSEVEN.png";
 import HeroBackgroundImg from "../assets/images/serivePgsImg/Hero/HeroBackgroundImg.png";
+import addbusiness from "../assets/images/serivePgsImg/Get/addbusiness.png";
+import affordableCleanEnergy from "../assets/images/serivePgsImg/Get/affordableCleanEnergy.png";
+import arttrack from "../assets/images/serivePgsImg/Get/arttrack.png";
+import housecompliance from "../assets/images/serivePgsImg/Get/housecompliance.png";
+import parkoutline from "../assets/images/serivePgsImg/Get/parkoutline.png";
+import userexpert from "../assets/images/serivePgsImg/Get/userexpert.png";
+import tickCircle from "../assets/images/WhyOutsourceAccounting/tickcircle.svg";
+import whyOutSourceUperImg from "../assets/images/serivePgsImg/WhyChooseUs/WhyChooseUs.png";
+import vatreturns from "../assets/images/serivePgsImg/WhyChooseUs/vatreturns.svg";
+import companyformation from "../assets/images/serivePgsImg/WhyChooseUs/companyformation.svg";
+import corporatetax from "../assets/images/serivePgsImg/WhyChooseUs/corporatetax.svg";
+import selfassesment from "../assets/images/serivePgsImg/WhyChooseUs/selfassesment.svg";
+import bookkeeping from "../assets/images/serivePgsImg/WhyChooseUs/bookkeeping.svg";
+import payroll from "../assets/images/serivePgsImg/WhyChooseUs/payroll.svg";
+import { Heading } from "lucide-react";
 
-// Example data structure for Hero section
 export const heroData = {
   // ========== SERVICE 1: Annual Accounts ==========
   "Annual-Accounts": {
@@ -22,8 +36,81 @@ export const heroData = {
     buttonText: "Get Started Now",
     image: HONE.src,
     bgImage: HeroBackgroundImg.src,
+    whatYouGet: {
+      heading: "What You Will Get",
+      whatYouGetcards: [
+        {
+          key: 1,
+          img: parkoutline.src,
+          title: "Comprehensive Online Accounting Services for UK Businesses",
+          description:
+            "Outsource Accounting offers a suite of core financial and accounting services designed to support businesses of all sizes. These include monthly bookkeeping, accounts preparation, corporation tax filing, self-assessment tax returns, payroll management, and VAT return submissions.",
+        },
+        {
+          key: 2,
+          img: affordableCleanEnergy.src,
+          title: "Affordable Pricing with Transparent, Flat-Rate Fees",
+          description:
+            "One of the standout benefits highlighted on the website is clear and affordable pricing. Outsource Accounting emphasises flat-rate pricing with no hidden charges — meaning you know what you'll pay from the start, whether you're a small start-up or an established company.",
+        },
+        {
+          key: 3,
+          img: userexpert.src,
+          title: "Expert Support from Professional UK Accountants",
+          description:
+            "Instead of automated bots or generic financial software, the services are delivered by a real team of expert accountants who provide personalised one-on-one support. This means you get direct access to professionals who can explain complex financial requirements.",
+        },
+        {
+          key: 4,
+          img: addbusiness.src,
+          title: "Insightful Financial Reporting Tailored to Your Business",
+          description:
+            "Outsource Accounting doesn't just manage numbers — they provide insightful financial reporting that goes beyond basic bookkeeping. These reports are designed to give you a clearer picture of your company's financial health, helping you understand profitability, cash flow trends, and tax obligations.",
+        },
+        {
+          key: 5,
+          img: arttrack.src,
+          title: "Supportive Mission and Proven Track Record",
+          description:
+            "According to the website's 'About Us' section, the company started with a simple mission: to make professional accounting affordable and accessible to all UK businesses. With over two decades of experience and more than 1,000 clients served, Outsource Accounting positions itself as a reliable and trustworthy partner committed to helping businesses.",
+        },
+        {
+          key: 6,
+          img: housecompliance.src,
+          title: "Tax Filing, HMRC and Companies House Compliance",
+          description:
+            "A core part of the service is handling all regulatory filings required in the UK. This includes Corporation Tax returns, VAT return submissions, annual accounts filings with Companies House, and Self-Assessment tax returns for business owners. Outsource Accounting liaises with HM Revenue & Customs (HMRC) and Companies House on your behalf.",
+        },
+      ],
+    },
+    whyChooseUs: {
+      heading: "Why Choose Us for Your UK Annual Accounts?",
+      img: whyOutSourceUperImg.src,
+      whyChooseUscards: [
+        {
+          key: 1,
+          img: tickCircle.src,
+          title: "Compliance You Can Trust",
+          description:
+            "We handle everything from preparing your financial statements to submitting them to HMRC and Companies House. Our experts stay up to date with the latest regulations, ensuring your statutory accounts and end of the year accounting are fully compliant and filed correctly.",
+        },
+        {
+          key: 2,
+          img: tickCircle.src,
+          title: "No Hidden Costs:",
+          description:
+            "We believe in transparency. Our annual accounts services operate on a fixed pricing model—what we quote is what you pay, with no hidden fees.",
+        },
+        {
+          key: 3,
+          img: tickCircle.src,
+          title: "Expert Advice, Anytime:",
+          description:
+            "Your company annual accounts service isn’t just a legal requirement—it’s an opportunity to gain insights into your financial health. We go beyond compliance, offering actionable advice to help you reduce tax liabilities and identify growth opportunities.",
+        },
+      ],
+    },
   },
-
   // ========== SERVICE 2: Self Assessment Tax ==========
   "Self-Assessment-Tax": {
     title: "File ",
@@ -36,9 +123,89 @@ export const heroData = {
     buttonText: "Get Started Now",
     image: HTOO.src,
     bgImage: HeroBackgroundImg.src,
+    whatYouGet: {
+      heading: "What You Will Get",
+      whatYouGetcards: [
+        {
+          key: 1,
+          img: parkoutline.src,
+          title: "Comprehensive Online Accounting Services for UK Businesses",
+          description:
+            "Outsource Accounting offers a suite of core financial and accounting services designed to support businesses of all sizes. These include monthly bookkeeping, accounts preparation, corporation tax filing, self-assessment tax returns, payroll management, and VAT return submissions.",
+        },
+        {
+          key: 2,
+          img: affordableCleanEnergy.src,
+          title: "Affordable Pricing with Transparent, Flat-Rate Fees",
+          description:
+            "One of the standout benefits highlighted on the website is clear and affordable pricing. Outsource Accounting emphasises flat-rate pricing with no hidden charges — meaning you know what you'll pay from the start, whether you're a small start-up or an established company.",
+        },
+        {
+          key: 3,
+          img: userexpert.src,
+          title: "Expert Support from Professional UK Accountants",
+          description:
+            "Instead of automated bots or generic financial software, the services are delivered by a real team of expert accountants who provide personalised one-on-one support. This means you get direct access to professionals who can explain complex financial requirements.",
+        },
+        {
+          key: 4,
+          img: addbusiness.src,
+          title: "Insightful Financial Reporting Tailored to Your Business",
+          description:
+            "Outsource Accounting doesn't just manage numbers — they provide insightful financial reporting that goes beyond basic bookkeeping. These reports are designed to give you a clearer picture of your company's financial health, helping you understand profitability, cash flow trends, and tax obligations.",
+        },
+        {
+          key: 5,
+          img: arttrack.src,
+          title: "Supportive Mission and Proven Track Record",
+          description:
+            "According to the website's 'About Us' section, the company started with a simple mission: to make professional accounting affordable and accessible to all UK businesses. With over two decades of experience and more than 1,000 clients served, Outsource Accounting positions itself as a reliable and trustworthy partner committed to helping businesses.",
+        },
+        {
+          key: 6,
+          img: housecompliance.src,
+          title: "Tax Filing, HMRC and Companies House Compliance",
+          description:
+            "A core part of the service is handling all regulatory filings required in the UK. This includes Corporation Tax returns, VAT return submissions, annual accounts filings with Companies House, and Self-Assessment tax returns for business owners. Outsource Accounting liaises with HM Revenue & Customs (HMRC) and Companies House on your behalf.",
+        },
+      ],
+    },
+    whyChooseUs: {
+      heading: "Why Choose Affotax for Your Self Assessment?",
+      img: selfassesment.src,
+      whyChooseUscards: [
+        {
+          key: 1,
+          img: tickCircle.src,
+          title: "Ease of Use",
+          description:
+            "Our simple, user-friendly online service guides you through every step of the Self Assessment process. No confusing jargon—just clear, concise instructions",
+        },
+        {
+          key: 2,
+          img: tickCircle.src,
+          title: "Expert Support",
+          description:
+            "If you have any questions, our team of tax professionals is available to provide guidance and help resolve any issues.",
+        },
+        {
+          key: 3,
+          img: tickCircle.src,
+          title: "Accuracy and Compliance",
+          description:
+            "We meticulously check your return to ensure it meets all of HMRC's requirements. With us, you can be confident that your tax return is error-free and fully compliant.",
+        },
+        {
+          key: 4,
+          img: tickCircle.src,
+          title: "Timeliness",
+          description:
+            "We ensure your Self Assessment is filed on time, every time—avoiding penalties and ensuring you meet your tax obligations with ease.",
+        },
+      ],
+    },
   },
-
-  // ========== SERVICE 3: Payroll Services ==========
+  // ========== SERVICE 3: Bookkeeping-Services ==========
   "Bookkeeping-Services": {
     title: "Reliable ",
     titleHighlight: "Bookkeeping",
@@ -50,6 +217,80 @@ export const heroData = {
     buttonText: "Get Started Now",
     image: HTHREE.src,
     bgImage: HeroBackgroundImg.src,
+    whatYouGet: {
+      heading: "What You Will Get",
+      whatYouGetcards: [
+        {
+          key: 1,
+          img: parkoutline.src,
+          title: "Comprehensive Online Accounting Services for UK Businesses",
+          description:
+            "Outsource Accounting offers a suite of core financial and accounting services designed to support businesses of all sizes. These include monthly bookkeeping, accounts preparation, corporation tax filing, self-assessment tax returns, payroll management, and VAT return submissions.",
+        },
+        {
+          key: 2,
+          img: affordableCleanEnergy.src,
+          title: "Affordable Pricing with Transparent, Flat-Rate Fees",
+          description:
+            "One of the standout benefits highlighted on the website is clear and affordable pricing. Outsource Accounting emphasises flat-rate pricing with no hidden charges — meaning you know what you'll pay from the start, whether you're a small start-up or an established company.",
+        },
+        {
+          key: 3,
+          img: userexpert.src,
+          title: "Expert Support from Professional UK Accountants",
+          description:
+            "Instead of automated bots or generic financial software, the services are delivered by a real team of expert accountants who provide personalised one-on-one support. This means you get direct access to professionals who can explain complex financial requirements.",
+        },
+        {
+          key: 4,
+          img: addbusiness.src,
+          title: "Insightful Financial Reporting Tailored to Your Business",
+          description:
+            "Outsource Accounting doesn't just manage numbers — they provide insightful financial reporting that goes beyond basic bookkeeping. These reports are designed to give you a clearer picture of your company's financial health, helping you understand profitability, cash flow trends, and tax obligations.",
+        },
+        {
+          key: 5,
+          img: arttrack.src,
+          title: "Supportive Mission and Proven Track Record",
+          description:
+            "According to the website's 'About Us' section, the company started with a simple mission: to make professional accounting affordable and accessible to all UK businesses. With over two decades of experience and more than 1,000 clients served, Outsource Accounting positions itself as a reliable and trustworthy partner committed to helping businesses.",
+        },
+        {
+          key: 6,
+          img: housecompliance.src,
+          title: "Tax Filing, HMRC and Companies House Compliance",
+          description:
+            "A core part of the service is handling all regulatory filings required in the UK. This includes Corporation Tax returns, VAT return submissions, annual accounts filings with Companies House, and Self-Assessment tax returns for business owners. Outsource Accounting liaises with HM Revenue & Customs (HMRC) and Companies House on your behalf.",
+        },
+      ],
+    },
+    whyChooseUs: {
+      heading: "Why Digital Bookkeeping?",
+      img: bookkeeping.src,
+      whyChooseUscards: [
+        {
+          key: 1,
+          img: tickCircle.src,
+          title: "Access Your Financial Data Anywhere, Anytime:",
+          description:
+            "Our cloud-based solutions give you real-time access to your financial data, no matter where you are or what device you use.",
+        },
+        {
+          key: 2,
+          img: tickCircle.src,
+          title: "Go Paperless:",
+          description:
+            "Say goodbye to manual paperwork. All of your financial records are stored digitally in secure, user-friendly apps, making it easier to organize and access them when needed",
+        },
+        {
+          key: 3,
+          img: tickCircle.src,
+          title: "Automate Routine Tasks:",
+          description:
+            "With automated processes like invoicing, bank reconciliation, and financial reporting, our system reduces the potential for human error, saving you time and increasing efficiency.",
+        },
+      ],
+    },
   },
   // ========== SERVICE 4: Payroll Services ==========
   "Payroll-services": {
@@ -63,6 +304,87 @@ export const heroData = {
     buttonText: "Get Started Now",
     image: HFOOR.src,
     bgImage: HeroBackgroundImg.src,
+    whatYouGet: {
+      heading: "What You Will Get",
+      whatYouGetcards: [
+        {
+          key: 1,
+          img: parkoutline.src,
+          title: "Comprehensive Online Accounting Services for UK Businesses",
+          description:
+            "Outsource Accounting offers a suite of core financial and accounting services designed to support businesses of all sizes. These include monthly bookkeeping, accounts preparation, corporation tax filing, self-assessment tax returns, payroll management, and VAT return submissions.",
+        },
+        {
+          key: 2,
+          img: affordableCleanEnergy.src,
+          title: "Affordable Pricing with Transparent, Flat-Rate Fees",
+          description:
+            "One of the standout benefits highlighted on the website is clear and affordable pricing. Outsource Accounting emphasises flat-rate pricing with no hidden charges — meaning you know what you'll pay from the start, whether you're a small start-up or an established company.",
+        },
+        {
+          key: 3,
+          img: userexpert.src,
+          title: "Expert Support from Professional UK Accountants",
+          description:
+            "Instead of automated bots or generic financial software, the services are delivered by a real team of expert accountants who provide personalised one-on-one support. This means you get direct access to professionals who can explain complex financial requirements.",
+        },
+        {
+          key: 4,
+          img: addbusiness.src,
+          title: "Insightful Financial Reporting Tailored to Your Business",
+          description:
+            "Outsource Accounting doesn't just manage numbers — they provide insightful financial reporting that goes beyond basic bookkeeping. These reports are designed to give you a clearer picture of your company's financial health, helping you understand profitability, cash flow trends, and tax obligations.",
+        },
+        {
+          key: 5,
+          img: arttrack.src,
+          title: "Supportive Mission and Proven Track Record",
+          description:
+            "According to the website's 'About Us' section, the company started with a simple mission: to make professional accounting affordable and accessible to all UK businesses. With over two decades of experience and more than 1,000 clients served, Outsource Accounting positions itself as a reliable and trustworthy partner committed to helping businesses.",
+        },
+        {
+          key: 6,
+          img: housecompliance.src,
+          title: "Tax Filing, HMRC and Companies House Compliance",
+          description:
+            "A core part of the service is handling all regulatory filings required in the UK. This includes Corporation Tax returns, VAT return submissions, annual accounts filings with Companies House, and Self-Assessment tax returns for business owners. Outsource Accounting liaises with HM Revenue & Customs (HMRC) and Companies House on your behalf.",
+        },
+      ],
+    },
+    whyChooseUs: {
+      heading: "Comprehensive Payroll",
+      img: payroll.src,
+      whyChooseUscards: [
+        {
+          key: 1,
+          img: tickCircle.src,
+          title: "Accurate Payroll Calculations:",
+          description:
+            "We ensure accurate calculations for income tax and National Insurance deductions.",
+        },
+        {
+          key: 2,
+          img: tickCircle.src,
+          title: "Monthly HMRC Returns:",
+          description:
+            "We take care of all HMRC submissions, ensuring you stay compliant throughout the year.",
+        },
+        {
+          key: 3,
+          img: tickCircle.src,
+          title: "Electronic Pay slips:",
+          description:
+            "Your pay slips are emailed directly to you, making it easy to access your financial records.",
+        },
+        {
+          key: 4,
+          img: tickCircle.src,
+          title: "Year-End Processing:",
+          description:
+            "At the end of the year, we prepare and submit P60s for each director, ensuring all year-end obligations are met.",
+        },
+      ],
+    },
   },
   // ========== SERVICE 5: vat-returns ==========
   "vat-returns": {
@@ -76,8 +398,82 @@ export const heroData = {
     buttonText: "Get Started Now",
     image: HFIVE.src,
     bgImage: HeroBackgroundImg.src,
+    whatYouGet: {
+      heading: "What You Will Get",
+      whatYouGetcards: [
+        {
+          key: 1,
+          img: parkoutline.src,
+          title: "Comprehensive Online Accounting Services for UK Businesses",
+          description:
+            "Outsource Accounting offers a suite of core financial and accounting services designed to support businesses of all sizes. These include monthly bookkeeping, accounts preparation, corporation tax filing, self-assessment tax returns, payroll management, and VAT return submissions.",
+        },
+        {
+          key: 2,
+          img: affordableCleanEnergy.src,
+          title: "Affordable Pricing with Transparent, Flat-Rate Fees",
+          description:
+            "One of the standout benefits highlighted on the website is clear and affordable pricing. Outsource Accounting emphasises flat-rate pricing with no hidden charges — meaning you know what you'll pay from the start, whether you're a small start-up or an established company.",
+        },
+        {
+          key: 3,
+          img: userexpert.src,
+          title: "Expert Support from Professional UK Accountants",
+          description:
+            "Instead of automated bots or generic financial software, the services are delivered by a real team of expert accountants who provide personalised one-on-one support. This means you get direct access to professionals who can explain complex financial requirements.",
+        },
+        {
+          key: 4,
+          img: addbusiness.src,
+          title: "Insightful Financial Reporting Tailored to Your Business",
+          description:
+            "Outsource Accounting doesn't just manage numbers — they provide insightful financial reporting that goes beyond basic bookkeeping. These reports are designed to give you a clearer picture of your company's financial health, helping you understand profitability, cash flow trends, and tax obligations.",
+        },
+        {
+          key: 5,
+          img: arttrack.src,
+          title: "Supportive Mission and Proven Track Record",
+          description:
+            "According to the website's 'About Us' section, the company started with a simple mission: to make professional accounting affordable and accessible to all UK businesses. With over two decades of experience and more than 1,000 clients served, Outsource Accounting positions itself as a reliable and trustworthy partner committed to helping businesses.",
+        },
+        {
+          key: 6,
+          img: housecompliance.src,
+          title: "Tax Filing, HMRC and Companies House Compliance",
+          description:
+            "A core part of the service is handling all regulatory filings required in the UK. This includes Corporation Tax returns, VAT return submissions, annual accounts filings with Companies House, and Self-Assessment tax returns for business owners. Outsource Accounting liaises with HM Revenue & Customs (HMRC) and Companies House on your behalf.",
+        },
+      ],
+    },
+    whyChooseUs: {
+      heading: "Why Choose Us for VAT Registration Online?",
+      img: vatreturns.src,
+      whyChooseUscards: [
+        {
+          key: 1,
+          img: tickCircle.src,
+          title: "Expert Guidance:",
+          description:
+            "Our VAT specialists are available to assist with queries and ensure accurate registration.",
+        },
+        {
+          key: 2,
+          img: tickCircle.src,
+          title: "HMRC Compliance:",
+          description:
+            "All documentation and filings meet HMRC VAT online regulations, avoiding delays or penalties.",
+        },
+        {
+          key: 3,
+          img: tickCircle.src,
+          title: "Fast Processing:",
+          description:
+            "Get your VAT registration number within 7-10 working days.",
+        },
+      ],
+    },
   },
-  // ========== SERVICE 6: vat-returns ==========
+  // ========== SERVICE 6: Company Formation ==========
   "company-formation": {
     title: "Seamless",
     titleHighlight: "Company Formation",
@@ -89,6 +485,78 @@ export const heroData = {
     buttonText: "Get Started Now",
     image: HSIX.src,
     bgImage: HeroBackgroundImg.src,
+    whatYouGet: {
+      heading: "What You Will Get",
+      whatYouGetcards: [
+        {
+          key: 1,
+          img: parkoutline.src,
+          title: "Comprehensive Online Accounting Services for UK Businesses",
+          description:
+            "Outsource Accounting offers a suite of core financial and accounting services designed to support businesses of all sizes. These include monthly bookkeeping, accounts preparation, corporation tax filing, self-assessment tax returns, payroll management, and VAT return submissions.",
+        },
+        {
+          key: 2,
+          img: affordableCleanEnergy.src,
+          title: "Affordable Pricing with Transparent, Flat-Rate Fees",
+          description:
+            "One of the standout benefits highlighted on the website is clear and affordable pricing. Outsource Accounting emphasises flat-rate pricing with no hidden charges — meaning you know what you'll pay from the start, whether you're a small start-up or an established company.",
+        },
+        {
+          key: 3,
+          img: userexpert.src,
+          title: "Expert Support from Professional UK Accountants",
+          description:
+            "Instead of automated bots or generic financial software, the services are delivered by a real team of expert accountants who provide personalised one-on-one support. This means you get direct access to professionals who can explain complex financial requirements.",
+        },
+        {
+          key: 4,
+          img: addbusiness.src,
+          title: "Insightful Financial Reporting Tailored to Your Business",
+          description:
+            "Outsource Accounting doesn't just manage numbers — they provide insightful financial reporting that goes beyond basic bookkeeping. These reports are designed to give you a clearer picture of your company's financial health, helping you understand profitability, cash flow trends, and tax obligations.",
+        },
+        {
+          key: 5,
+          img: arttrack.src,
+          title: "Supportive Mission and Proven Track Record",
+          description:
+            "According to the website's 'About Us' section, the company started with a simple mission: to make professional accounting affordable and accessible to all UK businesses. With over two decades of experience and more than 1,000 clients served, Outsource Accounting positions itself as a reliable and trustworthy partner committed to helping businesses.",
+        },
+        {
+          key: 6,
+          img: housecompliance.src,
+          title: "Tax Filing, HMRC and Companies House Compliance",
+          description:
+            "A core part of the service is handling all regulatory filings required in the UK. This includes Corporation Tax returns, VAT return submissions, annual accounts filings with Companies House, and Self-Assessment tax returns for business owners. Outsource Accounting liaises with HM Revenue & Customs (HMRC) and Companies House on your behalf.",
+        },
+      ],
+    },
+    whyChooseUs: {
+      heading: "Key Features of Our UK Company Registration Service",
+      img: companyformation.src,
+      whyChooseUscards: [
+        {
+          key: 1,
+          img: tickCircle.src,
+          title: "Efficient Registration Process:",
+          description:
+            "Hassle-Free Registration Secure Documentation Name Check Assistance",
+        },
+        {
+          key: 2,
+          img: tickCircle.src,
+          title: "Business Essentials for Startups:",
+          description: "Free Domain Names Marketing Credits Business Listings",
+        },
+        {
+          key: 3,
+          img: tickCircle.src,
+          title: "Banking Solutions:",
+          description: "Business Account Assistance Prepaid Credit Card",
+        },
+      ],
+    },
   },
   // ========== SERVICE 7: Corporation Tax Services (CT600) ==========
   "Corporation-Tax": {
@@ -102,5 +570,72 @@ export const heroData = {
     buttonText: "Get Started Now",
     image: HSEVEN.src,
     bgImage: HeroBackgroundImg.src,
+    whatYouGet: {
+      heading: "What You Will Get",
+      whatYouGetcards: [
+        {
+          key: 1,
+          img: parkoutline.src,
+          title: "Comprehensive Online Accounting Services for UK Businesses",
+          description:
+            "Outsource Accounting offers a suite of core financial and accounting services designed to support businesses of all sizes. These include monthly bookkeeping, accounts preparation, corporation tax filing, self-assessment tax returns, payroll management, and VAT return submissions.",
+        },
+        {
+          key: 2,
+          img: affordableCleanEnergy.src,
+          title: "Affordable Pricing with Transparent, Flat-Rate Fees",
+          description:
+            "One of the standout benefits highlighted on the website is clear and affordable pricing. Outsource Accounting emphasises flat-rate pricing with no hidden charges — meaning you know what you'll pay from the start, whether you're a small start-up or an established company.",
+        },
+        {
+          key: 3,
+          img: userexpert.src,
+          title: "Expert Support from Professional UK Accountants",
+          description:
+            "Instead of automated bots or generic financial software, the services are delivered by a real team of expert accountants who provide personalised one-on-one support. This means you get direct access to professionals who can explain complex financial requirements.",
+        },
+        {
+          key: 4,
+          img: addbusiness.src,
+          title: "Insightful Financial Reporting Tailored to Your Business",
+          description:
+            "Outsource Accounting doesn't just manage numbers — they provide insightful financial reporting that goes beyond basic bookkeeping. These reports are designed to give you a clearer picture of your company's financial health, helping you understand profitability, cash flow trends, and tax obligations.",
+        },
+        {
+          key: 5,
+          img: arttrack.src,
+          title: "Supportive Mission and Proven Track Record",
+          description:
+            "According to the website's 'About Us' section, the company started with a simple mission: to make professional accounting affordable and accessible to all UK businesses. With over two decades of experience and more than 1,000 clients served, Outsource Accounting positions itself as a reliable and trustworthy partner committed to helping businesses.",
+        },
+        {
+          key: 6,
+          img: housecompliance.src,
+          title: "Tax Filing, HMRC and Companies House Compliance",
+          description:
+            "A core part of the service is handling all regulatory filings required in the UK. This includes Corporation Tax returns, VAT return submissions, annual accounts filings with Companies House, and Self-Assessment tax returns for business owners. Outsource Accounting liaises with HM Revenue & Customs (HMRC) and Companies House on your behalf.",
+        },
+      ],
+    },
+    whyChooseUs: {
+      heading: "What is Corporation Tax (CT600)?",
+      img: corporatetax.src,
+      whyChooseUscards: [
+        {
+          key: 1,
+          img: tickCircle.src,
+          title: "",
+          description:
+            "Corporation Tax is a mandatory tax levied on the profits of UK-registered limited companies. Every active company must file a Corporation Tax Return (CT600) with HMRC within 12 months of the financial year-end. However, tax payments are due within 9 months and 1 day after the accounting period ends.",
+        },
+        {
+          key: 2,
+          img: tickCircle.src,
+          title: "",
+          description:
+            "Failure to meet these deadlines can lead to significant penalties and interest charges. Affotax ensures your tax returns are prepared accurately and submitted on time, preventing unnecessary financial burdens.",
+        },
+      ],
+    },
   },
 };
