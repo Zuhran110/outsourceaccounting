@@ -10,7 +10,7 @@ import ServiceCard from "./ServiceCard.jsx";
 const data = [
   {
     index: 1,
-    pglink: "/service/company-accounts",
+    pglink: "/service/Annual-Accounts",
     imgSrc: GroupIcon.src,
     title: "Company Accounts",
     description:
@@ -19,7 +19,7 @@ const data = [
   },
   {
     index: 2,
-    pglink: "/service/corporation-tax",
+    pglink: "/service/Bookkeeping-Services",
     imgSrc: TaxIcon.src,
     title: "Corporation Tax",
     description:
@@ -28,7 +28,7 @@ const data = [
   },
   {
     index: 3,
-    pglink: "/service/self-assessment",
+    pglink: "/service/Self-Assessment-Tax",
     imgSrc: SelfAssessmentIcon.src,
     title: "Self Assessment",
     description:
@@ -37,7 +37,7 @@ const data = [
   },
   {
     index: 4,
-    pglink: "/service/payroll",
+    pglink: "/service/Payroll-services",
     imgSrc: PayrollIcon.src,
     title: "Payroll",
     description:

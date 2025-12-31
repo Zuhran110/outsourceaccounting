@@ -19,7 +19,7 @@ const Hero = ({ data }) => {
 
         {/* ✅ DYNAMIC SUBTITLE */}
         <h1 className="text-2xl md:text-3xl font-bold mb-6 leading-snug md:max-w-120">
-          <span className="text-blue-800">{data.subtitle}</span>
+          <span className="">{data.subtitle}</span>
         </h1>
 
         {/* ✅ DYNAMIC DESCRIPTION - Loop through paragraphs */}
