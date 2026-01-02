@@ -1,4 +1,4 @@
-import tickCircle from "../../../../assets/images/WhyOutsourceAccounting/tickCircle.png";
+import tickCircle from "../../../../assets/images/WhyOutsourceAccounting/tickcircle.svg";
 import BulletPoint from "./BulletPoint.jsx";
 
 const data = [
