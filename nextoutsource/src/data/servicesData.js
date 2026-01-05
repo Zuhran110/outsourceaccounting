@@ -131,8 +131,8 @@ export const heroData = {
       ],
     },
     ServiceData: {
-      heading: "Our Simple Process –",
-      highlightHeading: "Our Simple Process –",
+      heading: "Our Simple Process – ",
+      highlightHeading: "How It Works",
       ServiceData: [
         {
           index: 1,

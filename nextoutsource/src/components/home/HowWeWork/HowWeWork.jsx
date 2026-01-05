@@ -23,7 +23,7 @@ const HowWeWork = () => {
           <img
             src={CompanyIcon.src}
             alt="Service Icon"
-            className="w-16 h-16 bg-white p-3 mb-6 object-contain self-end"
+            className="w-3/4 h-3/4 bg-white p-3 mb-6 object-contain self-end"
           />
 
           <h2 className="font-semibold mb-3 text-lg ">Choose Your Service</h2>

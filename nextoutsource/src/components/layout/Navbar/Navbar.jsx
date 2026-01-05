@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { HamburgerMenu } from "../../../assets/images/NavbarTopBar/NavbarImg.js";
+import closeMenu from "../../../assets/images/NavbarTopBar/CrossIcon.png";
+import ContactUsButton from "@/components/shared/buttons/contactUsButton.jsx";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -63,12 +65,7 @@ const Navbar = () => {
             </ul>
           }
 
-          <Link
-            href="/contactUs"
-            className="navbar-btn bg-(--color-buttonBlue) pr-8 pl-8 pt-2 pb-2 text-white font-semibold border-2 rounded-2xl hidden md:flex"
-          >
-            Contact Us
-          </Link>
+          <ContactUsButton />
         </div>
       </nav>
 
@@ -88,7 +85,7 @@ const Navbar = () => {
             onClick={onClick}
           >
             <img
-              src={menuOpen ? CloseMenu : HamburgerMenu}
+              src={menuOpen ? closeMenu.src : HamburgerMenu.src}
               alt={menuOpen ? "Close Menu" : "Menu"}
               className="w-6 h-auto block"
             />
@@ -138,12 +135,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="mt-auto mb-8">
-                <Link
-                  href="/contactUs"
-                  className="inline-block border-(--color-buttonBlue) text-white px-4 py-2 rounded-md font-semibold transition-all duration-200"
-                >
-                  Contact Us
-                </Link>
+                <ContactUsButton />
               </li>
             </ul>
           )}

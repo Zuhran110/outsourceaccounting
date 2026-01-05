@@ -128,8 +128,8 @@ const ContactUsHero = () => {
               disabled={isSubmitting}
               className={
                 isSubmitting
-                  ? "bg-blue-800 text-white px-10 py-4 rounded hover:bg-blue-700 cursor-not-allowed flex justify-self-center text-center w-auto transition duration-300"
-                  : "bg-blue-800 text-white px-10 py-4 rounded hover:bg-blue-700 cursor-pointer flex justify-self-center text-center w-auto transition duration-300"
+                  ? "bg-(--color-buttonBlue) text-white px-10 py-4 rounded hover:bg-blue-700 cursor-not-allowed flex justify-self-center text-center w-auto transition duration-300"
+                  : "bg-(--color-buttonBlue) text-white px-10 py-4 rounded hover:bg-blue-700 cursor-pointer flex justify-self-center text-center w-auto transition duration-300"
               }
             >
               {isSubmitting ? "Sending" : "Send Message"}

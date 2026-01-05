@@ -1,8 +1,12 @@
-import React from "react";
-
+"use client";
+import { useState } from "react";
 import ServiceCards from "./ServiceComponents/ServiceCards.jsx";
+import QuoteButton from "@/components/shared/buttons/QuoteButton.jsx";
+import Model from "@/components/shared/forms/Model.jsx";
+import QuoteForm from "@/components/shared/forms/QuoteForm.jsx";
 
 const Services = () => {
+  const [isModelOpen, setisModelOpen] = useState(false);
   return (
     <section
       className="flex flex-col self-center items-center content-center justify-center text-black bg-white lg:my-12 mx-12 md:mx-20"
@@ -23,11 +27,15 @@ const Services = () => {
         </p>
         <ServiceCards />
       </div>
-      <div>
-        <button className="border px-6 py-3 border-blue-800 m-6 text-blue-800 rounded">
-          Get a Quote
-        </button>
+      <div className="mt-3">
+        <QuoteButton onClick={() => setisModelOpen(true)} />
       </div>
+      <Model isOpen={isModelOpen} onClose={() => setisModelOpen(false)}>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-left text-gray-800">
+          Quick <span className="text-(--color-buttonBlue)">Quote</span>
+        </h2>
+        <QuoteForm onSuccess={() => setisModelOpen(false)} />
+      </Model>
     </section>
   );
 };

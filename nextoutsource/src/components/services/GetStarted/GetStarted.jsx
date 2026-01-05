@@ -1,3 +1,5 @@
+import GetStartedButton from "@/components/shared/buttons/GetStartedButton";
+
 const GetStarted = ({ data }) => {
   return (
     <div className="rounded-2xl flex flex-col bg-blue-100 text-center gap-6 my-3 md:my-12 mx-3 md:mx-24 lg:my-24 py-3 md:py-8 px-3 md:px-12">
@@ -7,6 +9,9 @@ const GetStarted = ({ data }) => {
       <div className="flex flex-col gap-2 ">
         <p>{data.descriptionone}</p>
         <p>{data.descriptiontwo}</p>
+        <div className="my-3">
+          <GetStartedButton />
+        </div>
       </div>
     </div>
   );

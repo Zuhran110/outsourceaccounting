@@ -1,9 +1,14 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import whyOutSourceAccounting from "@/assets/images/WhyOutsourceAccounting/whyOutSourceAccounting.png";
 import whyOutSourceUperImg from "@/assets/images/WhyOutsourceAccounting/whyOutSourceUperImg.png";
 import BulletPoints from "./components/BulletPoints.jsx";
+import QuoteButton from "@/components/shared/buttons/QuoteButton.jsx";
+import QuoteForm from "@/components/shared/forms/QuoteForm.jsx";
+import Model from "@/components/shared/forms/Model.jsx";
 
 const Outsource = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <div className="flex justify-center lg:justify-evenly items-center mx-12 my-6 md:mx-24 md:my-12 flex-wrap lg:my-12">
@@ -22,9 +27,9 @@ const Outsource = () => {
             success!
           </p>
           <BulletPoints />
-          <button className="h-auto w-auto text-amber-50 bg-(--color-buttonBlue) px-8 py-3 rounded-2xl ">
-            Get a Quote
-          </button>
+          <div>
+            <QuoteButton onClick={() => setIsModalOpen(true)} />
+          </div>
         </div>
         <div className="relative flex mt-6 w-80 h-70 md:w-140 md:h-120 items-center justify-center lg:justify-end overflow-hidden">
           <img
@@ -38,6 +43,13 @@ const Outsource = () => {
             className="absolute inline-block h-60 w-60 md:h-90 md:w-90 rounded ring-white right-1"
           />
         </div>
+        {/* MODAL OVERLAY */}
+        <Model isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-left text-gray-800">
+            Quick <span className="text-(--color-buttonBlue)">Quote</span>
+          </h2>
+          <QuoteForm onSuccess={() => setIsModalOpen(false)} />
+        </Model>
       </div>
     </>
   );
