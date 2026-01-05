@@ -1,4 +1,5 @@
 import GetStartedButton from "@/components/shared/buttons/GetStartedButton";
+import Cards from "./subComponents/Cards";
 
 const Hero = ({ data }) => {
   return (
@@ -34,6 +35,9 @@ const Hero = ({ data }) => {
         {/* ✅ DYNAMIC BUTTON TEXT */}
         <div className="">
           <GetStartedButton />
+        </div>
+        <div className="align-bottom">
+          <Cards />
         </div>
       </div>
 
