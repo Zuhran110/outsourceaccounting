@@ -1,13 +1,28 @@
-import React from "react";
+import Link from "next/link";
 
 const Comapany = () => {
   return (
     <ul className="font-light mt-4 lg:mt-8">
-      <li className="mb-2">About Us</li>
-      <li className="mb-2">News & Articles</li>
-      <li className="mb-2">FAQS</li>
-      <li className="mb-2">Blogs</li>
-      <li className="mb-2">Contact Us</li>
+      <li>
+        <Link href="/aboutus" className="font-light inline-block">
+          About Us
+        </Link>
+      </li>
+      <li>
+        <Link href="/faqs" className="font-light inline-block">
+          FAQS
+        </Link>
+      </li>
+      {/* <li>
+        <Link href="/blogs" className="font-light inline-block">
+          Blogs
+        </Link>
+      </li> */}
+      <li>
+        <Link href="/contactUs" className="font-light inline-block">
+          Contact Us
+        </Link>
+      </li>
     </ul>
   );
 };

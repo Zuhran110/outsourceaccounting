@@ -1,10 +1,9 @@
 import React from "react";
-import CompanyIcon from "@/assets/images/HowWeWork/Company.png";
-import ReviewSubmitIcon from "@/assets/images/HowWeWork/ReviewSubmit.png";
-import SendInfoIcon from "@/assets/images/HowWeWork/SendInfo.png";
-import one from "@/assets/images/HowWeWork/one.png";
-import two from "@/assets/images/HowWeWork/two.png";
-import three from "@/assets/images/HowWeWork/three.png";
+import CompanyIcon from "@/assets/images/HowWeWork/chooseYourService.svg";
+import document from "@/assets/images/HowWeWork/documents.svg";
+import circlefill from "@/assets/images/HowWeWork/circlefill.svg";
+import LineOne from "@/assets/images/HowWeWork/Lineone.svg";
+import Linetwo from "@/assets/images/HowWeWork/Linetwo.svg";
 
 const HowWeWork = () => {
   return (
@@ -13,17 +12,18 @@ const HowWeWork = () => {
         How We Work
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-14 gap-y-12 mx-auto w-full lg:w-5xl font-light">
-        <div className="relative flex flex-col justify-start h-full  border  bg-white rounded-2xl border-blue-800 p-6 pt-6 ">
-          <img
-            src={one.src}
-            alt="Service Icon"
-            className="absolute -top-8 -left-6 w-18 h-18 border-blue-800  object-contain"
-          />
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-x-14 gap-y-12 mx-auto w-full lg:w-5xl font-light items-start">
+        <div className="relative flex flex-col text-center bg-white rounded-2xl h-full ">
+          <p
+            alt="Submission Icon"
+            className="absolute w-8 h-8 border rounded-full border-gray-300 bg-gray-200 text-center items-center justify-center font-light  object-contain"
+          >
+            1
+          </p>
           <img
             src={CompanyIcon.src}
             alt="Service Icon"
-            className="w-3/4 h-3/4 bg-white p-3 mb-6 object-contain self-end"
+            className="w-2/3 aspect-square max-w-50 border rounded-full border-gray-600 shadow-2xl p-8 mb-6 object-contain self-center"
           />
 
           <h2 className="font-semibold mb-3 text-lg ">Choose Your Service</h2>
@@ -32,18 +32,19 @@ const HowWeWork = () => {
             the payment.
           </p>
         </div>
-
+        <img src={Linetwo.src} alt="" className="my-8 hidden md:inline-block" />
         {/* Card 2 */}
-        <div className="relative flex flex-col  border  bg-white rounded-2xl border-blue-800 p-6 pt-6 h-full">
+        <div className="relative flex flex-col text-center bg-white rounded-2xl h-full ">
+          <p
+            alt="Submission Icon"
+            className="absolute w-8 h-8 border rounded-full border-gray-300 bg-gray-200 text-center items-center justify-center font-light  object-contain"
+          >
+            2
+          </p>
           <img
-            src={two.src}
+            src={document.src}
             alt="Info Icon"
-            className="absolute -top-8 -left-6 w-16 h-16 border-blue-800  object-contain"
-          />
-          <img
-            src={ReviewSubmitIcon.src}
-            alt="Info Icon"
-            className="w-16 h-16 bg-white p-3 mb-6 object-contain self-end"
+            className="w-2/3 aspect-square max-w-50 border rounded-full border-gray-600 shadow-2xl p-8 mb-6 object-contain self-center"
           />
           <h2 className="font-semibold mb-3 text-lg ">
             Send us Your information
@@ -54,18 +55,23 @@ const HowWeWork = () => {
             turnaround, it starts then.
           </p>
         </div>
-
+        <img
+          src={LineOne.src}
+          alt=""
+          className="my-12 hidden md:inline-block"
+        />
         {/* Card 3 */}
-        <div className="relative flex flex-col  border  bg-white rounded-2xl border-blue-800 p-6 pt-6 h-full">
-          <img
-            src={three.src}
+        <div className="relative flex flex-col text-center bg-white rounded-2xl h-full ">
+          <p
             alt="Submission Icon"
-            className="absolute -top-8 -left-6 w-16 h-16 border-blue-800  object-contain"
-          />
+            className="absolute w-8 h-8 border rounded-full border-gray-300 bg-gray-200 text-center items-center justify-center font-light  object-contain"
+          >
+            3
+          </p>
           <img
-            src={SendInfoIcon.src}
+            src={circlefill.src}
             alt="Submission Icon"
-            className=" w-16 h-16 bg-white p-3 mb-6 object-contain self-end"
+            className="w-2/3 aspect-square max-w-50 border rounded-full border-gray-600 shadow-2xl p-8 mb-6 object-contain self-center"
           />
           <h2 className="font-semibold mb-3 text-lg ">Review & Submission</h2>
           <p className="text-gray-600">

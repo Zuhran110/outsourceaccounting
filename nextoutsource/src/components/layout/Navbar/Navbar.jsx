@@ -1,12 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { HamburgerMenu } from "../../../assets/images/NavbarTopBar/NavbarImg.js";
 import closeMenu from "../../../assets/images/NavbarTopBar/CrossIcon.png";
 import ContactUsButton from "@/components/shared/buttons/contactUsButton.jsx";
+import CompanyLogo from "../../../assets/images/NavbarTopBar/CompanyLogo.svg";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const onClick = () => {
     console.log("clicked");
@@ -15,13 +16,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full px-16 z-1000 bg-white items-center justify-between hidden md:flex ">
+      <nav className="w-full px-16 z-1000 bg-white items-center justify-between hidden md:flex sticky top-0">
         <div className="flex items-center justify-between w-full py-3 mx-3 md:mx-8">
           <div className="navbar-logo ">
-            <img
-              src="/images/NavbarTopBar/CompanyLogo.png"
-              alt="Company Logo"
-            />
+            <img src={CompanyLogo.src} alt="Company Logo" />
           </div>
 
           {
@@ -49,14 +47,14 @@ const Navbar = () => {
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/blogs"
                   className="p-1 pr-3 font-light inline-block"
                 >
                   Blogs
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/faqs" className="p-1 pr-3 font-light inline-block">
                   FAQs
