@@ -29,7 +29,7 @@ const data = [
 
 const Cards = () => {
   return (
-    <div className="grid grid-cols-4 gap-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 w-full">
       {data.map((card) => {
         const { key, title, img } = card;
         return <Card key={key} title={title} img={img} />;

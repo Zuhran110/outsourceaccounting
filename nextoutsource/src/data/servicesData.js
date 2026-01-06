@@ -39,9 +39,14 @@ import vati from "@/assets/images/serivePgsImg/AnnualAccounts/vati.svg";
 import waa from "@/assets/images/serivePgsImg/AnnualAccounts/waa.svg";
 import wsa from "@/assets/images/serivePgsImg/AnnualAccounts/wsa.svg";
 //mmmm
-import statisticsone from "@/assets/images/serivePgsImg/statics/staticsone.svg";
-import statisticstwo from "@/assets/images/serivePgsImg/statics/staticstwo.svg";
-import statisticsthree from "@/assets/images/serivePgsImg/statics/staticsthree.svg";
+import bookkeepingstatic from "@/assets/images/serivePgsImg/statics/bookkeepingstatic.svg";
+import companyformationstatic from "@/assets/images/serivePgsImg/statics/companyformationsatic.svg";
+import corporationtaxstatic from "@/assets/images/serivePgsImg/statics/corporationtaxstatic.svg";
+import accountstatic from "@/assets/images/serivePgsImg/statics/accountstatic.svg";
+import payrollstatic from "@/assets/images/serivePgsImg/statics/payrollstatic.svg";
+import selfassessmentsatic from "@/assets/images/serivePgsImg/statics/selfassessmentsatic.svg";
+import vatstatic from "@/assets/images/serivePgsImg/statics/vatstatic.svg";
+//
 
 export const heroData = {
   // ========== SERVICE 1: Annual Accounts ==========
@@ -211,9 +216,7 @@ export const heroData = {
           description: "Make informed decisions to drive growth.",
         },
       ],
-      imgone: statisticsone.src,
-      imgtwo: statisticstwo.src,
-      imgthree: statisticsthree.src,
+      imgone: accountstatic.src,
     },
   },
   // ========== SERVICE 2: Self Assessment Tax ==========
@@ -370,9 +373,7 @@ export const heroData = {
       heading: "Who Needs to File an SA100 Tax Return?",
       description:
         "Certain individuals are legally required to submit a self-assessment tax return. You’ll need to complete and submit this form if you:",
-      imgone: statisticsone.src,
-      imgtwo: statisticstwo.src,
-      imgthree: statisticsthree.src,
+      imgone: selfassessmentsatic.src,
       data: [
         {
           key: 1,
@@ -560,9 +561,7 @@ export const heroData = {
     statics: {
       heading: "How Our Bookkeeping Service Works",
       description: "Getting started with Outsource is simple and hassle-free:",
-      imgone: statisticsone.src,
-      imgtwo: statisticstwo.src,
-      imgthree: statisticsthree.src,
+      imgone: bookkeepingstatic.src,
       data: [
         {
           key: 1,
@@ -748,9 +747,7 @@ export const heroData = {
     statics: {
       heading: "How to Register for PAYE with Us",
       description: "Getting started with Outsource is simple and hassle-free:",
-      imgone: statisticsone.src,
-      imgtwo: statisticstwo.src,
-      imgthree: statisticsthree.src,
+      imgone: payrollstatic.src,
       data: [
         {
           key: 1,
@@ -963,9 +960,7 @@ export const heroData = {
       heading: "How to Register for VAT Online with Us",
       description:
         "Our online VAT registration UK service is simple and efficient. Follow these steps to get started:",
-      imgone: statisticsone.src,
-      imgtwo: statisticstwo.src,
-      imgthree: statisticsthree.src,
+      imgone: vatstatic.src,
       data: [
         {
           key: 1,
@@ -1140,9 +1135,7 @@ export const heroData = {
     statics: {
       heading: "How to Register a Company in the UK",
       description: "Follow these simple steps to get started with us:",
-      imgone: statisticsone.src,
-      imgtwo: statisticstwo.src,
-      imgthree: statisticsthree.src,
+      imgone: companyformationstatic.src,
       data: [
         {
           key: 1,
@@ -1307,9 +1300,7 @@ export const heroData = {
       heading: "Penalties for Late CT600 Filing",
       description:
         "Missing the corporation tax filing deadline can result in escalating penalties:",
-      imgone: statisticsone.src,
-      imgtwo: statisticstwo.src,
-      imgthree: statisticsthree.src,
+      imgone: corporationtaxstatic.src,
       data: [
         {
           key: 1,
