@@ -23,7 +23,7 @@ const BookACall = () => {
         </p>
       </div>
       <div>
-        <img src={Group} alt="" className="p-2" />
+        <img src={Group.src} alt="" className="p-2" />
       </div>
     </div>
   );
