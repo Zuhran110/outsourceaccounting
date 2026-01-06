@@ -66,7 +66,7 @@ const data = [
 
 const ServiceCards = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-black bg-white gap-2 md:gap-8 flex-wrap">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center place-content-center text-black bg-white gap-2 md:gap-2 w-7/9">
       {data.map((ServiceCards, index) => {
         const {
           index: serviceIndex,

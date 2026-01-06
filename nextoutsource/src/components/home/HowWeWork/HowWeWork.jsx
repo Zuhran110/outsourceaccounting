@@ -12,7 +12,7 @@ const HowWeWork = () => {
         How We Work
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-x-14 gap-y-12 mx-auto w-full lg:w-5xl font-light items-start">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-x-4 gap-y-2 mx-auto w-full lg:w-5xl font-light items-start">
         <div className="relative flex flex-col text-center bg-white rounded-2xl h-full ">
           <p
             alt="Submission Icon"

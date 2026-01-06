@@ -5,97 +5,88 @@ import ContactUS from "./components/ContactUS.jsx";
 
 const Footer = () => {
   return (
-    <footer className=" bg-(--color-buttonBlue) text-amber-50 rounded-base shadow-xs border border-default px-4">
-      <div className="w-full max-w-7xl mx-auto p-4 md:py-8">
-        <div className="flex flex-col md:flex-row items-start justify-between w-full">
-          <div className="flex flex-col gap-6 h-auto">
-            <div>
-              <span className="text-heading self-center text-2xl font-semibold whitespace-nowrap">
-                Outsource Accounting
-              </span>
-              <p className="wrap max-w-120 mt-8 font-light">
-                We at Outsource Accounting Ltd are a reliable UK-based
-                Accounting firm that specialises in providing affordable
-                accounting and tax filing services online for clients within the
-                UK. 
-              </p>
-            </div>
-            <div className="mt-auto">
-              <p className="font-light">Follow us for more updates:</p>
-              <ul className="flex gap-6 mt-3">
-                <li>
-                  <img
-                    src="/images/Footer/MoreUpdates/LinkdinIcon.png"
-                    alt="LinkdinIcon"
-                    className="h-6 w-6"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="/images/Footer/MoreUpdates/TwitterIcon.png"
-                    alt="TwitterIcon"
-                    className="h-6 w-6"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="/images/Footer/MoreUpdates/PintrestIcon.png"
-                    alt="PintrestIcon"
-                    className="h-6 w-6"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="/images/Footer/MoreUpdates/InstagramIcon.png"
-                    alt="InstagramIcon"
-                    className="h-6 w-6"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="/images/Footer/MoreUpdates/FacebookIcon.png"
-                    alt="FacebookIcon"
-                    className="h-6 w-6"
-                  />
-                </li>
-              </ul>
-            </div>
-          </div>
-          <ul className="flex flex-wrap items-start w-auto  mb-6 ml-0 mt-4 md:mt-0 md:ml-3 lg:ml-12 text-sm font-medium text-body sm:mb-0 gap-4 lg:gap-16">
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Services
-              </a>
-              <Services />
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Company
-              </a>
-              <Comapany />
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Contact Us
-              </a>
-              <ContactUS />
-            </li>
-          </ul>
-        </div>
-        <hr className="my-6 border-default sm:mx-auto lg:my-8" />
-        <div className="flex justify-between">
-          <span className="block text-sm text-body items-start">
-            © 2024{" "}
-            <a href="#" className="hover:underline">
+    <footer className=" bg-(--color-buttonBlue) text-amber-50 rounded-base shadow-xs border border-default py-3 md:py-8 px-4 md:px-24">
+      <div className="flex flex-col md:flex-row items-start justify-between w-full">
+        <div className="flex flex-col gap-6 h-auto">
+          <div>
+            <span className="text-heading self-center text-2xl font-semibold whitespace-nowrap">
               Outsource Accounting
-            </a>
-            Outsource Accounting. All rights reserved.
-          </span>
-          <span className=" flex text-sm text-body items-end gap-3">
-            <p>Terms and Conditions</p>
-            <p>Privacy Policy</p>
-          </span>
+            </span>
+            <p className="wrap max-w-120 mt-8 font-light">
+              We at Outsource Accounting Ltd are a reliable UK-based Accounting
+              firm that specialises in providing affordable accounting and tax
+              filing services online for clients within the UK. 
+            </p>
+          </div>
+          <div className="mt-auto">
+            <p className="font-light">Follow us for more updates:</p>
+            <ul className="flex gap-6 mt-3">
+              <li>
+                <img
+                  src="/images/Footer/MoreUpdates/LinkdinIcon.png"
+                  alt="LinkdinIcon"
+                  className="h-6 w-6"
+                />
+              </li>
+              <li>
+                <img
+                  src="/images/Footer/MoreUpdates/TwitterIcon.png"
+                  alt="TwitterIcon"
+                  className="h-6 w-6"
+                />
+              </li>
+              <li>
+                <img
+                  src="/images/Footer/MoreUpdates/PintrestIcon.png"
+                  alt="PintrestIcon"
+                  className="h-6 w-6"
+                />
+              </li>
+              <li>
+                <img
+                  src="/images/Footer/MoreUpdates/InstagramIcon.png"
+                  alt="InstagramIcon"
+                  className="h-6 w-6"
+                />
+              </li>
+              <li>
+                <img
+                  src="/images/Footer/MoreUpdates/FacebookIcon.png"
+                  alt="FacebookIcon"
+                  className="h-6 w-6"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
+        <ul className="grid grid-rows-[2fr_1fr_2fr] grid-flow-col md:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 lg:grid-rows-none lg:w-1/2 mb-6 mt-4 md:mt-0 text-sm font-medium text-body sm:mb-0 gap-4 lg:gap-12">
+          <li className="me-4 md:me-6">
+            Services
+            <Services />
+          </li>
+          <li className="me-4 md:me-6">
+            Company
+            <Comapany />
+          </li>
+          <li className="me-4 md:me-6">
+            Contact Us
+            <ContactUS />
+          </li>
+        </ul>
+      </div>
+      <hr className="my-6 border-default sm:mx-auto lg:my-8" />
+      <div className="flex justify-between">
+        <span className="block text-sm text-body items-start">
+          © 2024{" "}
+          <a href="#" className="hover:underline">
+            Outsource Accounting
+          </a>
+          Outsource Accounting. All rights reserved.
+        </span>
+        <span className=" flex text-sm text-body items-end gap-3">
+          <p>Terms and Conditions</p>
+          <p>Privacy Policy</p>
+        </span>
       </div>
     </footer>
   );

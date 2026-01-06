@@ -8,13 +8,13 @@ import ClientsTestimonials from "@/components/home/ClientsTestimonials/ClientsTe
 
 export default function Home() {
   return (
-    <>
+    <div className="">
       <Hero />
       <WhyOutsource />
       <Services />
       <HowWeWork />
       <JoinUs />
       <ClientsTestimonials />
-    </>
+    </div>
   );
 }

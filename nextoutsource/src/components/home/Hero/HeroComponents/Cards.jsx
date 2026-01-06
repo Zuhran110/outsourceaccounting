@@ -38,7 +38,7 @@ const data = [
 
 const Cards = () => {
   return (
-    <div className="flex flex-col md:flex-row relative items-start justify-evenly w-full px-6 md:px-24 mt-4 md:mt-0 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 md:flex-row relative w-full px-6 md:px-24 mt-4 md:mt-0 gap-4">
       {data.map((card, index) => {
         const { imgComponent, title, content } = card;
 

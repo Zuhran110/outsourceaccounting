@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Card = ({ index, imgComponent, title, content }) => {
   return (
-    <div className="flex flex-col items-start justify-start mt-2 gap-3 w-full md:flex-1 min-w-30 md:max-w-xs lg:max-w-md border border-gray-300 p-6 rounded-lg shadow-md bg-white h-auto min-h-48">
+    <div className="grid grid-rows-[1fr_1fr_2fr] mt-2 gap-3   min-w-30  lg:max-w-md border border-gray-300 p-6 rounded-lg shadow-md bg-white">
       {/* Image */}
       <img src={imgComponent} alt={title} className="w-8 h-8 object-contain" />
 

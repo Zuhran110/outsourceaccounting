@@ -9,14 +9,14 @@ const Services = () => {
   const [isModelOpen, setisModelOpen] = useState(false);
   return (
     <section
-      className="flex flex-col self-center items-center content-center justify-center text-black bg-white lg:my-12 mx-12 md:mx-20"
+      className="flex flex-col self-center items-center content-center justify-center text-black bg-white lg:my-12 mx-3 md:mx-12 lg:mx-20"
       id="services"
     >
-      <div className="flex self-center items-center content-center justify-center text-black bg-white flex-wrap">
-        <h2 className="text-[2rem] font-semibold mb-4 w-full text-center text-[#4632DA]">
+      <div className="flex flex-col self-center items-center content-center justify-center align-middle text-black bg-white flex-wrap">
+        <h2 className="text-[2rem] font-semibold mb-4 w-full text-center text-[#4632DA] ">
           Services
         </h2>
-        <p className="text-[1rem] font-normal mb-8 w-full text-start md:text-center text-[#333333]">
+        <p className="text-[1rem] font-normal mb-8 w-7/9 text-start md:text-center text-[#333333]">
           Welcome to our all-inclusive professional Accountancy service
           portfolio, designed to satisfy the various financial requirements of
           individuals, partnerships, limited liability programs, sole traders,
