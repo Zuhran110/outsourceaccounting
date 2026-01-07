@@ -1,0 +1,48 @@
+import { useForm, SubmitHandler } from "react-hook-form";
+
+const Form = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  return (
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-6 w-full md:w-1/2 "
+    >
+      <input
+        className="border border-gray-300 w-full py-2 px-6"
+        placeholder="Your Business Name"
+        {...register("Name", { required: true, maxLength: 20 })}
+      />
+      {errors.Name && <p>errors.Name.message</p>}
+      <input
+        className="border border-gray-300 w-full py-2 px-6"
+        placeholder="Your Business Email"
+        {...register("email", {
+          required: true,
+          pattern: {
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            message: "Invalid email address",
+          },
+        })}
+      />
+      {errors.email && <p>errors.email.message</p>}
+      <button
+        type="submit"
+        value=""
+        className="flex justify-self-rigth self-end border bg-blue-800 text-white rounded border-blue-800 px-6 py-2 my-2"
+      >
+        submit
+      </button>
+    </form>
+  );
+};
+export default Form;
