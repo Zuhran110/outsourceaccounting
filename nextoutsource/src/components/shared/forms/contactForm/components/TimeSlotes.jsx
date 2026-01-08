@@ -1,84 +1,88 @@
 "use client";
+import { UTCDate } from "@date-fns/utc";
+import { format, roundToNearestMinutes, startOfDay, setHours } from "date-fns";
 import TimeSlote from "./TimeSlote";
 
-const data = [
-  {
-    Key: 1,
-    time: "12:00 AM",
-    avialable: false,
-  },
-  {
-    Key: 2,
-    time: "01:00 AM",
-    avialable: false,
-  },
-  {
-    Key: 3,
-    time: "02:00 AM",
-    avialable: false,
-  },
-  {
-    Key: 4,
-    time: "03:00 AM",
-    avialable: true,
-  },
-  {
-    Key: 5,
-    time: "04:00 AM",
-    avialable: true,
-  },
-  {
-    Key: 6,
-    time: "05:00 AM",
-    avialable: true,
-  },
-  {
-    Key: 7,
-    time: "06:00 AM",
-    avialable: true,
-  },
-  {
-    Key: 8,
-    time: "07:00 AM",
-    avialable: true,
-  },
-  {
-    Key: 9,
-    time: "08:00 AM",
-    avialable: true,
-  },
-  {
-    Key: 10,
-    time: "09:00 AM",
-    avialable: false,
-  },
-  {
-    Key: 11,
-    time: "10:00 AM",
-    avialable: false,
-  },
-  {
-    Key: 12,
-    time: "11:00 AM",
-    avialable: false,
-  },
-];
 const TimeSlotes = ({ isSelected, setIsSelected }) => {
+  let date = new UTCDate(new Date(Date.now())); //utc time
+  console.log(date);
+
+  let localTime = new Date(date.getTime()); //local time
+
+  const utchour = format(roundToNearestMinutes(date, { nearestTo: 30 }), "HH"); //utc hour
+  console.log(utchour);
+
+  const localHour = format(
+    roundToNearestMinutes(localTime, { nearestTo: 30 }),
+    "HH"
+  ); //local hour
+
+  console.log(localHour);
+
+  const currentHour = parseInt(localHour);
+
+  const number = []; //hour static
+  const utcToday = startOfDay(new UTCDate());
+
+  console.log(`${utcToday}`);
+  for (let i = 0; i < 24; i++) {
+    const utcDateForHours = format(setHours(utcToday, i), "HH");
+    const localDateForHours = format(new Date(setHours(utcToday, i)), "HH");
+    const obj = {
+      key: i,
+      isAvailable: true,
+      utcHour: utcDateForHours,
+      localHour: localDateForHours,
+    };
+    number.push(obj);
+  }
+
+  const target = [0, 1, 2, 3, 15, 16, 17, 18, 19, 20, 21, 22, 23]; //not available
+  target.forEach((item) => {
+    if (number[item]) {
+      number[item].isAvailable = false;
+    }
+  });
+
+  console.log(number);
   return (
     <div
       className="flex flex-col w-full gap-3 overflow-y-auto scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       style={{ maxHeight: "400px" }}
     >
-      {data.map((slot, index) => {
-        const { time, avialable } = slot;
+      {number.map((item, index) => {
+        const { isAvailable, utcHour, localHour } = item;
+        const hour = parseInt(localHour);
+        let displayHour = hour;
+        let suffix = "AM";
+        if (hour === 0) {
+          displayHour = 12;
+          suffix = "AM";
+        } else if (hour < 12) {
+          suffix = "AM";
+        } else if (hour === 12) {
+          suffix = "PM";
+        } else {
+          displayHour = hour - 12;
+          suffix = "PM";
+        }
         return (
           <TimeSlote
             key={index}
-            time={time}
-            avialable={avialable}
-            onSelect={() => setIsSelected(time)}
-            isSelected={isSelected === time}
+            time={localHour}
+            isAvailable={isAvailable}
+            suffix={suffix}
+            onSelect={() => setIsSelected(localHour)}
+            isSelected={isSelected === localHour}
           />
+          // <button
+          //     key={item.key}
+          //     variant="outline"
+          //     disabled={!isAvailable}
+          //     className="flex w-full h-12 gap-3 border-blue-800 hover:bg-blue-50 transition"
+          //   >
+          //     {formattedTime}
+          //   </button>
         );
       })}
     </div>
