@@ -8,9 +8,14 @@ const ContactForm = () => {
   const [date, setDate] = useState();
   const [isSelected, setIsSelected] = useState(null);
   const [isConfirm, setIsConfirm] = useState(false);
+  const [message, setMessage] = useState();
 
   const handleConfirm = () => {
     setIsConfirm(true);
+  };
+
+  const handledata = (data) => {
+    setMessage(data);
   };
 
   return (
@@ -37,6 +42,20 @@ const ContactForm = () => {
             <p className="text-blue-800 font-semibold">Time</p>
             {isSelected ? isSelected : "Select a Time"}
           </div>
+          <div className="my-6">
+            {message && (
+              <div>
+                <div>
+                  <p className="text-blue-800 font-semibold">Name</p>
+                  <p>{message.Name}</p>
+                </div>
+                <div>
+                  <p className="text-blue-800 font-semibold">email</p>
+                  <p>{message.email}</p>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
         {/* Date and time picker */}
         {!isConfirm && (
@@ -47,7 +66,7 @@ const ContactForm = () => {
             setIsSelected={setIsSelected}
           />
         )}
-        {isConfirm && <Form />}
+        {isConfirm && <Form formData={handledata} />}
       </div>
 
       {!isConfirm && isSelected && (

@@ -6,7 +6,7 @@ const TimeSlote = ({ time, isAvailable, isSelected, onSelect, suffix }) => {
       onClick={onSelect}
       variant="outline"
       disabled={!isAvailable}
-      className={`w-full h-12 border-blue-800 hover:bg-blue-50 transition${
+      className={`flex flex-row mr-2 w-full h-12 border-blue-800 hover:bg-blue-50 transition${
         !isAvailable ? " opacity-50" : " cursor-pointer"
       } ${isSelected ? "bg-blue-800 text-white" : ""}`}
     >

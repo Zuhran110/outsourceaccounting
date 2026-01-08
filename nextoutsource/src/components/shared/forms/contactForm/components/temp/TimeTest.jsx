@@ -1,6 +1,6 @@
 import { UTCDate } from "@date-fns/utc";
 import { format, roundToNearestMinutes, startOfDay, setHours } from "date-fns";
-import TimeSlotes from "./TimeSlotes";
+import TimeSlotes from "../TimeSlotes";
 
 export default function TimeTest() {
   let date = new UTCDate(new Date(Date.now())); //utc time

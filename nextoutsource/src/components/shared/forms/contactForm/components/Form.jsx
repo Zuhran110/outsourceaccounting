@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
-const Form = () => {
+const Form = ({ formData }) => {
   const {
     register,
     handleSubmit,
@@ -9,7 +10,7 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    formData(data);
   };
 
   return (
@@ -40,7 +41,7 @@ const Form = () => {
         value=""
         className="flex justify-self-rigth self-end border bg-blue-800 text-white rounded border-blue-800 px-6 py-2 my-2"
       >
-        submit
+        confirm
       </button>
     </form>
   );
