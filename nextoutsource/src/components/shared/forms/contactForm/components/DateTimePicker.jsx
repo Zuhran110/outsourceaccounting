@@ -5,7 +5,7 @@ import { isWeekend, startOfDay, isPast } from "date-fns";
 
 const DateTimePicker = ({ date, setDate, isSelected, setIsSelected }) => {
   return (
-    <div className="lg:w-2/3 flex flex-col md:flex-row gap-6">
+    <div className="flex flex-col md:flex-row gap-2 w-full">
       {/* date picker */}
       <div className="flex-1">
         <h1 className="font-bold mb-4">Select Date & Time</h1>

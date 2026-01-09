@@ -1,29 +1,34 @@
 import { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 const Form = ({ formData }) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const onSubmit = (data) => {
     formData(data);
+    setIsSubmitted(true);
   };
+
+  if (isSubmitted) {
+    return null;
+  }
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-6 w-full md:w-1/2 "
+      className="flex flex-col gap-6 w-full"
     >
       <input
         className="border border-gray-300 w-full py-2 px-6"
         placeholder="Your Business Name"
         {...register("Name", { required: true, maxLength: 20 })}
       />
-      {errors.Name && <p>errors.Name.message</p>}
+      {errors.Name && <p>{errors.Name.message}</p>}
       <input
         className="border border-gray-300 w-full py-2 px-6"
         placeholder="Your Business Email"
@@ -35,7 +40,7 @@ const Form = ({ formData }) => {
           },
         })}
       />
-      {errors.email && <p>errors.email.message</p>}
+      {errors.email && <p>{errors.email.message}</p>}
       <button
         type="submit"
         value=""
