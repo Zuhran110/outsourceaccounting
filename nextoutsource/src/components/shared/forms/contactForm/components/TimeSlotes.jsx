@@ -4,25 +4,20 @@ import { format, roundToNearestMinutes, startOfDay, setHours } from "date-fns";
 import TimeSlote from "./TimeSlote";
 
 const TimeSlotes = ({ isSelected, setIsSelected }) => {
-  let date = new UTCDate(new Date(Date.now())); //utc time
-  console.log(date);
+  let date = new UTCDate(new Date(Date.now()));
 
-  let localTime = new Date(date.getTime()); //local time
+  let localTime = new Date(date.getTime());
 
-  const utchour = format(roundToNearestMinutes(date, { nearestTo: 30 }), "HH"); //utc hour
-  console.log(utchour);
+  const utchour = format(roundToNearestMinutes(date, { nearestTo: 30 }), "HH");
 
   const localHour = format(
     roundToNearestMinutes(localTime, { nearestTo: 30 }),
     "HH"
-  ); //local hour
+  );
 
-  console.log(localHour);
-
-  const number = []; //hour static
+  const number = [];
   const utcToday = startOfDay(new UTCDate());
 
-  console.log(`${utcToday}`);
   for (let i = 0; i < 24; i++) {
     const utcDateForHours = format(setHours(utcToday, i), "HH");
     const localDateForHours = format(new Date(setHours(utcToday, i)), "HH");
@@ -35,21 +30,20 @@ const TimeSlotes = ({ isSelected, setIsSelected }) => {
     number.push(obj);
   }
 
-  const target = [0, 1, 2, 3, 15, 16, 17, 18, 19, 20, 21, 22, 23]; //not available
+  const target = [0, 1, 2, 3, 15, 16, 17, 18, 19, 20, 21, 22, 23];
   target.forEach((item) => {
     if (number[item]) {
       number[item].isAvailable = false;
     }
   });
 
-  console.log(number);
   return (
     <div
       className="flex flex-col w-full gap-3 overflow-y-auto scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       style={{ maxHeight: "400px" }}
     >
       {number.map((item, index) => {
-        const { isAvailable, utcHour, localHour } = item;
+        const { isAvailable, localHour } = item;
         const hour = parseInt(localHour);
         let displayHour = hour;
         let suffix = "AM";
@@ -73,14 +67,6 @@ const TimeSlotes = ({ isSelected, setIsSelected }) => {
             onSelect={() => setIsSelected(localHour)}
             isSelected={isSelected === localHour}
           />
-          // <button
-          //     key={item.key}
-          //     variant="outline"
-          //     disabled={!isAvailable}
-          //     className="flex w-full h-12 gap-3 border-blue-800 hover:bg-blue-50 transition"
-          //   >
-          //     {formattedTime}
-          //   </button>
         );
       })}
     </div>
