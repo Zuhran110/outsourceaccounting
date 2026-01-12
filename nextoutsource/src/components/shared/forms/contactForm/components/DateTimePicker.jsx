@@ -20,11 +20,10 @@ const DateTimePicker = ({ date, setDate, isSelected, setIsSelected }) => {
         />
       </div>
       {/* time picker */}
-      {date && (
-        <div className="flex-1">
-          <TimeSlotes isSelected={isSelected} setIsSelected={setIsSelected} />
-        </div>
-      )}
+
+      <div className="flex-1">
+        <TimeSlotes isSelected={isSelected} setIsSelected={setIsSelected} />
+      </div>
     </div>
   );
 };

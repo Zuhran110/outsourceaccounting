@@ -7,21 +7,15 @@ const Form = ({ formData }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const onSubmit = (data) => {
     formData(data);
-    setIsSubmitted(true);
   };
-
-  if (isSubmitted) {
-    return null;
-  }
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-6 w-full"
+      className="flex flex-col gap-2 w-full my-6"
     >
       <input
         className="border border-gray-300 w-full py-2 px-6"
@@ -46,7 +40,7 @@ const Form = ({ formData }) => {
         value=""
         className="flex justify-self-rigth self-end border bg-blue-800 text-white rounded border-blue-800 px-6 py-2 my-2"
       >
-        confirm
+        Confirm
       </button>
     </form>
   );

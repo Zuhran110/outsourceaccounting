@@ -3,14 +3,14 @@ const Modeltwo = ({ isOpen, onClose, children }) => {
 
   return (
     <div
-      className="fixed inset-0 z-101 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 w-full overflow-y-auto"
+      className="fixed inset-0 z-101 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 w-full"
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-2xl shadow-2xl relative w-full md:w-3/4 max-h-[90vh] overflow-y-auto my-auto"
+        className="bg-white rounded-2xl shadow-2xl relative overflow-hidden w-3/4 h-4/5"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-end p-4 sticky top-0 bg-white z-10">
+        <div className="flex justify-end p-4">
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600 text-2xl"
