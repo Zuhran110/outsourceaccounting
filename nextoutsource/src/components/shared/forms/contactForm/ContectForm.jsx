@@ -41,14 +41,14 @@ const ContactForm = ({ onSuccess }) => {
   };
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col overflow-y-auto sm:max-h-9/10 lg:max-h-full lg:overflow-y-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
       <h2 className="text-2xl font-bold mb-6">
         Book a <span className="text-blue-600"> Meeting</span>
       </h2>
 
-      <div className="flex flex-col md:flex-row gap-6 justify-between">
+      <div className="flex flex-col lg:flex-row gap-6 justify-between">
         {/* left text  */}
-        <div className="w-full md:w-1/2 lg:w-2/5 ">
+        <div className="w-full  lg:w-2/5 ">
           <div className="hidden md:inline-block">
             <p className="text-sm md:text-base text-gray-600">
               Use this form to schedule a meeting with our team. Please select
@@ -56,24 +56,25 @@ const ContactForm = ({ onSuccess }) => {
               confirm the appointment.
             </p>
           </div>
+          <div className="flex flex-col md:flex-row lg:flex-col gap-2">
+            <div className="my-3">
+              <p className="text-blue-800 font-semibold">Day</p>
+              {date ? format(date, "PPP") : "Pick a Day"}
+            </div>
+            <div className="my-3">
+              <p className="text-blue-800 font-semibold">Time</p>
+              {isSelected ? isSelected : "Select a Time"}
+            </div>
 
-          <div className="my-3">
-            <p className="text-blue-800 font-semibold">Day</p>
-            {date ? format(date, "PPP") : "Pick a Day"}
-          </div>
-          <div className="my-3">
-            <p className="text-blue-800 font-semibold">Time</p>
-            {isSelected ? isSelected : "Select a Time"}
-          </div>
+            <div className="my-3">
+              <p className="text-blue-800 font-semibold">Name</p>
+              {message ? message.Name : "Enter Your Business Name"}
+            </div>
 
-          <div className="my-3">
-            <p className="text-blue-800 font-semibold">Name</p>
-            {message ? message.Name : "Enter Your Business Name"}
-          </div>
-
-          <div className="my-3">
-            <p className="text-blue-800 font-semibold">Email</p>
-            {message ? message.email : "Confirm Your Business Email"}
+            <div className="my-3">
+              <p className="text-blue-800 font-semibold">Email</p>
+              {message ? message.email : "Confirm Your Business Email"}
+            </div>
           </div>
 
           {message && isSelected && date && (
@@ -86,17 +87,15 @@ const ContactForm = ({ onSuccess }) => {
           )}
         </div>
         {/* Date and time picker */}
-        <div className="w-full md:w-1/2 lg:w-3/5">
-          <div>
-            <DateTimePicker
-              date={date}
-              setDate={setDate}
-              isSelected={isSelected}
-              setIsSelected={setIsSelected}
-            />
+        <div className="w-full  lg:w-3/5 h-full lg:h-1/2 xl:h-8/9 flex flex-col justify-between">
+          <DateTimePicker
+            date={date}
+            setDate={setDate}
+            isSelected={isSelected}
+            setIsSelected={setIsSelected}
+          />
 
-            <Form formData={handledata} />
-          </div>
+          <Form formData={handledata} />
         </div>
       </div>
     </div>

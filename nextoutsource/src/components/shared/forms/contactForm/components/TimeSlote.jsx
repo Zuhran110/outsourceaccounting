@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const TimeSlote = ({ time, isAvailable, isSelected, onSelect, suffix }) => {
+const TimeSlote = ({ time, isAvailable, isSelected, onSelect }) => {
   return (
     <Button
       onClick={onSelect}
@@ -11,7 +11,7 @@ const TimeSlote = ({ time, isAvailable, isSelected, onSelect, suffix }) => {
       } ${isSelected ? "bg-blue-800 text-white" : ""}`}
     >
       {time}
-      {suffix}
+      {/* {suffix} */}
     </Button>
   );
 };

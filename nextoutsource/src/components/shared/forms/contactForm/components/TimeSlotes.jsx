@@ -38,32 +38,29 @@ const TimeSlotes = ({ isSelected, setIsSelected }) => {
   });
 
   return (
-    <div
-      className="flex flex-col w-full gap-3 overflow-y-auto scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-      style={{ maxHeight: "400px" }}
-    >
+    <div className="flex flex-col w-full md:max-h-60 lg:max-h-75 2xl:max-h-100 gap-3 overflow-y-auto scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
       {number.map((item, index) => {
         const { isAvailable, localHour } = item;
         const hour = parseInt(localHour);
         let displayHour = hour;
-        let suffix = "AM";
+        // let suffix = "AM";
         if (hour === 0) {
           displayHour = 12;
-          suffix = "AM";
+          // suffix = "AM";
         } else if (hour < 12) {
-          suffix = "AM";
+          // suffix = "AM";
         } else if (hour === 12) {
-          suffix = "PM";
+          // suffix = "PM";
         } else {
           displayHour = hour - 12;
-          suffix = "PM";
+          // suffix = "PM";
         }
         return (
           <TimeSlote
             key={index}
             time={localHour}
             isAvailable={isAvailable}
-            suffix={suffix}
+            // suffix={suffix}
             onSelect={() => setIsSelected(localHour)}
             isSelected={isSelected === localHour}
           />
