@@ -1,26 +1,21 @@
 import { mailtransporter } from "../config/mail.config";
 import { parse } from "date-fns";
-import { UTCDate } from "@date-fns/utc";
 
 const meetingService = async ({ date, time, Name, email }) => {
   try {
     const transporter = await mailtransporter();
 
-    const parsedDate = parse(date, "PPP", new Date(0));
+    const parsedDate = parse(date, "PPP", new Date());
 
-    parsedDate.setHours(parseInt(time), 0, 0, 0);
+    const hour = Number(time);
+    if (Number.isNaN(hour) || hour < 0 || hour > 23) {
+      throw new Error("Invalid hour");
+    }
 
-    const DateUTC = new UTCDate(parsedDate);
+    parsedDate.setHours(hour, 0, 0, 0);
+    const meetingUTC = parsedDate;
 
-    const pakistanOffset = 5 * 60;
-    const DatePakistan = new Date(
-      DateUTC.getTime() + pakistanOffset * 60 * 1000
-    );
-
-    console.log("Original date/time from frontend:", date, time);
-    console.log("Parsed local date:", parsedDate);
-    console.log("UTC time:", DateUTC);
-    console.log("Pakistan time (UTC+5):", DatePakistan);
+    console.log("UTC Meeting Hour:", meetingUTC);
 
     const adminMailSetup = {
       from: '"OutSource Accounting" <system@example.com>',
@@ -61,15 +56,23 @@ const meetingService = async ({ date, time, Name, email }) => {
 
                     <li style="margin-bottom: 10px;">
                         <strong>Date (UTC):</strong>
-                        <span>${DateUTC.toISOString()}</span>
+                        <span>${meetingUTC.toISOString()}</span>
                     </li>
 
                     <li style="margin-bottom: 10px;">
                         <strong>Date (PKT):</strong>
-                        <span>${DatePakistan.toLocaleString("en-PK", {
-                          timeZone: "Asia/Karachi",
-                        })}</span>
+                        <span>
+                            ${meetingUTC.toLocaleString("en-PK", {
+                              timeZone: "Asia/Karachi",
+                              hour: "2-digit",
+                              hour12: true,
+                              day: "2-digit",
+                              month: "short",
+                              year: "numeric",
+                            })}
+                        </span>
                     </li>
+
 
                 </ul>
             </td>

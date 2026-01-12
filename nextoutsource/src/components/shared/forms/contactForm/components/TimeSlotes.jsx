@@ -1,20 +1,9 @@
 "use client";
 import { UTCDate } from "@date-fns/utc";
-import { format, roundToNearestMinutes, startOfDay, setHours } from "date-fns";
+import { format, setHours, startOfDay } from "date-fns";
 import TimeSlote from "./TimeSlote";
 
 const TimeSlotes = ({ isSelected, setIsSelected }) => {
-  let date = new UTCDate(new Date(Date.now()));
-
-  let localTime = new Date(date.getTime());
-
-  const utchour = format(roundToNearestMinutes(date, { nearestTo: 30 }), "HH");
-
-  const localHour = format(
-    roundToNearestMinutes(localTime, { nearestTo: 30 }),
-    "HH"
-  );
-
   const number = [];
   const utcToday = startOfDay(new UTCDate());
 
@@ -37,35 +26,19 @@ const TimeSlotes = ({ isSelected, setIsSelected }) => {
     }
   });
 
+  const slots = number;
+
   return (
-    <div className="flex flex-col w-full md:max-h-60 lg:max-h-75 2xl:max-h-100 gap-3 overflow-y-auto scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-      {number.map((item, index) => {
-        const { isAvailable, localHour } = item;
-        const hour = parseInt(localHour);
-        let displayHour = hour;
-        // let suffix = "AM";
-        if (hour === 0) {
-          displayHour = 12;
-          // suffix = "AM";
-        } else if (hour < 12) {
-          // suffix = "AM";
-        } else if (hour === 12) {
-          // suffix = "PM";
-        } else {
-          displayHour = hour - 12;
-          // suffix = "PM";
-        }
-        return (
-          <TimeSlote
-            key={index}
-            time={localHour}
-            isAvailable={isAvailable}
-            // suffix={suffix}
-            onSelect={() => setIsSelected(localHour)}
-            isSelected={isSelected === localHour}
-          />
-        );
-      })}
+    <div className="flex flex-col w-full md:max-h-60  lg:max-h-75 2xl:max-h-100 gap-3 overflow-y-auto scrollbar-none  [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      {slots.map((item) => (
+        <TimeSlote
+          key={item.key}
+          time={item.localHour}
+          isAvailable={item.isAvailable}
+          onSelect={() => setIsSelected(item.localHour)}
+          isSelected={isSelected === item.localHour}
+        />
+      ))}
     </div>
   );
 };
