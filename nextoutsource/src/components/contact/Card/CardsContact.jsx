@@ -1,6 +1,5 @@
 "use client";
-import CardContact from "./CardContact";
-const CardsContact = ({ id, img, title, description, details }) => {
+const CardsContact = ({ img, title, description, details }) => {
   return (
     <div className="flex flex-col md:flex-row border border-purple-200 rounded-2xl p-3 md:p-6 lg:p-8 my-2 md:my-4 w-full">
       <div className="mr-4">

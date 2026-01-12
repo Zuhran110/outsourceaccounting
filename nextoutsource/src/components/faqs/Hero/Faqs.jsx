@@ -4,9 +4,9 @@ const Faqs = () => {
     <div
       className="flex flex-col justify-center items-center content-center justify-self-center
       md:items-start border-transparent rounded-2xl 
-      w-2/3
+      w-8/9 md:w-2/3
     bg-linear-to-r from-gray-50 to-blue-300  
-    my-6 lg:my-12 mx-6 md:m-12
+    my-6 lg:my-12 mx-3 md:m-12
     py-6 lg:py-12 px-6 md:px-12"
     >
       <h1

@@ -60,7 +60,7 @@ const data = [
 
 const Card = () => {
   return (
-    <div className="grid grid-cols-1 items-center w-2/3 justify-self-center">
+    <div className="grid grid-cols-1 items-center w-full md:w-2/3 justify-self-center gap-2">
       {data.map((carding, index) => {
         const { id, service, description } = carding;
         return (

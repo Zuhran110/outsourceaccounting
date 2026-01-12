@@ -42,7 +42,7 @@ const ContactUsHero = () => {
         <div>
           <CardContact />
         </div>
-        <div className="w-3/4 md:w-1/3 flex flex-col justify-center border border-gray-600 rounded-2xl  h-1/2 p-4 md:p-8 text-center lg:text-left shadow-lg shadow-black/10">
+        <div className="w-8/9 md:w-1/3 flex flex-col justify-center border border-gray-600 rounded-2xl  h-1/2 p-4 md:p-8 text-center lg:text-left shadow-lg shadow-black/10">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-1 text-blue-800">
             Message Us
           </h1>

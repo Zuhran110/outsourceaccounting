@@ -41,7 +41,7 @@ const ContactForm = ({ onSuccess }) => {
   };
 
   return (
-    <div className="flex flex-col border md:max-w-1/2 md:max-h-1/2 mx-auto p-6">
+    <div className="flex flex-col ">
       <h2 className="text-2xl font-bold mb-6">
         Book a <span className="text-blue-600"> Meeting</span>
       </h2>
@@ -106,7 +106,7 @@ const ContactForm = ({ onSuccess }) => {
             {isConfirm && <Form formData={handledata} />}
           </div>
           {message && (
-            <div className="w-full ">
+            <div className="w-full hidden md:inline-block">
               <div>
                 <DateTimePicker
                   date={date}

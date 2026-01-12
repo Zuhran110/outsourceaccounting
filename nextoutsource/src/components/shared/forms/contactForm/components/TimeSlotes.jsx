@@ -19,8 +19,6 @@ const TimeSlotes = ({ isSelected, setIsSelected }) => {
 
   console.log(localHour);
 
-  const currentHour = parseInt(localHour);
-
   const number = []; //hour static
   const utcToday = startOfDay(new UTCDate());
 

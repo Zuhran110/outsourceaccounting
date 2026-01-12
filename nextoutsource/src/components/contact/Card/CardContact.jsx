@@ -30,7 +30,7 @@ const data = [
 
 const CardContact = () => {
   return (
-    <div className="mx-12 lg:mx-0 flex flex-col  items-center md:items-start">
+    <div className="mx-3 md:mx-12 lg:mx-0 flex flex-col  items-center md:items-start">
       <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-blue-800">
         Get In Touch
       </h1>
@@ -40,6 +40,7 @@ const CardContact = () => {
         return (
           <div key={id} className="w-3/4 min-w-auto md:min-w-120">
             <CardsContact
+              key={index}
               img={img}
               title={title}
               description={description}
