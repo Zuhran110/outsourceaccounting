@@ -22,11 +22,11 @@ const meetingService = async ({ date, time, Name, email }) => {
     console.log("UTC time:", DateUTC);
     console.log("Pakistan time (UTC+5):", DatePakistan);
 
-    const mailSetup = {
-      from: '"My App" <system@example.com>',
+    const adminMailSetup = {
+      from: '"OutSource Accounting" <system@example.com>',
       to: "zuhranyousaf12345@gmail.com",
       subject: "New Meeting Scheduled",
-      text: `New Meeting Scheduled! Name: ${Name}, Date: ${date}, Time: ${time}`, // Fallback for non-HTML email clients
+      text: `New Meeting Scheduled! Name: ${Name}, Date: ${date}, Time: ${time}`,
       html: `
     <table style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; font-family: Arial, sans-serif;">
         <tr>
@@ -40,14 +40,14 @@ const meetingService = async ({ date, time, Name, email }) => {
                     A new meeting has been scheduled with the following details:
                 </p>
                 <ul style="list-style: none; padding: 0;">
-                    
+
                     <li style="margin-bottom: 10px;">
-                        <strong>Name:</strong> 
+                        <strong>Name:</strong>
                         <span style="color: #007bff;">${Name}</span>
                     </li>
 
                     <li style="margin-bottom: 10px;">
-                        <strong>Email:</strong> 
+                        <strong>Email:</strong>
                        ${email}
                     </li>
 
@@ -60,12 +60,12 @@ const meetingService = async ({ date, time, Name, email }) => {
                     </li>
 
                     <li style="margin-bottom: 10px;">
-                        <strong>Date (UTC):</strong> 
+                        <strong>Date (UTC):</strong>
                         <span>${DateUTC.toISOString()}</span>
                     </li>
 
                     <li style="margin-bottom: 10px;">
-                        <strong>Date (PKT):</strong> 
+                        <strong>Date (PKT):</strong>
                         <span>${DatePakistan.toLocaleString("en-PK", {
                           timeZone: "Asia/Karachi",
                         })}</span>
@@ -78,13 +78,58 @@ const meetingService = async ({ date, time, Name, email }) => {
   `,
     };
 
-    const sendMail = await transporter.sendMail(mailSetup);
+    const customerMailSetup = {
+      from: '"OutSource Accounting" <system@example.com>',
+      to: email,
+      subject: "Meeting Confirmation",
+      text: `Your meeting has been confirmed! Name: ${Name}, Date: ${date}, Time: ${time}`,
+      html: `
+    <table style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; font-family: Arial, sans-serif;">
+        <tr>
+            <td style="background-color: #f4f4f4; padding: 20px; text-align: center;">
+                <h1 style="color: #333333; font-size: 24px;">✅ Meeting Confirmation</h1>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 30px; background-color: #ffffff; border: 1px solid #dddddd;">
+                <p style="font-size: 16px; color: #555555; margin-bottom: 15px;">
+                    Your meeting has been confirmed with the following details:
+                </p>
+                <ul style="list-style: none; padding: 0;">
 
-    console.log("Meeting service mail sent", sendMail.messageId);
+                    <li style="margin-bottom: 10px;">
+                        <strong>Name:</strong>
+                        <span style="color: #007bff;">${Name}</span>
+                    </li>
+
+                    <li style="margin-bottom: 10px;">
+                        <strong>Date:</strong> ${date}
+                    </li>
+
+                    <li style="margin-bottom: 10px;">
+                        <strong>Time:</strong> ${time}
+                    </li>
+
+                </ul>
+                <p style="font-size: 14px; color: #777777; margin-top: 20px;">
+                    We look forward to meeting with you!
+                </p>
+            </td>
+        </tr>
+    </table>
+  `,
+    };
+
+    const sendAdminMail = await transporter.sendMail(adminMailSetup);
+    console.log("Admin notification sent", sendAdminMail.messageId);
+
+    const sendCustomerMail = await transporter.sendMail(customerMailSetup);
+    console.log("Customer confirmation sent", sendCustomerMail.messageId);
 
     return {
       success: true,
-      messageId: sendMail.messageId,
+      adminMessageId: sendAdminMail.messageId,
+      customerMessageId: sendCustomerMail.messageId,
     };
   } catch (error) {
     console.error("Meeting service mail not sent", error);

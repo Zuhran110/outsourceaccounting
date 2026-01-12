@@ -11,6 +11,7 @@ const ContactForm = ({ onSuccess }) => {
   const [isSelected, setIsSelected] = useState(null);
   const [isConfirm, setIsConfirm] = useState(false);
   const [message, setMessage] = useState();
+  const [isSending, setIsSending] = useState(false);
 
   const handleConfirm = () => {
     setIsConfirm(true);
@@ -22,6 +23,8 @@ const ContactForm = ({ onSuccess }) => {
 
   const onSubmit = async () => {
     try {
+      setIsSending(true);
+
       const meetingData = {
         date: date ? format(date, "PPP") : "Pick a Day",
         time: isSelected,
@@ -31,12 +34,16 @@ const ContactForm = ({ onSuccess }) => {
       const res = await axios.post(`api/meeting`, meetingData);
       toast.success(res.data.message);
 
+      // Wait for toast to be visible, then close modal
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       if (onSuccess) {
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        onSuccess();
       }
+      setIsSending(false);
     } catch (error) {
       console.log("error occued hero ", error);
       toast.error("failed to send message");
+      setIsSending(false);
     }
   };
 
@@ -79,8 +86,14 @@ const ContactForm = ({ onSuccess }) => {
 
           {message && isSelected && date && (
             <button
+              disabled={isSending}
               onClick={onSubmit}
-              className="flex justify-self-rigth self-end border bg-blue-800 text-white rounded border-blue-800 px-6 py-2 my-2"
+              className={`flex self-end border rounded px-6 py-2 my-2 
+                ${
+                  isSending
+                    ? "bg-gray-400 border-gray-400 cursor-not-allowed"
+                    : "bg-blue-800 border-blue-800 text-white"
+                }`}
             >
               Send
             </button>
