@@ -7,7 +7,7 @@ const OurStoryPg = async () => {
 
   return (
     <div>
-      <div className=" flex flex-col lg:flex-row justify-center items-center lg:justify-between mx-6 md:mx-12 lg:mx-24 my-6 md:my-16 lg:my-24">
+      <div className=" flex flex-col lg:flex-row justify-center items-center lg:justify-between mx-6 md:mx-12 lg:mx-24 xl:mx-44 my-6 md:my-16 lg:my-24">
         <img
           src={`${STRAPI_URL}${content.imgOurStory.url}`}
           alt="Our Story"

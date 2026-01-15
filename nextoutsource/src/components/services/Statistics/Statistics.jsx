@@ -20,7 +20,7 @@ const Statistics = ({ data }) => {
         <img
           src={data.imgone}
           alt="statisticsone"
-          className="absolute inline-block rounded  ring-white z-50 left-0 lg:left-6"
+          className="absolute inline-block rounded  ring-white left-0 lg:left-6"
         />
       </div>
     </div>

@@ -2,7 +2,7 @@ import GetStartedButton from "@/components/shared/buttons/GetStartedButton";
 
 const AnnualAcounts = ({ data }) => {
   return (
-    <div className="flex flex-col items-center mx-12 my-6 md:mx-24 md:my-12">
+    <div className="flex flex-col items-center mx-12 my-6 md:mx-24 md:my-12 ">
       <div className="flex flex-col lg:flex-row justify-center lg:justify-evenly items-center gap-6 lg:gap-12 mt-8">
         <div className="flex flex-col justify-center content-center items-center text-center md:text-start md:items-start lg:items-start w-full lg:w-120 gap-6 ">
           <h1 className="text-3xl font-semibold md:my-4">{data.heading}</h1>

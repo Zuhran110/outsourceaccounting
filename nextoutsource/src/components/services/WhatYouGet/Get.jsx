@@ -8,7 +8,7 @@ import { useState } from "react";
 const Get = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="flex flex-col items-center my-3 md:my-12 lg:my-24">
+    <div className="flex flex-col items-center my-3 md:my-12 lg:my-24 ">
       <div className="flex flex-col items-center bg-blue-50 ">
         <div className="py-3 md:py-8">
           <h1 className="text-blue-800 font-semibold md:font-semibold text-2xl md:text-4xl">

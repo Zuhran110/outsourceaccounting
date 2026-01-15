@@ -5,8 +5,8 @@ import ContactUS from "./components/ContactUS.jsx";
 
 const Footer = () => {
   return (
-    <footer className=" bg-(--color-buttonBlue) text-amber-50 rounded-base shadow-xs border border-default py-3 md:py-8 px-4 md:px-24">
-      <div className="flex flex-col md:flex-row items-start justify-between w-full">
+    <footer className=" bg-(--color-buttonBlue) text-amber-50 rounded-base shadow-xs border border-default py-3 md:py-8 px-4 md:px-24 xl:px-44">
+      <div className="flex flex-col md:flex-row items-start justify-between w-full ">
         <div className="flex flex-col gap-6 h-auto">
           <div>
             <span className="text-heading self-center text-2xl font-semibold whitespace-nowrap">
@@ -59,7 +59,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <ul className="grid grid-rows-[2fr_1fr_2fr] grid-flow-col md:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 lg:grid-rows-none lg:w-1/2 mb-6 mt-4 md:mt-0 text-sm font-medium text-body sm:mb-0 gap-4 lg:gap-12">
+        <ul className="grid grid-rows-[2fr_1fr_2fr] grid-flow-col md:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 lg:grid-rows-none lg:w-1/2 mb-6 mt-4 md:mt-0 text-sm font-medium text-body sm:mb-0 gap-4 lg:gap-12 ">
           <li className="me-4 md:me-6">
             Services
             <Services />

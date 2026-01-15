@@ -1,9 +1,13 @@
 const TopBar = () => {
   return (
-    <div className="w-full bg-(--color-veryLightBlue) text-gray-800 text-xs flex items-center px-12 lg:px-25 z-1001 flex-wrap">
+    <div className="w-full bg-(--color-veryLightBlue) text-gray-800 text-xs flex items-center px-12 lg:px-25 z-1001 flex-wrap xl:px-44">
       <div className="flex items-center ml-auto pb-1 pt-1 flex-wrap justify-center">
         <div className="contact-item pt-1 pb-1 mr-4 flex items-center">
-          <img src="/images/NavbarTopBar/TopBar/MailIcon.png" alt="mail" className="icon p-1" />
+          <img
+            src="/images/NavbarTopBar/TopBar/MailIcon.png"
+            alt="mail"
+            className="icon p-1"
+          />
           <a
             className="value text-nowrap"
             href="mailto:admin@outsourceaccountings.co.uk"
@@ -12,13 +16,21 @@ const TopBar = () => {
           </a>
         </div>
         <div className="contact-item pt-1 pb-1 mr-4 flex items-center ">
-          <img src="/images/NavbarTopBar/TopBar/CallIcon.png" alt="phone" className="icon p-1" />
+          <img
+            src="/images/NavbarTopBar/TopBar/CallIcon.png"
+            alt="phone"
+            className="icon p-1"
+          />
           <a className="value text-nowrap" href="tel:+442081446811">
             0208 144 6811
           </a>
         </div>
         <div className="contact-item pt-1 pb-1 flex items-center ">
-          <img src="/images/NavbarTopBar/TopBar/WhatsappIcon.png" alt="whatsapp" className="icon p-1" />
+          <img
+            src="/images/NavbarTopBar/TopBar/WhatsappIcon.png"
+            alt="whatsapp"
+            className="icon p-1"
+          />
           <a className="value text-nowrap" href="https://wa.me/447723143223">
             +44 7723 143223
           </a>

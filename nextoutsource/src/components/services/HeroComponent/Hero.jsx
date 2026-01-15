@@ -3,7 +3,7 @@ import Cards from "./subComponents/Cards";
 
 const Hero = ({ data }) => {
   return (
-    <section className="relative mx-4 my-4 md:mx-12 md:my-8 lg:mx-24 lg:my-12 rounded-2xl overflow-hidden border border-transparent shadow-sm">
+    <section className="relative mx-4 my-4 md:mx-12 xl:mx-42 md:my-8 lg:mx-24 lg:my-12 rounded-2xl overflow-hidden border border-transparent shadow-sm">
       <div className="absolute inset-0 w-full h-full -z-10">
         <img
           src={data.bgImage}
