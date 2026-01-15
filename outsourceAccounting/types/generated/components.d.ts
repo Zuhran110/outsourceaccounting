@@ -52,6 +52,18 @@ export interface AboutUsOurValue extends Struct.ComponentSchema {
   };
 }
 
+export interface FaqHero extends Struct.ComponentSchema {
+  collectionName: 'components_faq_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
 export interface HomeClientsTestimonial extends Struct.ComponentSchema {
   collectionName: 'components_home_clients_testimonials';
   info: {
@@ -229,6 +241,7 @@ declare module '@strapi/strapi' {
       'about-us.mission-statment': AboutUsMissionStatment;
       'about-us.our-story': AboutUsOurStory;
       'about-us.our-value': AboutUsOurValue;
+      'faq.hero': FaqHero;
       'home.clients-testimonial': HomeClientsTestimonial;
       'home.hero-section': HomeHeroSection;
       'home.how-we-work': HomeHowWeWork;
