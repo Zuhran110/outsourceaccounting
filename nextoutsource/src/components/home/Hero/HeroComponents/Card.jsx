@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from "react";
-
-const Card = ({ index, imgComponent, title, content }) => {
+const Card = ({ imgComponent, title, content }) => {
   return (
     <div className="grid grid-rows-[1fr_1fr_2fr] mt-2 gap-3   min-w-30  lg:max-w-md border border-gray-300 p-6 rounded-lg shadow-md bg-white">
-      {/* Image */}
       <img src={imgComponent} alt={title} className="w-8 h-8 object-contain" />
 
-      {/* Title */}
       <h2 className="text-sm font-semibold text-neutral-800 wrap-break-word w-full">
         {title}
       </h2>
 
-      {/* Content */}
       <p className="text-xs text-neutral-600 leading-relaxed wrap-break-word w-full">
         {content}
       </p>

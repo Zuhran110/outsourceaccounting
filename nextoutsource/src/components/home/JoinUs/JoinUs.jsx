@@ -1,12 +1,29 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import ContactUsButton from "@/components/shared/buttons/contactUsButton";
-import JoinUS from "@/assets/images/JoinUs/BgImg.png";
+import joinUsCat from "@/lib/data/homepage/joinUs";
 
 const JoinUs = () => {
+  const [joinUsContent, setJoinUsContent] = useState(null);
+  const getData = async () => {
+    const res = await joinUsCat();
+    setJoinUsContent(res.data.joinUs);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const STRAPI = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+
+  if (!joinUsContent) {
+    return <div className="text-center py-20">Loading...</div>;
+  }
+
   return (
     <div className="relative my-24">
       <img
-        src={JoinUS.src}
+        src={`${STRAPI}${joinUsContent?.bgImg?.url}`}
         alt="LinkdinIcon"
         className="h-auto w-full overlay-image bg-(--color-ImgOverlay) opacity-90"
       />

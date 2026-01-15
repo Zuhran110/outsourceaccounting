@@ -1,12 +1,28 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ServiceCards from "./ServiceComponents/ServiceCards.jsx";
 import QuoteButton from "@/components/shared/buttons/QuoteButton.jsx";
 import Model from "@/components/shared/forms/Model.jsx";
 import QuoteForm from "@/components/shared/forms/QuoteForm.jsx";
+import serviceData from "@/lib/data/homepage/serviceData.js";
 
 const Services = () => {
   const [isModelOpen, setisModelOpen] = useState(false);
+  const [serviceContent, setServiceContent] = useState(null);
+
+  const getData = async () => {
+    const res = await serviceData();
+    setServiceContent(res.data.service);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  if (!serviceContent) {
+    return <div className="text-center py-20">Loading...</div>;
+  }
+
   return (
     <section
       className="flex flex-col self-center items-center content-center justify-center text-black bg-white lg:my-12 mx-3 md:mx-12 lg:mx-20"
@@ -14,16 +30,10 @@ const Services = () => {
     >
       <div className="flex flex-col self-center items-center content-center justify-center align-middle text-black bg-white flex-wrap">
         <h2 className="text-[2rem] font-semibold mb-4 w-full text-center text-[#4632DA] ">
-          Services
+          {`${serviceContent.heading}`}
         </h2>
         <p className="text-[1rem] font-normal mb-8 w-7/9 text-start md:text-center text-[#333333]">
-          Welcome to our all-inclusive professional Accountancy service
-          portfolio, designed to satisfy the various financial requirements of
-          individuals, partnerships, limited liability programs, sole traders,
-          and limited corporations across the United Kingdom. Our expert team
-          works tirelessly to ensure the financial success of organisations We
-          offer a comprehensive range of services designed to simplify and
-          manage your tax responsibilities.
+          {`${serviceContent.description}`}
         </p>
         <ServiceCards />
       </div>
