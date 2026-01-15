@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_home_service_cards",
+  "info": {
+    "displayName": "serviceCard"
+  },
+  "options": {},
+  "attributes": {
+    "imgServiceCard": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "titleServiceCard": {
+      "type": "string"
+    },
+    "descriptionServiceCard": {
+      "type": "text"
+    },
+    "buttontxtServiceCard": {
+      "type": "string"
+    },
+    "pglink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

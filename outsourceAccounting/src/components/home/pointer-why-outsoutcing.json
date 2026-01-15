@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_pointer_why_outsoutcings",
+  "info": {
+    "displayName": "pointerWhyOutsoutcing"
+  },
+  "options": {},
+  "attributes": {
+    "imgPoinerWhyOutsoutcing": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pointerTextWhyOutsoutcing": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

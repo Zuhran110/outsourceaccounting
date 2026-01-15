@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_home_testimonial_cards",
+  "info": {
+    "displayName": "testimonialCard"
+  },
+  "options": {},
+  "attributes": {
+    "testimonialBgImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "testimonialPersonImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "testimonialTitle": {
+      "type": "string"
+    },
+    "testimonialDescription": {
+      "type": "string"
+    },
+    "testimonialPersonName": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

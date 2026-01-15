@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_services",
+  "info": {
+    "displayName": "service"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "serviceCard": {
+      "type": "component",
+      "component": "home.service-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

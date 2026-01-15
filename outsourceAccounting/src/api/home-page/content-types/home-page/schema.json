@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "HomePage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "component",
+      "component": "shared.hero-section",
+      "repeatable": false
+    },
+    "WhyOutsoutcing": {
+      "type": "component",
+      "component": "home.why-outsoutcing",
+      "repeatable": false
+    },
+    "service": {
+      "type": "component",
+      "component": "home.service",
+      "repeatable": false
+    },
+    "howWeWork": {
+      "type": "component",
+      "component": "home.how-we-work",
+      "repeatable": false
+    },
+    "joinUs": {
+      "type": "component",
+      "component": "home.join-us",
+      "repeatable": false
+    },
+    "clientsTestimonial": {
+      "type": "component",
+      "component": "home.clients-testimonial",
+      "repeatable": false
+    }
+  }
+}

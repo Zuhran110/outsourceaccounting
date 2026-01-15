@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_home_why_outsoutcings",
+  "info": {
+    "displayName": "whyOutsoutcing"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "descriptionWhyOutsoutcing": {
+      "type": "string"
+    },
+    "imgWhyOutsoutcing": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imgtwoWhyOutsoutcing": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pointerWhyOutsoutcing": {
+      "type": "component",
+      "component": "home.pointer-why-outsoutcing",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
