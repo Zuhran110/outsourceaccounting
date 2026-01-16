@@ -5,6 +5,7 @@ import QuoteButton from "@/components/shared/buttons/QuoteButton.jsx";
 import QuoteForm from "@/components/shared/forms/QuoteForm.jsx";
 import Model from "@/components/shared/forms/Model.jsx";
 import whyOutSourceData from "@/lib/data/homepage/whyOutSourceData.js";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const Outsource = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,8 +19,6 @@ const Outsource = () => {
   useEffect(() => {
     getData();
   }, []);
-
-  const STRAPI = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
   if (!whyOutsourceContent) {
     return <div className="text-center py-20">Loading...</div>;
@@ -42,12 +41,12 @@ const Outsource = () => {
         </div>
         <div className="relative flex mt-6 w-80 h-70 md:w-140 md:h-120 items-center justify-center lg:justify-end overflow-hidden">
           <img
-            src={`${STRAPI}${whyOutsourceContent.imgWhyOutsoutcing.url}`}
+            src={getImageUrl(whyOutsourceContent.imgWhyOutsoutcing?.url)}
             alt="whyOutSourceUperImg"
             className="absolute inline-block h-50 w-50 md:h-80 md:w-80 rounded  ring-white z-50 left-0 lg:left-6"
           />
           <img
-            src={`${STRAPI}${whyOutsourceContent.imgtwoWhyOutsoutcing.url}`}
+            src={getImageUrl(whyOutsourceContent.imgtwoWhyOutsoutcing?.url)}
             alt="whyOutSourceAccounting"
             className="absolute inline-block h-60 w-60 md:h-90 md:w-90 rounded ring-white right-1"
           />

@@ -1,6 +1,6 @@
 import outStoryQuesry from "@/lib/data/aboutUS/ourStory.js";
-// nextoutsource\src\lib\data\aboutUS\ourStory.js
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+import getImageUrl from "@/lib/utils/getImageUrl";
+
 const OurStoryPg = async () => {
   const res = await outStoryQuesry();
   const content = res.data.ourstory;
@@ -9,7 +9,7 @@ const OurStoryPg = async () => {
     <div>
       <div className=" flex flex-col lg:flex-row justify-center items-center lg:justify-between mx-6 md:mx-12 lg:mx-24 xl:mx-44 my-6 md:my-16 lg:my-24">
         <img
-          src={`${STRAPI_URL}${content.imgOurStory.url}`}
+          src={getImageUrl(content.imgOurStory?.url)}
           alt="Our Story"
           className="hidden lg:block lg:w-auto lg:h-auto "
         />

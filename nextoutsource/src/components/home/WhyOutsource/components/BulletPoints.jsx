@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import BulletPoint from "./BulletPoint.jsx";
 import whyOutSourceData from "@/lib/data/homepage/whyOutSourceData.js";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const BulletPoints = () => {
   const [pointContent, setpointContent] = useState(null);
@@ -20,8 +21,6 @@ const BulletPoints = () => {
     getData();
   }, []);
 
-  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   if (!pointContent) {
     return (
       <section className="w-full h-[95vh] lg:h-[90vh] flex items-center justify-center">
@@ -36,7 +35,7 @@ const BulletPoints = () => {
         return (
           <BulletPoint
             key={point.id || index}
-            img={`${STRAPI_URL}${point.imgPoinerWhyOutsoutcing.url}`}
+            img={getImageUrl(point.imgPoinerWhyOutsoutcing?.url)}
             description={point.pointerTextWhyOutsoutcing}
           />
         );

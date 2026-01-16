@@ -1,6 +1,5 @@
 import missionStatementQuery from "@/lib/data/aboutUS/missionStatementQuery";
-
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const MissionStatement = async () => {
   const res = await missionStatementQuery();
@@ -21,7 +20,7 @@ const MissionStatement = async () => {
           >
             {item.imgStatment?.url && (
               <img
-                src={`${STRAPI_URL}${item.imgStatment.url}`}
+                src={getImageUrl(item.imgStatment.url)}
                 alt={item.headingStatment || "Statement"}
                 className="w-24 h-24 my-2"
               />

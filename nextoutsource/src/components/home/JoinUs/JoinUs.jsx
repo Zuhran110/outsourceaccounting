@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ContactUsButton from "@/components/shared/buttons/contactUsButton";
 import joinUsCat from "@/lib/data/homepage/joinUs";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const JoinUs = () => {
   const [joinUsContent, setJoinUsContent] = useState(null);
@@ -14,8 +15,6 @@ const JoinUs = () => {
     getData();
   }, []);
 
-  const STRAPI = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   if (!joinUsContent) {
     return <div className="text-center py-20">Loading...</div>;
   }
@@ -23,7 +22,7 @@ const JoinUs = () => {
   return (
     <div className="relative my-24">
       <img
-        src={`${STRAPI}${joinUsContent?.bgImg?.url}`}
+        src={getImageUrl(joinUsContent?.bgImg?.url)}
         alt="LinkdinIcon"
         className="h-auto w-full overlay-image bg-(--color-ImgOverlay) opacity-90"
       />

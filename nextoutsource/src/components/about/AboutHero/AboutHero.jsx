@@ -1,6 +1,5 @@
 import heroQuery from "@/lib/data/aboutUS/hero";
-
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const AboutHero = async () => {
   const res = await heroQuery();
@@ -18,7 +17,7 @@ const AboutHero = async () => {
           {content.subHeading}
         </h2>
       </div>
-      <img src={`${STRAPI_URL}${content.ImgHero.url}`} alt="AboutUsImg" />
+      <img src={getImageUrl(content.ImgHero?.url)} alt="AboutUsImg" />
     </div>
   );
 };

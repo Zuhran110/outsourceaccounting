@@ -3,7 +3,20 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
   images: {
-    domains: ["localhost"],
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+      },
+      {
+        protocol: "https",
+        hostname: "fantastic-dog-00a226e27b.strapiapp.com",
+      },
+      {
+        protocol: "https",
+        hostname: "fantastic-dog-00a226e27b.media.strapiapp.com",
+      },
+    ],
   },
 };
 

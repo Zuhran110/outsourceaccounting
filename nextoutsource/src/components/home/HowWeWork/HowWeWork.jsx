@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import howWeWorkAround from "@/lib/data/homepage/howWeWork";
-// nextoutsource\src\lib\data\homepage\howWeWork.js
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const HowWeWork = () => {
   const [howWeWorkContent, sethowWeWorkContent] = useState(null);
@@ -15,8 +15,6 @@ const HowWeWork = () => {
   useEffect(() => {
     getData();
   }, []);
-
-  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
   if (!howWeWorkContent) {
     return (
@@ -41,7 +39,7 @@ const HowWeWork = () => {
             {howWeWorkContent.one}
           </p>
           <img
-            src={`${STRAPI_URL}${howWeWorkContent.oneIcon.url}`}
+            src={getImageUrl(howWeWorkContent.oneIcon?.url)}
             alt="Service Icon"
             className="w-2/3 aspect-square max-w-50 border rounded-full border-gray-600 shadow-2xl p-8 mb-6 object-contain self-center"
           />
@@ -50,7 +48,7 @@ const HowWeWork = () => {
           <p className="text-gray-600">{howWeWorkContent.description}</p>
         </div>
         <img
-          src={`${STRAPI_URL}${howWeWorkContent.lineOne.url}`}
+          src={getImageUrl(howWeWorkContent.lineOne?.url)}
           alt=""
           className="my-8 hidden md:inline-block"
         />
@@ -63,7 +61,7 @@ const HowWeWork = () => {
             {howWeWorkContent.two}
           </p>
           <img
-            src={`${STRAPI_URL}${howWeWorkContent.twoIcon.url}`}
+            src={getImageUrl(howWeWorkContent.twoIcon?.url)}
             alt="Info Icon"
             className="w-2/3 aspect-square max-w-50 border rounded-full border-gray-600 shadow-2xl p-8 mb-6 object-contain self-center"
           />
@@ -73,7 +71,7 @@ const HowWeWork = () => {
           <p className="text-gray-600">{howWeWorkContent.descriptiontwo}</p>
         </div>
         <img
-          src={`${STRAPI_URL}${howWeWorkContent.lineTwo.url}`}
+          src={getImageUrl(howWeWorkContent.lineTwo?.url)}
           alt=""
           className="my-12 hidden md:inline-block"
         />
@@ -86,7 +84,7 @@ const HowWeWork = () => {
             {howWeWorkContent.three}
           </p>
           <img
-            src={`${STRAPI_URL}${howWeWorkContent.threeIcon.url}`}
+            src={getImageUrl(howWeWorkContent.threeIcon?.url)}
             alt="Submission Icon"
             className="w-2/3 aspect-square max-w-50 border rounded-full border-gray-600 shadow-2xl p-8 mb-6 object-contain self-center"
           />

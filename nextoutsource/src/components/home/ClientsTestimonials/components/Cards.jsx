@@ -1,6 +1,7 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import Card from "./Card";
 import testimonialData from "@/lib/data/homepage/testimonial";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const Cards = forwardRef((props, ref) => {
   const [testimonialCardContent, setTestimonialCardContent] = useState(null);
@@ -34,8 +35,6 @@ const Cards = forwardRef((props, ref) => {
     return null;
   }
 
-  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   return (
     <div
       ref={ref}
@@ -46,8 +45,8 @@ const Cards = forwardRef((props, ref) => {
           <div key={card.id || index} className="flex">
             <Card
               key={card.id || index}
-              bgImg={`${STRAPI_URL}${card.testimonialBgImg.url}`}
-              personImg={`${STRAPI_URL}${card.testimonialPersonImg.url}`}
+              bgImg={getImageUrl(card.testimonialBgImg?.url)}
+              personImg={getImageUrl(card.testimonialPersonImg?.url)}
               name={card.testimonialPersonName}
               title={card.testimonialTitle}
               description={card.testimonialDescription}

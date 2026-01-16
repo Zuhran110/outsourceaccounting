@@ -2,6 +2,7 @@
 import ServiceCard from "./ServiceCard.jsx";
 import { useEffect, useState } from "react";
 import serviceData from "@/lib/data/homepage/serviceData.js";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const ServiceCards = () => {
   const [serviceCardContent, setServiceCardContent] = useState(null);
@@ -14,8 +15,6 @@ const ServiceCards = () => {
   useEffect(() => {
     getData();
   }, []);
-
-  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
   if (!serviceCardContent) {
     return (
@@ -31,7 +30,7 @@ const ServiceCards = () => {
           <ServiceCard
             key={ServiceCards.id || index}
             pglink={ServiceCards.pglink}
-            imgServiceCard={`${STRAPI_URL}${ServiceCards.imgServiceCard.url}`}
+            imgServiceCard={getImageUrl(ServiceCards.imgServiceCard?.url)}
             titleServiceCard={ServiceCards.titleServiceCard}
             descriptionServiceCard={ServiceCards.descriptionServiceCard}
             buttontxtServiceCard={ServiceCards.buttontxtServiceCard}

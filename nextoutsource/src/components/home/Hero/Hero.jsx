@@ -1,6 +1,7 @@
 "use client";
 import QuoteForm from "@/components/shared/forms/QuoteForm";
 import heroData from "@/lib/data/homepage/heroData";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 import Cards from "./HeroComponents/Cards";
 import { useState, useEffect } from "react";
@@ -24,8 +25,6 @@ const Hero = () => {
     getData();
   }, []);
 
-  const STRAPI = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   if (loading) {
     return (
       <section className="w-full h-[95vh] lg:h-[90vh] flex items-center justify-center">
@@ -43,8 +42,8 @@ const Hero = () => {
       <div className="relative h-[95vh] lg:h-[90vh] w-full flex flex-col md:flex-row items-center justify-center md:justify-between overflow-hidden ">
         {/* Background Image */}
         <img
-          src={`${STRAPI}${heroContent.bgImage.url}`}
-          alt={heroContent.bgImage.alternativeText || "Background"}
+          src={getImageUrl(heroContent.bgImage?.url)}
+          alt={heroContent.bgImage?.alternativeText || "Background"}
           className="absolute inset-0 w-full h-full object-cover brightness-50 -z-10"
         />
 
@@ -61,7 +60,7 @@ const Hero = () => {
             </span>{" "}
             {`${heroContent.headingEndText}`}{" "}
             <img
-              src={`${STRAPI}${heroContent.ukFlage.url}`}
+              src={getImageUrl(heroContent.ukFlage?.url)}
               alt="uk flag"
               className="inline-block w-8 h-8 ml-2"
             />
@@ -78,7 +77,7 @@ const Hero = () => {
 
           <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-linear-to-r from-indigo-600 to-indigo-400 text-white shadow-lg hover:opacity-90 transition w-max">
             <img
-              src={`${STRAPI}${heroContent.freeConsultationImg.url}`}
+              src={getImageUrl(heroContent.freeConsultationImg?.url)}
               alt="contact"
               className="w-4 h-4"
             />

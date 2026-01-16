@@ -2,6 +2,7 @@
 import Card from "./Card";
 import heroData from "@/lib/data/homepage/heroData";
 import { useState, useEffect } from "react";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const Cards = () => {
   const [heroContent, setHeroContent] = useState(null);
@@ -24,8 +25,6 @@ const Cards = () => {
     getData();
   }, []);
 
-  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   if (loading) {
     return (
       <section className="w-full h-[95vh] lg:h-[90vh] flex items-center justify-center">
@@ -44,7 +43,7 @@ const Cards = () => {
         return (
           <Card
             key={card.id || index}
-            imgComponent={`${STRAPI_URL}${card.imgComponent.url}`}
+            imgComponent={getImageUrl(card.imgComponent?.url)}
             title={card.title}
             content={card.content}
           />

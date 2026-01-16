@@ -1,6 +1,5 @@
 import ourValueQuery from "@/lib/data/aboutUS/ourValueQuery";
-
-const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const OurValues = async () => {
   const res = await ourValueQuery();
@@ -22,7 +21,7 @@ const OurValues = async () => {
               }`}
             >
               <img
-                src={`${STRAPI_URL}${card.imgValue?.url}`}
+                src={getImageUrl(card.imgValue?.url)}
                 alt="one"
                 className="w-46 md:w-48 lg:w-66 h-auto object-contain"
               />
