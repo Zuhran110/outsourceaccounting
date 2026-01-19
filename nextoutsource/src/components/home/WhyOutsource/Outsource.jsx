@@ -1,52 +1,41 @@
 "use client";
-import { useEffect, useState } from "react";
-import BulletPoints from "./components/BulletPoints.jsx";
+import { useState } from "react";
 import QuoteButton from "@/components/shared/buttons/QuoteButton.jsx";
 import QuoteForm from "@/components/shared/forms/QuoteForm.jsx";
 import Model from "@/components/shared/forms/Model.jsx";
-import whyOutSourceData from "@/lib/data/homepage/whyOutSourceData.js";
-import getImageUrl from "@/lib/utils/getImageUrl";
 
-const Outsource = () => {
+const Outsource = ({
+  heading,
+  description,
+  img,
+  imgTwo,
+  bulletPointsComponent,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [whyOutsourceContent, setOutsourceContent] = useState(null);
-
-  const getData = async () => {
-    const res = await whyOutSourceData();
-    setOutsourceContent(res.data.WhyOutsoutcing);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  if (!whyOutsourceContent) {
-    return <div className="text-center py-20">Loading...</div>;
-  }
 
   return (
     <>
       <div className="flex justify-center lg:justify-evenly items-center mx-12 my-6 md:mx-24 md:my-12 flex-wrap lg:my-12">
         <div className="flex flex-col h-auto justify-center lg:items-start w-120 ">
           <h1 className="text-3xl font-semibold text-center pb-4">
-            {`${whyOutsourceContent.heading}`}
+            {heading}
           </h1>
           <p className="my-2 font-light">
-            {`${whyOutsourceContent.descriptionWhyOutsoutcing}`}
+            {description}
           </p>
-          <BulletPoints />
+          {bulletPointsComponent}
           <div>
             <QuoteButton onClick={() => setIsModalOpen(true)} />
           </div>
         </div>
         <div className="relative flex mt-6 w-80 h-70 md:w-140 md:h-120 items-center justify-center lg:justify-end overflow-hidden">
           <img
-            src={getImageUrl(whyOutsourceContent.imgWhyOutsoutcing?.url)}
+            src={img}
             alt="whyOutSourceUperImg"
             className="absolute inline-block h-50 w-50 md:h-80 md:w-80 rounded  ring-white z-50 left-0 lg:left-6"
           />
           <img
-            src={getImageUrl(whyOutsourceContent.imgtwoWhyOutsoutcing?.url)}
+            src={imgTwo}
             alt="whyOutSourceAccounting"
             className="absolute inline-block h-60 w-60 md:h-90 md:w-90 rounded ring-white right-1"
           />

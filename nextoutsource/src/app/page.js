@@ -1,20 +1,26 @@
-import Image from "next/image";
-import Hero from "../components/home/Hero/Hero.jsx";
-import WhyOutsource from "@/components/home/WhyOutsource/Outsource.jsx";
-import Services from "@/components/home/Services/Services.jsx";
-import HowWeWork from "@/components/home/HowWeWork/HowWeWork.jsx";
-import JoinUs from "@/components/home/JoinUs/JoinUs.jsx";
-import ClientsTestimonials from "@/components/home/ClientsTestimonials/ClientsTestimonials.jsx";
+import heroApiCall from "@/components/home/Hero/apiCall.jsx";
+import whyOutsourceApiCall from "@/components/home/WhyOutsource/apiCall.jsx";
+import servicesApiCall from "@/components/home/Services/apiCall.jsx";
+import howWeWorkApiCall from "@/components/home/HowWeWork/apiCall.jsx";
+import joinUsApiCall from "@/components/home/JoinUs/apiCall.jsx";
+import clientsTestimonialsApiCall from "@/components/home/ClientsTestimonials/apiCall.jsx";
 
-export default function Home() {
+export default async function Home() {
+  const Hero = await heroApiCall();
+  const WhyOutsource = await whyOutsourceApiCall();
+  const Services = await servicesApiCall();
+  const HowWeWork = await howWeWorkApiCall();
+  const JoinUs = await joinUsApiCall();
+  const ClientsTestimonials = await clientsTestimonialsApiCall();
+
   return (
     <div className="">
-      <Hero />
-      <WhyOutsource />
-      <Services />
-      <HowWeWork />
-      <JoinUs />
-      <ClientsTestimonials />
+      {Hero}
+      {WhyOutsource}
+      {Services}
+      {HowWeWork}
+      {JoinUs}
+      {ClientsTestimonials}
     </div>
   );
 }

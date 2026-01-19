@@ -1,27 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
-import ServiceCards from "./ServiceComponents/ServiceCards.jsx";
+import { useState } from "react";
 import QuoteButton from "@/components/shared/buttons/QuoteButton.jsx";
 import Model from "@/components/shared/forms/Model.jsx";
 import QuoteForm from "@/components/shared/forms/QuoteForm.jsx";
-import serviceData from "@/lib/data/homepage/serviceData.js";
 
-const Services = () => {
+const Services = ({ heading, description, serviceCardsComponent }) => {
   const [isModelOpen, setisModelOpen] = useState(false);
-  const [serviceContent, setServiceContent] = useState(null);
-
-  const getData = async () => {
-    const res = await serviceData();
-    setServiceContent(res.data.service);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  if (!serviceContent) {
-    return <div className="text-center py-20">Loading...</div>;
-  }
 
   return (
     <section
@@ -30,12 +14,12 @@ const Services = () => {
     >
       <div className="flex flex-col self-center items-center content-center justify-center align-middle text-black bg-white flex-wrap">
         <h2 className="text-[2rem] font-semibold mb-4 w-full text-center text-[#4632DA] ">
-          {`${serviceContent.heading}`}
+          {heading}
         </h2>
         <p className="text-[1rem] font-normal mb-8 w-7/9 text-start md:text-center text-[#333333]">
-          {`${serviceContent.description}`}
+          {description}
         </p>
-        <ServiceCards />
+        {serviceCardsComponent}
       </div>
       <div className="mt-3">
         <QuoteButton onClick={() => setisModelOpen(true)} />

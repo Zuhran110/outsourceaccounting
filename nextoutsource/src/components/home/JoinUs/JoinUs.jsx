@@ -1,33 +1,15 @@
-"use client";
-import React, { useState, useEffect } from "react";
 import ContactUsButton from "@/components/shared/buttons/contactUsButton";
-import joinUsCat from "@/lib/data/homepage/joinUs";
-import getImageUrl from "@/lib/utils/getImageUrl";
 
-const JoinUs = () => {
-  const [joinUsContent, setJoinUsContent] = useState(null);
-  const getData = async () => {
-    const res = await joinUsCat();
-    setJoinUsContent(res.data.joinUs);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  if (!joinUsContent) {
-    return <div className="text-center py-20">Loading...</div>;
-  }
-
+const JoinUs = ({ bgImg }) => {
   return (
     <div className="relative my-24">
       <img
-        src={getImageUrl(joinUsContent?.bgImg?.url)}
+        src={bgImg}
         alt="LinkdinIcon"
         className="h-auto w-full overlay-image bg-(--color-ImgOverlay) opacity-90"
       />
       <div
-        className="overlay-text absolute inset-0 flex flex-col justify-center items-center 
+        className="overlay-text absolute inset-0 flex flex-col justify-center items-center
       bg-opacity-50 p-4"
       >
         <h2 className="text md:text-2xl lg:text-4xl mb-4 text-white text-center max-w-160">

@@ -1,21 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import Cards from "./components/Cards";
+import React, { useRef } from "react";
+import Card from "./components/Card";
 import arrow from "../../../assets/images/ClientsTestimonials/arrow.png";
-import testimonial from "@/lib/data/homepage/testimonial";
 
-const ClientsTestimonials = () => {
-  const [testimonialContent, setTestimonialContent] = useState(null);
-
-  const getData = async () => {
-    const res = await testimonial();
-    setTestimonialContent(res.data.clientsTestimonial);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+const ClientsTestimonials = ({ heading, testimonialCards }) => {
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {
@@ -30,15 +18,11 @@ const ClientsTestimonials = () => {
     }
   };
 
-  if (!testimonialContent) {
-    return <div className="text-center py-20">Loading...</div>;
-  }
-
   return (
     <div className="px-4 py-14 md:px-22 xl:px-44 w-full ">
       <div className="relative flex flex-col md:flex-row items-center justify-center mb-12">
         <h1 className="font-bold text-3xl text-center bg-linear-to-l from-blue-600 to-black bg-clip-text text-transparent">
-          {testimonialContent.heading}
+          {heading}
         </h1>
 
         <div className="hidden md:flex absolute right-0 gap-4">
@@ -61,7 +45,22 @@ const ClientsTestimonials = () => {
         </div>
       </div>
 
-      <Cards ref={sliderRef} />
+      <div
+        ref={sliderRef}
+        className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-8 px-2"
+      >
+        {testimonialCards.map((card, index) => (
+          <div key={card.id || index} className="flex">
+            <Card
+              bgImg={card.bgImg}
+              personImg={card.personImg}
+              name={card.name}
+              title={card.title}
+              description={card.description}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

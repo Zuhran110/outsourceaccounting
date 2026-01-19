@@ -1,11 +1,14 @@
-import Services from "@/components/home/Services/Services";
-import JoinUs from "@/components/home/JoinUs/JoinUs.jsx";
+import servicesApiCall from "@/components/home/Services/apiCall.jsx";
+import joinUsApiCall from "@/components/home/JoinUs/apiCall.jsx";
 
-export default function services() {
+export default async function services() {
+  const Services = await servicesApiCall();
+  const JoinUs = await joinUsApiCall();
+
   return (
     <>
-      <Services />
-      <JoinUs />
+      {Services}
+      {JoinUs}
     </>
   );
 }
