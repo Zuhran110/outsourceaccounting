@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -5,10 +6,7 @@ const Cards = ({ service, description }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      className="flex flex-col justify-center border border-gray-200
-    mx-6 md:mx-0 px-6 py-4 lg:mb-2"
-    >
+    <div className="flex flex-col justify-center border border-gray-200 mx-6 md:mx-0 px-6 py-4 lg:mb-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex justify-between items-center w-full text-left focus:outline-none"

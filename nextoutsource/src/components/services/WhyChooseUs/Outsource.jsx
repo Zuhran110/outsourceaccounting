@@ -7,12 +7,15 @@ import QuoteForm from "@/components/shared/forms/QuoteForm.jsx";
 
 const Outsource = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+  const imgUrl = data.img?.url ? `${strapiUrl}${data.img.url}` : data.img;
+
   return (
     <>
       <div className="flex justify-center lg:justify-evenly items-center mx-6 my-6 md:mx-24 md:my-12 flex-wrap lg:my-12">
         <div className="relative flex mt-6 w-80 h-70 md:w-140 md:h-120 items-center justify-center lg:justify-end overflow-hidden">
           <img
-            src={data.img}
+            src={imgUrl}
             alt="whyOutSourceUperImg"
             className="absolute inline-block rounded  ring-white left-0 lg:left-6"
           />
@@ -21,7 +24,7 @@ const Outsource = ({ data }) => {
           <h1 className="text-3xl font-semibold text-center md:mb-4">
             {data.heading}
           </h1>
-          <BulletPoints data={data.whyChooseUscards} />
+          <BulletPoints data={data.Card} />
           <div className="flex justify-center md:start-0">
             <QuoteButton onClick={() => setIsModalOpen(true)} />
           </div>

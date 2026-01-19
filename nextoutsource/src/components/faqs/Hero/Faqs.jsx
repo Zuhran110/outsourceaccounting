@@ -3,7 +3,6 @@ import faqHeroQuery from "@/lib/data/faq/faqHeroQuery";
 
 const Faqs = async () => {
   const res = await faqHeroQuery();
-
   const content = res?.data?.hero;
 
   if (!content) return null;

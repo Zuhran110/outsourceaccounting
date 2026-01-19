@@ -2,12 +2,14 @@
 import Card from "./Card.jsx";
 
 const Cards = ({ data }) => {
+  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+
   return (
     <div className="flex h-auto flex-wrap gap-3 flex-col md:flex-row justify-evenly my-6 xl:mx-10">
-      {data.map((card, index) => {
-        const { img, title, description } = card;
+      {data?.map((card, index) => {
+        const imgUrl = card.img?.url ? `${strapiUrl}${card.img.url}` : card.img;
         return (
-          <Card key={index} img={img} title={title} description={description} />
+          <Card key={card.id || index} img={imgUrl} title={card.title} description={card.description} />
         );
       })}
     </div>

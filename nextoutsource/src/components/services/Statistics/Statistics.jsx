@@ -2,6 +2,9 @@ import Points from "./points/Points";
 import GetStartedButton from "@/components/shared/buttons/GetStartedButton";
 
 const Statistics = ({ data }) => {
+  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+  const imgUrl = data.imgOne?.url ? `${strapiUrl}${data.imgOne.url}` : data.imgOne;
+
   return (
     <div className="flex justify-center lg:justify-evenly items-center mx-6 my-6 md:mx-24 md:my-12 flex-wrap lg:my-12">
       <div className="flex flex-col h-auto justify-center lg:items-start w-120 ">
@@ -18,7 +21,7 @@ const Statistics = ({ data }) => {
       </div>
       <div className="relative flex mt-6 w-80 h-70 md:w-140 md:h-120 items-center justify-center lg:justify-end overflow-hidden">
         <img
-          src={data.imgone}
+          src={imgUrl}
           alt="statisticsone"
           className="absolute inline-block rounded  ring-white left-0 lg:left-6"
         />

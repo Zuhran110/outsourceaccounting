@@ -1,11 +1,12 @@
 import ContactUsHero from "@/components/contact/ContactUsHero";
-import BookACall from "@/components/faqs/BookACall/BookACall";
+import { apiCall } from "@/components/faqs/BookACall/apiCall";
 
-export default function contactus() {
+export default async function contactus() {
+  const bookACallSection = await apiCall();
   return (
     <>
       <ContactUsHero />
-      <BookACall />
+      {bookACallSection}
     </>
   );
 }

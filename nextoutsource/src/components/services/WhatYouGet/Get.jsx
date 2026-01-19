@@ -16,7 +16,7 @@ const Get = ({ data }) => {
           </h1>
         </div>
 
-        <Cards data={data.whatYouGetcards} />
+        <Cards data={data.card} />
       </div>
       <div className="my-3">
         <QuoteButton onClick={() => setIsModalOpen(true)} />

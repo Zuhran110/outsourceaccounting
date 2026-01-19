@@ -13,7 +13,7 @@ const Services = ({ data }) => {
           {data.heading}
           <span className="text-blue-800">{data.highlightHeading}</span>
         </h2>
-        <ServiceCards data={data.ServiceData} />
+        <ServiceCards data={data.stepCard} />
       </div>
       <div className="my-2 md:my-6">
         <GetStartedButton />

@@ -1,4 +1,10 @@
-const TopBar = () => {
+import topBarQuery from "@/lib/data/topBarQuery";
+
+const TopBar = async () => {
+  const res = await topBarQuery();
+  const content = res.data.topBar;
+
+  if (!content) return <p>their is no data to show</p>;
   return (
     <div className="w-full bg-(--color-veryLightBlue) text-gray-800 text-xs flex items-center px-12 lg:px-25 z-1001 flex-wrap xl:px-44">
       <div className="flex items-center ml-auto pb-1 pt-1 flex-wrap justify-center">
@@ -12,7 +18,7 @@ const TopBar = () => {
             className="value text-nowrap"
             href="mailto:admin@outsourceaccountings.co.uk"
           >
-            admin@outsourceaccountings.co.uk
+            {content.email}
           </a>
         </div>
         <div className="contact-item pt-1 pb-1 mr-4 flex items-center ">
@@ -22,7 +28,7 @@ const TopBar = () => {
             className="icon p-1"
           />
           <a className="value text-nowrap" href="tel:+442081446811">
-            0208 144 6811
+            {content.number}
           </a>
         </div>
         <div className="contact-item pt-1 pb-1 flex items-center ">
@@ -32,7 +38,7 @@ const TopBar = () => {
             className="icon p-1"
           />
           <a className="value text-nowrap" href="https://wa.me/447723143223">
-            +44 7723 143223
+            {content.euNumber}
           </a>
         </div>
       </div>

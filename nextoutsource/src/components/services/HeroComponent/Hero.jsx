@@ -2,11 +2,15 @@ import GetStartedButton from "@/components/shared/buttons/GetStartedButton";
 import Cards from "./subComponents/Cards";
 
 const Hero = ({ data }) => {
+  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
+  const bgImageUrl = data.bgImage?.url ? `${strapiUrl}${data.bgImage.url}` : data.bgImage;
+  const imageUrl = data.image?.url ? `${strapiUrl}${data.image.url}` : data.image;
+
   return (
     <section className="relative mx-4 my-4 md:mx-12 xl:mx-42 md:my-8 lg:mx-24 lg:my-12 rounded-2xl overflow-hidden border border-transparent shadow-sm">
       <div className="absolute inset-0 w-full h-full -z-10">
         <img
-          src={data.bgImage}
+          src={bgImageUrl}
           alt="Background"
           className="w-full h-full object-cover"
         />
@@ -27,7 +31,7 @@ const Hero = ({ data }) => {
             )}
           </div>
           <div className="space-y-4 max-w-xl">
-            {data.description.map((paragraph, index) => (
+            {data.description?.map((paragraph, index) => (
               <p
                 key={index}
                 className="text-gray-700 text-sm md:text-base leading-relaxed"
@@ -48,7 +52,7 @@ const Hero = ({ data }) => {
 
         <div className="w-full lg:w-1/2 flex justify-center items-center">
           <img
-            src={data.image}
+            src={imageUrl}
             alt={data.title}
             className="w-full h-auto max-w-md lg:max-w-full object-contain drop-shadow-lg hidden lg:inline-block"
           />

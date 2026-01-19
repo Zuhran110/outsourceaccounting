@@ -3,8 +3,12 @@ import contactperson from "../../../assets/images/serivePgsImg/BookACall/contact
 import emailtyper from "../../../assets/images/serivePgsImg/BookACall/emailtyper.svg";
 import phone from "../../../assets/images/serivePgsImg/BookACall/phone.svg";
 import email from "../../../assets/images/serivePgsImg/BookACall/email.svg";
+import topBarQuery from "@/lib/data/topBarQuery";
 
-const FASolutions = () => {
+const FASolutions = async () => {
+  const res = await topBarQuery();
+  const content = res.data.topBar;
+
   return (
     <div className="relative flex flex-col items-center justify-center my-6 lg:my-12 overflow-hidden min-h-75">
       <img
@@ -29,7 +33,7 @@ const FASolutions = () => {
           </div>
           <div className="flex flex-col">
             <h1 className="font-bold text-lg">Feel free to contact</h1>
-            <p className="text-gray-600">0208 144 6811</p>
+            <p className="text-gray-600">{content.euNumber}</p>
           </div>
         </div>
 
@@ -49,7 +53,7 @@ const FASolutions = () => {
           <div className="flex flex-col">
             <h1 className="font-bold text-lg">Email Us</h1>
             <p className="text-gray-600 break-all lg:break-normal">
-              admin@outsourceaccountings.co.uk
+              {content.email}
             </p>
           </div>
         </div>
