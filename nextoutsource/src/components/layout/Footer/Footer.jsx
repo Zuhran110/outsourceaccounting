@@ -1,4 +1,3 @@
-"use client";
 import Services from "./components/Services.jsx";
 import Comapany from "./components/Company.jsx";
 import ContactUS from "./components/ContactUS.jsx";
@@ -25,35 +24,35 @@ const Footer = () => {
                 <img
                   src="/images/Footer/MoreUpdates/LinkdinIcon.png"
                   alt="LinkdinIcon"
-                  className="h-6 w-6"
+                  className="h-6 w-6 cursor-pointer"
                 />
               </li>
               <li>
                 <img
                   src="/images/Footer/MoreUpdates/TwitterIcon.png"
                   alt="TwitterIcon"
-                  className="h-6 w-6"
+                  className="h-6 w-6 cursor-pointer"
                 />
               </li>
               <li>
                 <img
                   src="/images/Footer/MoreUpdates/PintrestIcon.png"
                   alt="PintrestIcon"
-                  className="h-6 w-6"
+                  className="h-6 w-6 cursor-pointer"
                 />
               </li>
               <li>
                 <img
                   src="/images/Footer/MoreUpdates/InstagramIcon.png"
                   alt="InstagramIcon"
-                  className="h-6 w-6"
+                  className="h-6 w-6 cursor-pointer"
                 />
               </li>
               <li>
                 <img
                   src="/images/Footer/MoreUpdates/FacebookIcon.png"
                   alt="FacebookIcon"
-                  className="h-6 w-6"
+                  className="h-6 w-6 cursor-pointer"
                 />
               </li>
             </ul>

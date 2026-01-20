@@ -16,12 +16,12 @@ const Services = ({ heading, description, serviceCardsComponent }) => {
         <h2 className="text-[2rem] font-semibold mb-4 w-full text-center text-[#4632DA] ">
           {heading}
         </h2>
-        <p className="text-[1rem] font-normal mb-8 w-7/9 text-start md:text-center text-[#333333]">
+        <p className="text-[1rem] font-normal mb-8 w-2/3 text-start md:text-center text-[#333333]">
           {description}
         </p>
         {serviceCardsComponent}
       </div>
-      <div className="mt-3">
+      <div className="mt-6">
         <QuoteButton onClick={() => setisModelOpen(true)} />
       </div>
       <Model isOpen={isModelOpen} onClose={() => setisModelOpen(false)}>

@@ -10,7 +10,7 @@ const AnnualAcounts = ({ data }) => {
           <img
             src={imgUrl}
             alt="Annual accounts preparation illustration"
-            className="rounded z-50 w-8/9 h-8/9"
+            className="rounded w-8/9 h-8/9"
           />
         </div>
         <div className="flex flex-col justify-center content-center items-center text-center md:text-start md:items-start lg:items-start w-full lg:w-120 gap-6 ">

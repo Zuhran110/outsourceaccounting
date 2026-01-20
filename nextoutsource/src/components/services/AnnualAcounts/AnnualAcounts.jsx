@@ -20,7 +20,7 @@ const AnnualAcounts = ({ data }) => {
           <img
             src={imgUrl}
             alt="Annual accounts preparation illustration"
-            className="rounded z-50 w-8/9 h-8/9"
+            className="rounded w-8/9 h-8/9"
           />
         </div>
       </div>

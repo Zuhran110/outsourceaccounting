@@ -18,7 +18,7 @@ const Get = ({ data }) => {
 
         <Cards data={data.card} />
       </div>
-      <div className="my-3">
+      <div className="my-3 md:my-6">
         <QuoteButton onClick={() => setIsModalOpen(true)} />
       </div>
       <Model isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
