@@ -5,6 +5,7 @@ const meetingService = async ({ date, time, Name, email }) => {
   try {
     const transporter = await mailtransporter();
 
+    console.log("Meeting Service Data:", { date, time, Name, email });
     const parsedDate = parse(date, "PPP", new Date());
 
     const hour = Number(time);

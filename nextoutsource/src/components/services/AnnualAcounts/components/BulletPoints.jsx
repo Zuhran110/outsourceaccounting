@@ -1,4 +1,5 @@
 import BulletPoint from "./BulletPoint.jsx";
+import getImageUrl from "@/lib/utils/getImageUrl.js";
 
 const BulletPoints = ({ data }) => {
   return (
