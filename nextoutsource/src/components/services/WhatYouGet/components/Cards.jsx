@@ -1,15 +1,19 @@
 "use client";
 import Card from "./Card.jsx";
+import getImageUrl from "@/lib/utils/getImageUrl.js";
 
 const Cards = ({ data }) => {
-  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   return (
     <div className="flex h-auto flex-wrap gap-3 flex-col md:flex-row justify-evenly my-6 xl:mx-10">
       {data?.map((card, index) => {
-        const imgUrl = card.img?.url ? `${strapiUrl}${card.img.url}` : card.img;
+        const imgUrl = getImageUrl(card.img?.url);
         return (
-          <Card key={card.id || index} img={imgUrl} title={card.title} description={card.description} />
+          <Card
+            key={card.id || index}
+            img={imgUrl}
+            title={card.title}
+            description={card.description}
+          />
         );
       })}
     </div>

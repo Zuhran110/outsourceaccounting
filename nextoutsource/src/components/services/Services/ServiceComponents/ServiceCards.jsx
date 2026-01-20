@@ -2,12 +2,10 @@ import React from "react";
 import ServiceCard from "./ServiceCard.jsx";
 
 const ServiceCards = ({ data }) => {
-  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   return (
     <div className="flex self-center items-center content-center justify-center text-black bg-white gap-2 md:gap-8 flex-wrap">
       {data?.map((card, index) => {
-        const imgUrl = card.imgSrc?.url ? `${strapiUrl}${card.imgSrc.url}` : card.imgSrc;
+        const imgUrl = card.imgSrc?.url;
         return (
           <ServiceCard
             key={card.id || index}

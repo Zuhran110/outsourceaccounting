@@ -1,10 +1,12 @@
 import GetStartedButton from "@/components/shared/buttons/GetStartedButton";
 import Cards from "./subComponents/Cards";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const Hero = ({ data }) => {
-  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-  const bgImageUrl = data.bgImage?.url ? `${strapiUrl}${data.bgImage.url}` : data.bgImage;
-  const imageUrl = data.image?.url ? `${strapiUrl}${data.image.url}` : data.image;
+  const bgImageUrl = data.bgImage?.url
+    ? getImageUrl(data.bgImage?.url)
+    : data.bgImage;
+  const imageUrl = data.image?.url ? getImageUrl(data.image?.url) : data.image;
 
   return (
     <section className="relative mx-4 my-4 md:mx-12 xl:mx-42 md:my-8 lg:mx-24 lg:my-12 rounded-2xl overflow-hidden border border-transparent shadow-sm">

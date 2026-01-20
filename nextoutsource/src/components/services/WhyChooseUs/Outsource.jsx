@@ -4,11 +4,12 @@ import BulletPoints from "./components/BulletPoints.jsx";
 import QuoteButton from "@/components/shared/buttons/QuoteButton.jsx";
 import Model from "@/components/shared/forms/Model.jsx";
 import QuoteForm from "@/components/shared/forms/QuoteForm.jsx";
+import getImageUrl from "@/lib/utils/getImageUrl.js";
 
 const Outsource = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-  const imgUrl = data.img?.url ? `${strapiUrl}${data.img.url}` : data.img;
+  const imgUrl = getImageUrl(data.img?.url);
 
   return (
     <>

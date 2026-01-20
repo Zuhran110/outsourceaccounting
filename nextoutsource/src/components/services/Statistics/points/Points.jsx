@@ -1,12 +1,11 @@
 import Point from "./Point";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const Points = ({ data }) => {
-  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   return (
     <ul>
       {data?.map((point, index) => {
-        const imgUrl = point.img?.url ? `${strapiUrl}${point.img.url}` : point.img;
+        const imgUrl = getImageUrl(point.img?.url);
         return (
           <Point
             key={point.id || index}

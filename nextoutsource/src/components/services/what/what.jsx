@@ -1,6 +1,7 @@
+import getImageUrl from "@/lib/utils/getImageUrl";
+
 const AnnualAcounts = ({ data }) => {
-  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-  const imgUrl = data.img?.url ? `${strapiUrl}${data.img.url}` : data.img;
+  const imgUrl = getImageUrl(data.img?.url);
 
   return (
     <div className="flex flex-col items-center mx-12 my-6 md:mx-24 md:my-12">

@@ -1,9 +1,9 @@
 import Points from "./points/Points";
 import GetStartedButton from "@/components/shared/buttons/GetStartedButton";
+import getImageUrl from "@/lib/utils/getImageUrl";
 
 const Statistics = ({ data }) => {
-  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-  const imgUrl = data.imgOne?.url ? `${strapiUrl}${data.imgOne.url}` : data.imgOne;
+  const imgUrl = getImageUrl(data.imgOne?.url);
 
   return (
     <div className="flex justify-center lg:justify-evenly items-center mx-6 my-6 md:mx-24 md:my-12 flex-wrap lg:my-12">
