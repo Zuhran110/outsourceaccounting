@@ -6,7 +6,7 @@ const TopBar = async () => {
 
   if (!content) return <p>their is no data to show</p>;
   return (
-    <div className="w-full bg-(--color-veryLightBlue) text-gray-800 text-xs flex items-center px-12 lg:px-25 z-1001 flex-wrap xl:px-44">
+    <div className="w-full bg-(--color-veryLightBlue) text-gray-800 text-xs flex items-center px-12 lg:px-25 z-1001 flex-wrap xl:px-44 py-3">
       <div className="flex items-center ml-auto pb-1 pt-1 flex-wrap justify-center">
         <div className="contact-item pt-1 pb-1 mr-4 flex items-center">
           <img

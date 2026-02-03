@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full px-16 xl:px-34 z-50 bg-white items-center justify-between hidden md:flex sticky top-0">
+      <nav className="w-full px-16 xl:px-34 z-50 py-4 md:py-6 bg-white items-center justify-between hidden md:flex sticky top-0">
         <div className="flex items-center justify-between w-full py-3 mx-3 md:mx-8">
           <Link href="/" className="navbar-logo cursor-pointer">
             <img src={CompanyLogo.src} alt="Company Logo" />
@@ -27,14 +27,14 @@ const Navbar = () => {
               {" "}
               {/*hidden*/}
               <li>
-                <Link href="/" className="p-1 pr-3 font-light inline-block">
+                <Link href="/" className="p-1 pr-12 font-light inline-block">
                   Home
                 </Link>
               </li>
               <li>
                 <Link
                   href="/services"
-                  className="p-1 pr-3 font-light inline-block"
+                  className="p-1 pr-12 font-light inline-block"
                 >
                   Services
                 </Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/aboutus"
-                  className="p-1 pr-3 font-light inline-block"
+                  className="p-1 pr-12 font-light inline-block"
                 >
                   About Us
                 </Link>
