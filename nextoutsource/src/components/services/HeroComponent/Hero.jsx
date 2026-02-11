@@ -18,8 +18,8 @@ const Hero = ({ data }) => {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between p-6 md:p-12 gap-8 lg:gap-12">
-        <div className="w-full lg:w-1/2 flex flex-col text-center lg:text-left items-center lg:items-start space-y-6">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center lg:justify-between p-3 md:p-10 lg:p-12 xl:p-14 gap-8 lg:gap-12">
+        <div className="w-full lg:w-1/2 flex flex-col text-center lg:text-left items-center lg:items-start space-y-4 lg:space-y-6">
           <div className="space-y-2">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black">
               {data.title}{" "}
@@ -32,11 +32,11 @@ const Hero = ({ data }) => {
               </h2>
             )}
           </div>
-          <div className="space-y-4 max-w-xl">
+          <div className="space-y-3 max-w-xl lg:max-w-2xl">
             {data.description?.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-gray-700 text-sm md:text-base leading-relaxed"
+                className="text-gray-800 text-sm md:text-base leading-relaxed"
               >
                 {paragraph}
               </p>
@@ -46,19 +46,18 @@ const Hero = ({ data }) => {
           <div className="pt-2">
             <GetStartedButton />
           </div>
-
-          <div className=" pt-4 lg:pt-8 flex justify-center lg:justify-start">
-            <Cards />
-          </div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex justify-center items-center">
+        <div className="w-full lg:w-1/2 flex justify-center items-center lg:pr-8">
           <img
             src={imageUrl}
             alt={data.title}
-            className="w-full h-auto max-w-md lg:max-w-full object-contain drop-shadow-lg hidden lg:inline-block"
+            className="w-full h-auto max-w-md lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl hidden lg:inline-block"
           />
         </div>
+      </div>
+      <div className="pl-3 md:pl-10 lg:pl-12 2xl:pl-14 pr-3 md:pr-10 lg:pr-12 2xl:pr-0 flex justify-center lg:justify-start 2xl:w-1/2">
+        <Cards />
       </div>
     </section>
   );
