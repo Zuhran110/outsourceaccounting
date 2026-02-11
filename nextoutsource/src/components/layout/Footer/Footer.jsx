@@ -1,6 +1,11 @@
 import Services from "./components/Services.jsx";
 import Comapany from "./components/Company.jsx";
 import ContactUS from "./components/ContactUS.jsx";
+import TwitterIcon from "@/assets/images/Footer/FooterIcons/TwitterIcon.svg";
+import LinkdinIcon from "@/assets/images/Footer/FooterIcons/LinkdinIcon.svg";
+import PintrestIcon from "@/assets/images/Footer/FooterIcons/PintrestIcon.svg";
+import InstagramIcon from "@/assets/images/Footer/FooterIcons/InstagramIcon.svg";
+import FacebookIcon from "@/assets/images/Footer/FooterIcons/FacebookIcon.svg";
 
 const Footer = () => {
   return (
@@ -19,38 +24,38 @@ const Footer = () => {
           </div>
           <div className="mt-auto">
             <p className="font-light">Follow us for more updates:</p>
-            <ul className="flex gap-6 mt-3">
+            <ul className="flex gap-6 mt-3 items-center">
               <li>
                 <img
-                  src="/images/Footer/MoreUpdates/LinkdinIcon.png"
+                  src={LinkdinIcon.src}
                   alt="LinkdinIcon"
-                  className="h-6 w-6 cursor-pointer"
+                  className="h-5 w-5 cursor-pointer"
                 />
               </li>
               <li>
                 <img
-                  src="/images/Footer/MoreUpdates/TwitterIcon.png"
+                  src={TwitterIcon.src}
                   alt="TwitterIcon"
                   className="h-6 w-6 cursor-pointer"
                 />
               </li>
               <li>
                 <img
-                  src="/images/Footer/MoreUpdates/PintrestIcon.png"
+                  src={PintrestIcon.src}
                   alt="PintrestIcon"
                   className="h-6 w-6 cursor-pointer"
                 />
               </li>
               <li>
                 <img
-                  src="/images/Footer/MoreUpdates/InstagramIcon.png"
+                  src={InstagramIcon.src}
                   alt="InstagramIcon"
                   className="h-6 w-6 cursor-pointer"
                 />
               </li>
               <li>
                 <img
-                  src="/images/Footer/MoreUpdates/FacebookIcon.png"
+                  src={FacebookIcon.src}
                   alt="FacebookIcon"
                   className="h-6 w-6 cursor-pointer"
                 />
